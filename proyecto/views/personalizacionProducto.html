@@ -1,0 +1,289 @@
+<!-- ******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Fri Jun 10 2022
+*  File : personalizacionProducto.html
+******************************************* -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="AngelMaldonado">
+    <title>Industria Emblemática</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+    <header style="border: 1px solid black;" class="barraNavegacion">
+        <a style="border: 1px solid red;" class="barraNavegacion__logo" href="/"><img src="" alt="logo-IE"></a>
+        <nav>
+            <ul style="border: 1px solid red;" class="barraNavegacion__tabs">
+                <li><a class="enlace" href="/">Inicio</a></li>
+                <li><a class="enlace" href="/">Productos y servicios</a></li>
+                <li><a class="enlace" href="/">Crear pedido</a></li>
+                <li><a class="enlace" href="/">Galería</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul style="border: 1px solid red;" class="barraNavegacion__tabsUsuario">
+                <li>
+                    <!-- enlace+icono -->
+                    <a class="enlace" href="/">
+                        Bolsa
+                        <svg class="icono -t20">
+                            <use href="#icono-bolsa" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <!-- enlace+icono -->
+                    <a class="enlace" href="/">
+                        Perfil
+                        <svg class="icono -t20">
+                            <use href="#icono-usuario" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="enlace" href="/">
+                        Dashboard
+                        <svg class="icono -t20">
+                            <use href="#icono-dashboard" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="producto">
+            <div class="contenido">
+                <nav class="navegacionProducto">
+                    <a class="botonIcono -primario -grande" href="/">
+                        <svg>
+                            <use href="#icono-flecha-izquierda" />
+                        </svg>
+                    </a>
+                    <ul class="navegacionProducto__ruta">
+                        <li>
+                            <a class="ruta" href="/">
+                                <svg>
+                                    <use href="#icono-plataforma" />
+                                </svg>
+                                <h6>Productos y servicios</h6>
+                                <svg>
+                                    <use href="#icono-diamante-derecha" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ruta" href="/">
+                                <svg>
+                                    <use href="#icono-folder" />
+                                </svg>
+                                <h6>Paquetes de graduación</h6>
+                                <svg>
+                                    <use href="#icono-diamante-derecha" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ruta" href="/">
+                                <svg>
+                                    <use href="#icono-archivo" />
+                                </svg>
+                                <h6>Productos y servicios</h6>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="etiqueta" href="/">En espera</a>
+                </nav>
+                <div class="producto__exhibidor">
+                    <img class="exhibidor__actual" src="" alt="imagen actual">
+                </div>
+                <div class="producto__descripcion">
+                    <header class="descripcion__titulo">
+                        <h1>Paquete de graduación diamante</h1>
+                        <!-- controlEstrellas -->
+                        <ul class="caracteristicas__controlEstrellas">
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li>
+                                4.5
+                            </li>
+                        </ul>
+                        <!-- fin controlEstrellas -->
+                        <h3>$1850.00</h3>
+                    </header>
+                    <div class="descripcion__disponibilidad">
+                        <h3>Disponibles: 30</h3>
+                        <div class="controlNumerico">
+                            <a class="botonIcono -primario -grande" href="/">
+                                <svg>
+                                    <use href="#icono-mas" />
+                                </svg>
+                            </a>
+                            <p>1</p>
+                            <a class="botonIcono -primario -grande" href="/">
+                                <svg>
+                                    <use href="#icono-menos" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="separador"></div>
+        <section class="personalizacion">
+            <form class="personalizacion__campos" action="">
+                <label for="foto-agradecimiento">Foto del agradecimiento</label>
+                <select class="cajaDesplegable" name="foto-agradecimiento" id="">
+                    <option value="familiar">Familiar</option>
+                    <option value="individual">Individual</option>
+                    <option value="placa con texto">Placa con texto</option>
+                </select>
+                <label for="color">Color</label>
+                <select class="cajaDesplegable" name="color" id="">
+                    <option value="vino">Vino</option>
+                    <option value="negro">Negro</option>
+                    <option value="robotico">Robotico</option>
+                    <option value="cristal">Cristal</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="café">Café</option>
+                </select>
+                <h4>Escudo</h4>
+                <div class="cajaOpcionesRadio">
+                    <input type="radio" name="escudo" id="escultura" value="escultura">
+                    <label for="escultura">Escultura</label>
+                    <input type="radio" name="escudo" id="metal" value="metal">
+                    <label for="metal">Metal</label>
+                    <input type="radio" name="escudo" id="grabado" value="grabado">
+                    <label for="grabado">Grabado</label>
+                </div>
+                <h4>Foto en papel</h4>
+                <div class="cajaOpcionesRadio">
+                    <input type="radio" name="fotoPapel" id="formal" value="formal">
+                    <label for="formal">Formal</label>
+                    <input type="radio" name="fotoPapel" id="uniforme" value="uniforme">
+                    <label for="uniforme">Uniforme</label>
+                    <input type="radio" name="fotoPapel" id="chusca" value="chusca">
+                    <label for="chusca">Chusca</label>
+                </div>
+                <h4>Anillo (oro o plata)</h4>
+                <div class="cajaOpcionesRadio">
+                    <input type="radio" name="anilloOP" id="oro" value="oro">
+                    <label for="oro">Oro</label>
+                    <input type="radio" name="anilloOP" id="plata" value="plata">
+                    <label for="plata">Plata</label>
+                </div>
+                <h4>Escudo de anillo</h4>
+                <div class="cajaOpcionesRadio">
+                    <input type="radio" name="fotoPapel" id="escuela" value="escuela">
+                    <label for="escuela">Escuela</label>
+                    <input type="radio" name="fotoPapel" id="carrera" value="carrera">
+                    <label for="carrera">Carrera</label>
+                    <input type="radio" name="fotoPapel" id="facultad" value="facultad">
+                    <label for="facultad">Facultad</label>
+                </div>
+                <label for="medida-anillo">Medida del anillo</label>
+                <select class="cajaDesplegable" name="medida-anillo" id="">
+                    <option value="32mm">32mm</option>
+                    <option value="64mm">64mm</option>
+                    <option value="122mm">122mm</option>
+                    <option value="132mm">132mm</option>
+                </select>
+                <input type="button" value="Guardar">
+                <input type="button" value="Cancelar">
+            </form>
+        </section>
+    </main>
+    <footer class="piePagina">
+        <div class="contenido">
+            <a style="border: 1px solid red;" class="piePagina__logo" href="/"><img src="" alt="logo-IE"></a>
+            <nav class="piePagina__navegacion">
+                <ul>
+                    <li><a class="enlace" href="/">Inicio</a></li>
+                    <li><a class="enlace" href="/">Productos y servicios</a></li>
+                    <li><a class="enlace" href="/">Crear pedido</a></li>
+                    <li><a class="enlace" href="/">Galería</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="piePagina__info">
+            <div class="info__divisor"></div>
+            <div class="info__texto">
+                <span class="texto__redes">Copyright ©️ AngelMaldonado | Industria Emblemática</span>
+                <ul class="texto__redes">
+                    <li class="redes__icono">
+                        <a class="botonIcono -t32" href="/">
+                            <svg>
+                                <use href="#icono-facebook" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="redes__icono">
+                        <a class="botonIcono -t32" href="/">
+                            <svg>
+                                <use href="#icono-instagram" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="redes__icono">
+                        <a class="botonIcono -t32" href="/">
+                            <svg>
+                                <use href="#icono-whatsapp" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="texto__contacto">
+                    <li>
+                        <!-- enlace+icono -->
+                        <a class="enlace" href="/">
+                            <svg class="icono -t32">
+                                <use href="#icono-celular" />
+                            </svg>
+                            +52 4445489505
+                        </a>
+                    </li>
+                    <li>
+                        <!-- enlace+icono -->
+                        <a class="enlace" href="/">
+                            <svg class="icono -t32">
+                                <use href="#icono-correo" />
+                            </svg>
+                            industriaemblematica@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

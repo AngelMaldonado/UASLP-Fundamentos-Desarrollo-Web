@@ -1,0 +1,478 @@
+<!-- ******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Fri Jun 10 2022
+*  File : verProductoServicio.html
+******************************************* -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="AngelMaldonado">
+    <title>Industria Emblemática</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+    <header style="border: 1px solid black;" class="barraNavegacion">
+        <a style="border: 1px solid red;" class="barraNavegacion__logo" href="/"><img src="" alt="logo-IE"></a>
+        <nav>
+            <ul style="border: 1px solid red;" class="barraNavegacion__tabs">
+                <li><a class="enlace" href="/">Inicio</a></li>
+                <li><a class="enlace" href="/">Productos y servicios</a></li>
+                <li><a class="enlace" href="/">Crear pedido</a></li>
+                <li><a class="enlace" href="/">Galería</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul style="border: 1px solid red;" class="barraNavegacion__tabsUsuario">
+                <li>
+                    <!-- enlace+icono -->
+                    <a class="enlace" href="/">
+                        Bolsa
+                        <svg class="icono -t20">
+                            <use href="#icono-bolsa" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <!-- enlace+icono -->
+                    <a class="enlace" href="/">
+                        Perfil
+                        <svg class="icono -t20">
+                            <use href="#icono-usuario" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="enlace" href="/">
+                        Dashboard
+                        <svg class="icono -t20">
+                            <use href="#icono-dashboard" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="producto">
+            <div class="contenido">
+                <nav class="navegacionProducto">
+                    <a class="botonIcono -primario -grande" href="/">
+                        <svg>
+                            <use href="#icono-flecha-izquierda" />
+                        </svg>
+                    </a>
+                    <ul class="navegacionProducto__ruta">
+                        <li>
+                            <a class="ruta" href="/">
+                                <svg>
+                                    <use href="#icono-plataforma" />
+                                </svg>
+                                <h6>Productos y servicios</h6>
+                                <svg>
+                                    <use href="#icono-diamante-derecha" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ruta" href="/">
+                                <svg>
+                                    <use href="#icono-folder" />
+                                </svg>
+                                <h6>Paquetes de graduación</h6>
+                                <svg>
+                                    <use href="#icono-diamante-derecha" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="ruta" href="/">
+                                <svg>
+                                    <use href="#icono-archivo" />
+                                </svg>
+                                <h6>Productos y servicios</h6>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="producto__exhibidor">
+                    <ul class="exhibidor__imagenes">
+                        <li><a href="/"><img src="" alt="imagen 1"></a></li>
+                        <li><a href="/"><img src="" alt="imagen 2"></a></li>
+                        <li><a href="/"><img src="" alt="imagen 3"></a></li>
+                    </ul>
+                    <img class="exhibidor__actual" src="" alt="imagen actual">
+                </div>
+                <div class="producto__descripcion">
+                    <header class="descripcion__titulo">
+                        <h1>Paquete de graduación diamante</h1>
+                        <!-- controlEstrellas -->
+                        <ul class="caracteristicas__controlEstrellas">
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li>
+                                4.5
+                            </li>
+                        </ul>
+                        <!-- fin controlEstrellas -->
+                        <h3>$1850.00</h3>
+                    </header>
+                    <div class="descripcion__disponibilidad">
+                        <h3>Disponibles: 30</h3>
+                        <div class="controlNumerico">
+                            <a class="botonIcono -primario -grande" href="/">
+                                <svg>
+                                    <use href="#icono-mas" />
+                                </svg>
+                            </a>
+                            <p>1</p>
+                            <a class="botonIcono -primario -grande" href="/">
+                                <svg>
+                                    <use href="#icono-menos" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="descripcion__botonesCompra">
+                        <a class="boton -primario -mediano" href="/">Comprar ahora</a>
+                        <a class="boton -secundario -mediano" href="/">Agregar a la bolsa</a>
+                        <a class="boton -terciario -mediano" href="/">Crear pedido</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="separador"></div>
+        <section class="descripcion">
+            <div class="contenido">
+                <h1>Descripción</h1>
+                <h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim inventore officiis, tempore facilis
+                    quis
+                    eligendi reprehenderit! Exercitationem placeat itaque sunt, cum, dolor enim cupiditate neque
+                    quibusdam
+                    quis quae nesciunt ullam!
+                    Repellendus corporis maxime a, repellat mollitia quas, expedita voluptate veniam molestiae placeat
+                    sapiente nulla exercitationem ab praesentium quae possimus. Natus repellat dolores veniam iure sit
+                    itaque voluptatum, nobis id esse?
+                </h3>
+            </div>
+        </section>
+        <div class="separador"></div>
+        <section class="comentarios">
+            <h1>Comentarios</h1>
+            <div class="comentarios__tarjetas">
+                <!-- tarjetaComentario -->
+                <div class="tarjetaComentario">
+                    <div class="tarjetaComentario__usuario">
+                        <img class="avatar -t112" src="" alt="avatar usuario">
+                        <h4>Diana H.</h4>
+                    </div>
+                    <div class="tarjetaComentario__comentario">
+                        <!-- controlEstrellas -->
+                        <ul class="caracteristicas__controlEstrellas">
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                        </ul>
+                        <!-- fin controlEstrellas -->
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In ea exercitationem commodi
+                            repellat quia repudiandae at ab sequi ratione, tempora sint qui eaque minima optio amet
+                            dolore eos atque beatae.
+                            Repellendus aliquam atque veniam, blanditiis culpa modi! Odit cum magnam reiciendis
+                            corrupti, eligendi magni obcaecati vitae, veritatis qui possimus suscipit unde quaerat
+                            fugiat accusantium omnis, velit rem? Architecto, commodi est.
+                        </p>
+                    </div>
+                </div>
+                <!-- fin tarjetaComentario -->
+                <!-- tarjetaComentario -->
+                <div class="tarjetaComentario">
+                    <div class="tarjetaComentario__usuario">
+                        <img class="avatar -t112" src="" alt="avatar usuario">
+                        <h4>Diana H.</h4>
+                    </div>
+                    <div class="tarjetaComentario__comentario">
+                        <!-- controlEstrellas -->
+                        <ul class="caracteristicas__controlEstrellas">
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                        </ul>
+                        <!-- fin controlEstrellas -->
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In ea exercitationem commodi
+                            repellat quia repudiandae at ab sequi ratione, tempora sint qui eaque minima optio amet
+                            dolore eos atque beatae.
+                            Repellendus aliquam atque veniam, blanditiis culpa modi! Odit cum magnam reiciendis
+                            corrupti, eligendi magni obcaecati vitae, veritatis qui possimus suscipit unde quaerat
+                            fugiat accusantium omnis, velit rem? Architecto, commodi est.
+                        </p>
+                    </div>
+                </div>
+                <!-- fin tarjetaComentario -->
+                <!-- tarjetaComentario -->
+                <div class="tarjetaComentario">
+                    <div class="tarjetaComentario__usuario">
+                        <img class="avatar -t112" src="" alt="avatar usuario">
+                        <h4>Diana H.</h4>
+                    </div>
+                    <div class="tarjetaComentario__comentario">
+                        <!-- controlEstrellas -->
+                        <ul class="caracteristicas__controlEstrellas">
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                        </ul>
+                        <!-- fin controlEstrellas -->
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. In ea exercitationem commodi
+                            repellat quia repudiandae at ab sequi ratione, tempora sint qui eaque minima optio amet
+                            dolore eos atque beatae.
+                            Repellendus aliquam atque veniam, blanditiis culpa modi! Odit cum magnam reiciendis
+                            corrupti, eligendi magni obcaecati vitae, veritatis qui possimus suscipit unde quaerat
+                            fugiat accusantium omnis, velit rem? Architecto, commodi est.
+                        </p>
+                    </div>
+                </div>
+                <!-- fin tarjetaComentario -->
+                <div class="tarjetas__tarjetaNuevoComentario">
+                    <img class="tarjetaNuevoComentario__avatar" src="" alt="avatar usuario avatar">
+                    <form class="tarjetaNuevoComentario__entradas">
+                        <!-- controlEstrellas -->
+                        <ul class="caracteristicas__controlEstrellas">
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                            <li class="controlEstrellas__estrella">
+                                <svg>
+                                    <use href="#icono-estrella" />
+                                </svg>
+                            </li>
+                        </ul>
+                        <!-- fin controlEstrellas -->
+                        <div class="cajaComentario">
+                            <textarea class="entradas__texto" name="comentario" placeholder="Comentario"></textarea>
+                            <p>0/120</p>
+                        </div>
+                        <a class="boton -primario -mediano" href="/">Enviar</a>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="piePagina">
+        <div class="contenido">
+            <a style="border: 1px solid red;" class="piePagina__logo" href="/"><img src="" alt="logo-IE"></a>
+            <nav class="piePagina__navegacion">
+                <ul>
+                    <li><a class="enlace" href="/">Inicio</a></li>
+                    <li><a class="enlace" href="/">Productos y servicios</a></li>
+                    <li><a class="enlace" href="/">Crear pedido</a></li>
+                    <li><a class="enlace" href="/">Galería</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="piePagina__info">
+            <div class="info__divisor"></div>
+            <div class="info__texto">
+                <span class="texto__redes">Copyright ©️ AngelMaldonado | Industria Emblemática</span>
+                <ul class="texto__redes">
+                    <li class="redes__icono">
+                        <a class="botonIcono -t32" href="/">
+                            <svg>
+                                <use href="#icono-facebook" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="redes__icono">
+                        <a class="botonIcono -t32" href="/">
+                            <svg>
+                                <use href="#icono-instagram" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="redes__icono">
+                        <a class="botonIcono -t32" href="/">
+                            <svg>
+                                <use href="#icono-whatsapp" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="texto__contacto">
+                    <li>
+                        <!-- enlace+icono -->
+                        <a class="enlace" href="/">
+                            <svg class="icono -t32">
+                                <use href="#icono-celular" />
+                            </svg>
+                            +52 4445489505
+                        </a>
+                    </li>
+                    <li>
+                        <!-- enlace+icono -->
+                        <a class="enlace" href="/">
+                            <svg class="icono -t32">
+                                <use href="#icono-correo" />
+                            </svg>
+                            industriaemblematica@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="icono-plataforma">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M3 2.25C2.58579 2.25 2.25 2.58579 2.25 3V8.38462C2.25 8.79883 2.58579 9.13462 3 9.13462H8.38462C8.79883 9.13462 9.13462 8.79883 9.13462 8.38462V3C9.13462 2.58579 8.79883 2.25 8.38462 2.25H3ZM3.75 7.63462V3.75H7.63462V7.63462H3.75Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11.6154 2.25C11.2012 2.25 10.8654 2.58579 10.8654 3V8.38462C10.8654 8.79883 11.2012 9.13462 11.6154 9.13462H17C17.4142 9.13462 17.75 8.79883 17.75 8.38462V3C17.75 2.58579 17.4142 2.25 17 2.25H11.6154ZM12.3654 7.63462V3.75H16.25V7.63462H12.3654Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M2.25 11.6154C2.25 11.2012 2.58579 10.8654 3 10.8654H8.38462C8.79883 10.8654 9.13462 11.2012 9.13462 11.6154V17C9.13462 17.4142 8.79883 17.75 8.38462 17.75H3C2.58579 17.75 2.25 17.4142 2.25 17V11.6154ZM3.75 12.3654V16.25H7.63462V12.3654H3.75Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11.6154 10.8654C11.2012 10.8654 10.8654 11.2012 10.8654 11.6154V17C10.8654 17.4142 11.2012 17.75 11.6154 17.75H17C17.4142 17.75 17.75 17.4142 17.75 17V11.6154C17.75 11.2012 17.4142 10.8654 17 10.8654H11.6154ZM12.3654 16.25V12.3654H16.25V16.25H12.3654Z" />
+    </g>
+</svg>
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="icono-diamante-derecha">
+        <path id="Icon/Back (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+            d="M13.5303 9.46967L13 10L13.5303 10.5303C13.8232 10.2374 13.8232 9.76256 13.5303 9.46967ZM11.9393 10L5.46967 16.4697C5.17678 16.7626 5.17678 17.2374 5.46967 17.5303C5.76256 17.8232 6.23744 17.8232 6.53033 17.5303L13.5303 10.5303C13.5304 10.5303 13.5303 10.5303 13 10C13.5303 9.46967 13.5304 9.4697 13.5303 9.46967L6.53033 2.46967C6.23744 2.17678 5.76256 2.17678 5.46967 2.46967C5.17678 2.76256 5.17678 3.23744 5.46967 3.53033L11.9393 10Z" />
+    </g>
+</svg>
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="icono-folder">
+        <path id="Vector"
+            d="M7.82198 5.26548L9.48865 6.93215H16.847V15.2655H3.51365V5.26548H7.82198ZM8.51365 3.59882H3.51365C2.59698 3.59882 1.85532 4.34882 1.85532 5.26548L1.84698 15.2655C1.84698 16.1821 2.59698 16.9321 3.51365 16.9321H16.847C17.7637 16.9321 18.5137 16.1821 18.5137 15.2655V6.93215C18.5137 6.01548 17.7637 5.26548 16.847 5.26548H10.1803L8.51365 3.59882Z" />
+    </g>
+</svg>
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="icono-archivo">
+        <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd"
+            d="M5.84244 3.45001C5.73264 3.45001 5.63085 3.49277 5.55856 3.56334C5.48688 3.63333 5.45001 3.72437 5.45001 3.8154V16.0846C5.45001 16.1757 5.48688 16.2667 5.55856 16.3367C5.63085 16.4073 5.73264 16.45 5.84244 16.45H14.1243C14.2341 16.45 14.3358 16.4073 14.4081 16.3367C14.4798 16.2667 14.5167 16.1757 14.5167 16.0846V5.95041C14.5167 5.95046 14.5167 5.95035 14.5167 5.95041C14.5166 5.85956 14.4798 5.76857 14.4084 5.69868M14.4084 5.69868L12.2212 3.56326C12.149 3.49278 12.0473 3.45008 11.9377 3.45001C11.9377 3.45001 11.9376 3.45001 11.9377 3.45001H5.84244M14.1243 17.95C14.6204 17.95 15.0998 17.7577 15.456 17.41C15.8128 17.0616 16.0167 16.5852 16.0167 16.0846V5.95024C16.0166 5.44999 15.8129 4.9738 15.4564 4.62556L13.2689 2.48981C12.9128 2.14239 12.4336 1.95012 11.9378 1.95001H5.84244C5.34625 1.95001 4.86688 2.14229 4.51068 2.49006C4.15387 2.83843 3.95001 3.31479 3.95001 3.8154V16.0846C3.95001 16.5852 4.15387 17.0616 4.51068 17.41C4.86688 17.7577 5.34625 17.95 5.84244 17.95H14.1243Z" />
+    </g>
+</svg>
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="icono-mas">
+        <path id="Union"
+            d="M10.75 3C10.75 2.58579 10.4142 2.25 10 2.25C9.58579 2.25 9.25 2.58579 9.25 3V9.25H3C2.58579 9.25 2.25 9.58579 2.25 10C2.25 10.4142 2.58579 10.75 3 10.75H9.25V17C9.25 17.4142 9.58579 17.75 10 17.75C10.4142 17.75 10.75 17.4142 10.75 17V10.75H17C17.4142 10.75 17.75 10.4142 17.75 10C17.75 9.58579 17.4142 9.25 17 9.25H10.75V3Z" />
+    </g>
+</svg>
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="icono-menos">
+        <path id="Vector"
+            d="M2 10C2 9.73478 2.10536 9.48043 2.29289 9.29289C2.48043 9.10536 2.73478 9 3 9H17C17.2652 9 17.5196 9.10536 17.7071 9.29289C17.8946 9.48043 18 9.73478 18 10C18 10.2652 17.8946 10.5196 17.7071 10.7071C17.5196 10.8946 17.2652 11 17 11H3C2.73478 11 2.48043 10.8946 2.29289 10.7071C2.10536 10.5196 2 10.2652 2 10Z" />
+    </g>
+</svg>
