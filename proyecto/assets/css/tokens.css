@@ -18,6 +18,8 @@
     --color-primario: #105F7D;
     --color-primario-hover: #4F9BB9;
     --color-primario-seleccionado: #B5EAFF;
+    --color-primario-a085: rgba(181, 234, 255, 0.85);
+    --color-primario-fondo-a08: rgba(255, 255, 255, 0.8);
     --color-secundario: #00C875;
     --color-positivo: #258750;
     --color-positivo-hover: #007038;
@@ -108,7 +110,8 @@ h6 {
 }
 
 /* Paragraph */
-p {
+p,
+a {
     font-size: 16px;
     font-weight: normal;
 }
@@ -117,4 +120,26 @@ p {
 span {
     font-size: 14px;
     font-weight: normal;
+}
+
+/*
+████████╗░█████╗░███╗░░░███╗░█████╗░███╗░░██╗░█████╗░░██████╗
+╚══██╔══╝██╔══██╗████╗░████║██╔══██╗████╗░██║██╔══██╗██╔════╝
+░░░██║░░░███████║██╔████╔██║███████║██╔██╗██║██║░░██║╚█████╗░
+░░░██║░░░██╔══██║██║╚██╔╝██║██╔══██║██║╚████║██║░░██║░╚═══██╗
+░░░██║░░░██║░░██║██║░╚═╝░██║██║░░██║██║░╚███║╚█████╔╝██████╔╝
+░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚════╝░╚═════╝░
+*/
+.-t20 {
+    width: 2rem;
+    height: 2rem;
+}
+
+.-t235 {
+    width: 23.5rem;
+}
+
+.-grande {
+    width: 4.8rem;
+    height: 4.8rem;
 }

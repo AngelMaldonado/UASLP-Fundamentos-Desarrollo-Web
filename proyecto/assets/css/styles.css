@@ -5,6 +5,9 @@
 *******************************************/
 
 @import '/assets/css/tokens.css';
+@import '/assets/css/componentes.css';
+@import '/assets/css/inicio.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 /*
 ██████╗░███████╗░██████╗███████╗████████╗
@@ -55,8 +58,6 @@ video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 
@@ -82,4 +83,23 @@ body {
 ol,
 ul {
     list-style: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /** Reset para REMS - 62.5% = 10px de 16px **/
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* DISTRIBUCION GENERAL */
+section {
+    padding: 0 6.4rem;
+    height: 100vh;
 }

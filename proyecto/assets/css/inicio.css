@@ -1,0 +1,171 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Sun Jun 12 2022
+*  File : inicio.css
+*******************************************/
+
+.hero,
+.introduccionIzquierda,
+.introduccionDerecha {
+    padding: 0;
+}
+
+.experiencia>.contenido,
+.mejoresProductos>.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+
+    width: 100%;
+    height: 100%;
+}
+
+.slidesContenedor {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.slidesContenedor__anteriorSiguiente {
+    position: absolute;
+    padding: 0 6.4rem;
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.slidesContenedor__slides {
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.slides__slide {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: end;
+    flex-direction: column;
+    padding: 6.4rem;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url('https://picsum.photos/1920');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide__descripcion {
+    display: flex;
+    gap: 1.8rem;
+    padding: 1.2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 61.1rem;
+
+    border-radius: var(--borde-radio-mediano);
+    background-color: var(--color-primario-fondo-a08);
+}
+
+.introduccionIzquierda>.contenido,
+.introduccionDerecha>.contenido {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    height: 90%;
+}
+
+.tarjetaInicio {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.2rem 6.4rem;
+
+    width: 58vw;
+    height: 68vh;
+
+    color: var(--color-blanco);
+    background-color: var(--color-secundario);
+    filter: var(--sombra-grande);
+}
+
+.introduccionIzquierda>.contenido>.tarjetaInicio:first-child,
+.introduccionDerecha>.contenido>.tarjetaInicio:first-child {
+    background-image: url('https://picsum.photos/1920');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.introduccionDerecha>.contenido>.tarjetaInicio:last-child,
+.introduccionIzquierda>.contenido>.tarjetaInicio:first-child {
+    border-radius: 0rem 5rem 5rem 0rem;
+}
+
+.introduccionIzquierda>.contenido>.tarjetaInicio:last-child,
+.introduccionDerecha>.contenido>.tarjetaInicio:first-child {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    border-radius: 5rem 0rem 0rem 5rem;
+}
+
+.experiencia__tarjetas {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.tarjetaExperiencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+
+    text-align: center;
+
+    width: 29.7rem;
+    height: fit-content;
+}
+
+.tarjetaExperiencia>.iconoContenedor {
+    width: 80%;
+}
+
+.tarjetaExperiencia>h1 {
+    color: var(--color-positivo);
+}
+
+.mejoresProductos {
+    background-color: var(--color-primario-hover);
+}
+
+.mejoresProductos>.contenido>h1 {
+    color: var(--color-blanco);
+}
+
+.mejoresProductos__tarjetas {
+    display: flex;
+}
+
+.tarjetaProducto {
+    display: inherit;
+}
