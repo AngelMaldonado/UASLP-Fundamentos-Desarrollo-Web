@@ -18,9 +18,9 @@
     background-color: var(--color-primario-a085);
 }
 
-.barraNavegacion__logo {
+.barraNavegacion__logo,
+.piePagina__logo {
     width: 9.1rem;
-    /* width: 19.3rem; */
 
     background-image: url(/assets/svg/logo-ie.svg);
     background-repeat: no-repeat;
@@ -28,28 +28,65 @@
     background-size: contain;
 }
 
+.piePagina__logo {
+    width: 19.3rem;
+    height: 10.2rem;
+}
+
 .barraNavegacion__tabs {
     display: flex;
     gap: 1.2rem;
 }
 
-/* ICONOS */
+/*
+██╗░█████╗░░█████╗░███╗░░██╗░█████╗░░██████╗
+██║██╔══██╗██╔══██╗████╗░██║██╔══██╗██╔════╝
+██║██║░░╚═╝██║░░██║██╔██╗██║██║░░██║╚█████╗░
+██║██║░░██╗██║░░██║██║╚████║██║░░██║░╚═══██╗
+██║╚█████╔╝╚█████╔╝██║░╚███║╚█████╔╝██████╔╝
+╚═╝░╚════╝░░╚════╝░╚═╝░░╚══╝░╚════╝░╚═════╝░
+*/
 svg {
     fill: currentColor;
 }
 
-/* BOTONES Y ENLACES */
-/* botonIcono -primario */
+.icono {
+    background-color: transparent !important;
+    color: var(--color-primario);
+
+    border-radius: 50%;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+/*
+██████╗░░█████╗░████████╗░█████╗░███╗░░██╗███████╗░██████╗
+██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗████╗░██║██╔════╝██╔════╝
+██████╦╝██║░░██║░░░██║░░░██║░░██║██╔██╗██║█████╗░░╚█████╗░
+██╔══██╗██║░░██║░░░██║░░░██║░░██║██║╚████║██╔══╝░░░╚═══██╗
+██████╦╝╚█████╔╝░░░██║░░░╚█████╔╝██║░╚███║███████╗██████╔╝
+╚═════╝░░╚════╝░░░░╚═╝░░░░╚════╝░╚═╝░░╚══╝╚══════╝╚═════╝░
+*/
 .-primario {
     color: var(--color-primario-seleccionado);
     background-color: var(--color-primario);
 }
 
+.-secundario {
+    color: var(--color-blanco);
+    background-color: var(--color-secundario);
+}
+
 .enlace,
 .botonIcono,
 .boton,
-.iconoContenedor {
+.iconoContenedor,
+.controlEstrellas,
+.icono {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 0.4rem;
 
@@ -60,11 +97,18 @@ svg {
     transition: all 0.3s;
 }
 
-.enlace:hover,
-.botonIcono:hover,
-.boton:hover {
+.-primario:hover,
+.enlace:hover {
     color: var(--color-primario-seleccionado);
     background-color: var(--color-primario-hover);
+}
+
+.-secundario:hover {
+    background-color: var(--color-secundario-hover);
+}
+
+.icono:hover {
+    color: var(--color-primario-hover);
 }
 
 .boton,
@@ -78,9 +122,14 @@ svg {
 }
 
 .botonIcono>svg,
-.iconoContenedor>svg {
+.iconoContenedor>svg,
+.icono>svg {
     width: 100%;
     height: 100%;
+}
+
+.controlEstrellas {
+    color: var(--color-amarillo-habilitado);
 }
 
 .boton {
@@ -122,4 +171,73 @@ svg {
 
 .iconoContenedor>svg {
     padding: 2.4rem;
+}
+
+/*
+████████╗░█████╗░██████╗░░░░░░██╗███████╗████████╗░█████╗░░██████╗
+╚══██╔══╝██╔══██╗██╔══██╗░░░░░██║██╔════╝╚══██╔══╝██╔══██╗██╔════╝
+░░░██║░░░███████║██████╔╝░░░░░██║█████╗░░░░░██║░░░███████║╚█████╗░
+░░░██║░░░██╔══██║██╔══██╗██╗░░██║██╔══╝░░░░░██║░░░██╔══██║░╚═══██╗
+░░░██║░░░██║░░██║██║░░██║╚█████╔╝███████╗░░░██║░░░██║░░██║██████╔╝
+░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚══════╝░░░╚═╝░░░╚═╝░░╚═╝╚═════╝░
+*/
+.tarjetaProducto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    width: 26.8rem;
+    height: 38.8rem;
+    background-image: url('https://picsum.photos/1920');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: var(--borde-radio-grande);
+    filter: var(--sombra-mediana);
+    overflow: hidden;
+}
+
+.tarjetaProducto__titulo {
+    padding: 1.2rem;
+
+    width: 100%;
+    height: fit-content;
+
+    background-color: var(--color-primario-a085);
+
+    filter: var(--sombra-chica);
+}
+
+.tarjetaProducto__caracteristicas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.2rem;
+    position: absolute;
+    bottom: -36%;
+
+    width: 100%;
+    height: fit-content;
+
+    background-color: var(--color-primario-a085);
+
+    transition: all 0.3s;
+}
+
+.tarjetaProducto__caracteristicas>h2 {
+    color: var(--color-secundario);
+}
+
+.tarjetaProducto__caracteristicas>.controlEstrellas {
+    justify-content: flex-start;
+}
+
+.tarjetaProducto__caracteristicas>.boton {
+    width: 100%;
+}
+
+.tarjetaProducto:hover .tarjetaProducto__caracteristicas {
+    bottom: 0;
 }

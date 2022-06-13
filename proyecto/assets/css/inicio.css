@@ -6,7 +6,9 @@
 
 .hero,
 .introduccionIzquierda,
-.introduccionDerecha {
+.introduccionDerecha,
+.testimoniales,
+.siguenos {
     padding: 0;
 }
 
@@ -164,8 +166,146 @@
 
 .mejoresProductos__tarjetas {
     display: flex;
+    justify-content: space-between;
+
+    width: 100%;
 }
 
-.tarjetaProducto {
-    display: inherit;
+.testimoniales {
+    position: relative;
+}
+
+.testimoniales>.contenido>h1 {
+    position: absolute;
+    z-index: 1;
+
+    top: 6.4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: var(--color-blanco);
+}
+
+.testimoniales>.contenido>.slidesContenedor>.slidesContenedor__slides>.slides__slide {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 12.8rem;
+}
+
+.slides__slide>.usuario {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    text-align: center;
+
+    max-width: 25.6rem;
+    height: fit-content;
+}
+
+.usuario__info {
+    padding: 1.2rem;
+
+    background: var(--color-primario-fondo-a08);
+
+    border-radius: var(--borde-radio-mediano);
+}
+
+.slides__slide>.cita {
+    padding: 1.2rem;
+
+    max-width: 61.1rem;
+    background-color: var(--color-primario-fondo-a08);
+    color: black;
+
+    border-radius: var(--borde-radio-mediano);
+}
+
+.siguenos>.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 6.4rem;
+    padding-top: 6.4rem;
+
+    height: 85%;
+
+    color: var(--color-blanco);
+    text-align: center;
+
+    background-image: url('https://picsum.photos/1920');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 0 0 5rem 5rem;
+}
+
+.siguenos>.contenido>nav {
+    display: flex;
+    align-items: center;
+
+    width: 61.2rem;
+    height: 100%;
+}
+
+.redes {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: fit-content;
+}
+
+.piePagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 3.2rem;
+    padding: 1.2rem 6.4rem;
+}
+
+.piePagina>.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.piePagina__navegacion {
+    display: flex;
+    gap: 3.2rem;
+}
+
+.piePagina__navegacion>li>.enlace {
+    width: fit-content;
+}
+
+.piePagina__info>.info__texto,
+.piePagina__info>.info__texto>*,
+.piePagina__info {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.piePagina__info {
+    flex-direction: column;
+    gap: 0.8rem;
+
+    width: 100%;
+}
+
+.piePagina__info>.info__divisor {
+    width: 100%;
+    height: 0.4rem;
+    background-color: var(--color-primario);
+    border-radius: 0.4rem;
+}
+
+.piePagina__info>.info__texto {
+    align-items: center;
 }
