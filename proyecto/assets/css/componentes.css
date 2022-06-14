@@ -145,7 +145,8 @@
 ╚══════╝╚═╝░░╚══╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░
 */
 .cajaBusqueda,
-.cajaAreaTexto {
+.cajaAreaTexto,
+.cajaDesplegable {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -164,7 +165,8 @@
 
 .cajaBusqueda>input,
 .cajaBusqueda>a,
-.cajaAreaTexto__entrada {
+.cajaAreaTexto__entrada,
+.cajaDesplegable {
     color: var(--color-placeholder);
 }
 

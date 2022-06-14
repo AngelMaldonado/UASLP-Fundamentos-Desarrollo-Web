@@ -1,0 +1,52 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Tue Jun 14 2022
+*  File : personalizacionProducto.css
+*******************************************/
+
+.producto {
+    height: fit-content;
+    padding-bottom: 6.4rem;
+}
+
+.personalizacion__productoInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personalizacion__productoInfo>*,
+.personalizacion__productoInfo>*>* {
+    align-items: center;
+}
+
+.personalizacion {
+    position: relative;
+    padding: 3.2rem;
+
+    height: 100%;
+
+    background-color: var(--color-blanco);
+
+    border-radius: var(--borde-radio-grande);
+    filter: var(--sombra-mediana);
+    overflow-y: scroll;
+}
+
+.personalizacion__campos {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    height: fit-content;
+}
+
+.campos__botones {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.campos__botones>.boton {
+    width: 100%;
+}

@@ -92,7 +92,8 @@ h3 {
 }
 
 /* Fourth heading */
-h4 {
+h4,
+label {
     font-size: 18px;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -105,14 +106,17 @@ h5 {
 }
 
 /* Ui text */
-h6 {
+h6,
+option,
+.cajaOpcionesRadio>label {
     font-size: 14px;
     font-weight: normal;
 }
 
 /* Paragraph */
 p,
-a {
+a,
+select {
     font-size: 16px;
     font-weight: normal;
 }
