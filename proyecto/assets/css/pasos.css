@@ -1,0 +1,57 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Tue Jun 14 2022
+*  File : pasos.css
+*******************************************/
+
+.pasos {
+    height: fit-content;
+}
+
+.pasos__trayectoria {
+    height: 100%;
+    width: 2rem;
+    border-radius: 4rem;
+    background-color: var(--color-primario);
+}
+
+.pasos>.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+}
+
+.contenido__paso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido__paso>.XL {
+    color: var(--color-secundario);
+}
+
+.contenido__paso>h3 {
+    width: 50rem;
+}
+
+.notas {
+    text-align: center;
+    height: fit-content;
+    padding-bottom: 6.4rem;
+}
+
+.notas>ul {
+    list-style-type: disc;
+    text-align: left;
+}
+
+.notas>ul>li {
+    margin-bottom: 2.4rem;
+}
+
+.notas>.boton {
+    margin: 0 auto;
+}
