@@ -38,6 +38,13 @@
     gap: 1.2rem;
 }
 
+.separador {
+    width: 100%;
+    height: 0.4rem;
+    background-color: var(--color-borde-ui);
+    border-radius: 0.4rem;
+}
+
 /*
 ░█████╗░░█████╗░███╗░░██╗████████╗███████╗███╗░░██╗███████╗██████╗░░█████╗░██████╗░███████╗░██████╗
 ██╔══██╗██╔══██╗████╗░██║╚══██╔══╝██╔════╝████╗░██║██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝
@@ -82,6 +89,53 @@
     gap: 1.2rem;
 }
 
+.tarjetaComentario {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 2.4rem;
+    gap: 3.2rem;
+
+    width: 100%;
+
+    background-color: var(--color-blanco);
+
+    border-radius: var(--borde-radio-grande);
+    filter: var(--sombra-chica);
+}
+
+.tarjetaComentario__usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.tarjetaComentario__comentario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.tarjetaNuevoComentario {
+    display: flex;
+    gap: 6rem;
+}
+
+.tarjetaNuevoComentario>.avatar {
+    width: 20.4rem;
+    height: 20.4rem;
+}
+
+.tarjetaNuevoComentario__entradas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+
+    width: 100%;
+}
+
 /*
 ███████╗███╗░░██╗████████╗██████╗░░█████╗░██████╗░░█████╗░░██████╗
 ██╔════╝████╗░██║╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝
@@ -90,7 +144,8 @@
 ███████╗██║░╚███║░░░██║░░░██║░░██║██║░░██║██████╔╝██║░░██║██████╔╝
 ╚══════╝╚═╝░░╚══╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░
 */
-.cajaBusqueda {
+.cajaBusqueda,
+.cajaAreaTexto {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -102,9 +157,14 @@
     border-radius: var(--borde-radio-chico);
 }
 
-.cajaBusqueda>input,
-.cajaBusqueda>a {
+.cajaAreaTexto {
+    justify-content: space-between;
+    gap: 0;
+}
 
+.cajaBusqueda>input,
+.cajaBusqueda>a,
+.cajaAreaTexto__entrada {
     color: var(--color-placeholder);
 }
 
@@ -118,8 +178,32 @@
     font-size: 14px;
 }
 
-.cajaBusqueda>input:focus {
+.cajaBusqueda>input:focus,
+.cajaAreaTexto__entrada {
     color: var(--color-negro);
+}
+
+.controlNumerico {
+    display: flex;
+}
+
+.controlNumerico>.botonIcono:first-child {
+    border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.controlNumerico>.botonIcono:last-child {
+    border-radius: 0 0.4rem 0.4rem 0;
+}
+
+.controlNumerico>p {
+    /*alinear horizontal y verticalmente*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 7.4rem;
+
+    border: 0.2rem solid var(--color-borde-ui);
 }
 
 /*
@@ -226,6 +310,10 @@ svg {
 
 .controlEstrellas {
     color: var(--color-amarillo-habilitado);
+}
+
+.controlEstrellas>li:last-child {
+    color: var(--color-negro);
 }
 
 .boton {
