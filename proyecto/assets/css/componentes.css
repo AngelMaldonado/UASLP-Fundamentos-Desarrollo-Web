@@ -39,6 +39,90 @@
 }
 
 /*
+░█████╗░░█████╗░███╗░░██╗████████╗███████╗███╗░░██╗███████╗██████╗░░█████╗░██████╗░███████╗░██████╗
+██╔══██╗██╔══██╗████╗░██║╚══██╔══╝██╔════╝████╗░██║██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝
+██║░░╚═╝██║░░██║██╔██╗██║░░░██║░░░█████╗░░██╔██╗██║█████╗░░██║░░██║██║░░██║██████╔╝█████╗░░╚█████╗░
+██║░░██╗██║░░██║██║╚████║░░░██║░░░██╔══╝░░██║╚████║██╔══╝░░██║░░██║██║░░██║██╔══██╗██╔══╝░░░╚═══██╗
+╚█████╔╝╚█████╔╝██║░╚███║░░░██║░░░███████╗██║░╚███║███████╗██████╔╝╚█████╔╝██║░░██║███████╗██████╔╝
+░╚════╝░░╚════╝░╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚══╝╚══════╝╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚═════╝░
+*/
+
+.portada {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 6.4rem;
+    flex-direction: column;
+
+    background-image: url('https://picsum.photos/1920');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.portada__titulo {
+    padding: 1.2rem;
+
+    width: fit-content;
+
+    background-color: var(--color-primario-fondo-a08);
+
+    border-radius: var(--borde-radio-mediano);
+}
+
+.paginas {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+
+    padding-bottom: 8rem;
+}
+
+.paginas>ul {
+    display: flex;
+    gap: 1.2rem;
+}
+
+/*
+███████╗███╗░░██╗████████╗██████╗░░█████╗░██████╗░░█████╗░░██████╗
+██╔════╝████╗░██║╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝
+█████╗░░██╔██╗██║░░░██║░░░██████╔╝███████║██║░░██║███████║╚█████╗░
+██╔══╝░░██║╚████║░░░██║░░░██╔══██╗██╔══██║██║░░██║██╔══██║░╚═══██╗
+███████╗██║░╚███║░░░██║░░░██║░░██║██║░░██║██████╔╝██║░░██║██████╔╝
+╚══════╝╚═╝░░╚══╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░
+*/
+.cajaBusqueda {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+
+    width: 40.2rem;
+
+    border: 0.2rem solid var(--color-borde-ui);
+    border-radius: var(--borde-radio-chico);
+}
+
+.cajaBusqueda>input,
+.cajaBusqueda>a {
+
+    color: var(--color-placeholder);
+}
+
+.cajaBusqueda>a {
+    z-index: 1;
+}
+
+.cajaBusqueda>input {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+
+.cajaBusqueda>input:focus {
+    color: var(--color-negro);
+}
+
+/*
 ██╗░█████╗░░█████╗░███╗░░██╗░█████╗░░██████╗
 ██║██╔══██╗██╔══██╗████╗░██║██╔══██╗██╔════╝
 ██║██║░░╚═╝██║░░██║██╔██╗██║██║░░██║╚█████╗░
@@ -79,6 +163,10 @@ svg {
     background-color: var(--color-secundario);
 }
 
+.-terciario {
+    color: var(--color-primario);
+}
+
 .enlace,
 .botonIcono,
 .boton,
@@ -103,8 +191,16 @@ svg {
     background-color: var(--color-primario-hover);
 }
 
+.etiqueta:hover {
+    background-color: var(--color-primario-hover);
+}
+
 .-secundario:hover {
     background-color: var(--color-secundario-hover);
+}
+
+.-terciario:hover {
+    background-color: var(--color-primario-seleccionado);
 }
 
 .icono:hover {
@@ -141,6 +237,16 @@ svg {
 .enlace {
     color: var(--color-primario);
     padding: 0.8rem 1.6rem;
+}
+
+.etiqueta {
+    padding: 0.2rem 0.8rem;
+
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+
+    border-radius: var(--borde-radio-chico);
+    transition: all 0.3s;
 }
 
 .botonIcono {

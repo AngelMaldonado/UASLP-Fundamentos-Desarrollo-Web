@@ -1,0 +1,32 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Mon Jun 13 2022
+*  File : productosServicios.css
+*******************************************/
+
+.barraBusqueda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 6.4rem;
+
+    width: 100vw;
+    max-width: 100%;
+
+    background-color: var(--color-primario-a085);
+}
+
+.barraBusqueda__categorias {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.tarjetasProductos {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 4rem;
+    padding-top: 6.4rem;
+    padding-bottom: 2.4rem;
+
+    height: 100%;
+}
