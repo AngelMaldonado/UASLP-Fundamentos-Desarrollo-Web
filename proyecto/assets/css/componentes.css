@@ -410,6 +410,11 @@
     color: var(--color-amarillo-habilitado);
 }
 
+.controlEstrellas__estrella {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
 .controlEstrellas>li:last-child {
     color: var(--color-negro);
 }
