@@ -4,13 +4,14 @@
 *  File : styles.css
 *******************************************/
 
-@import '/assets/css/tokens.css';
 @import '/assets/css/componentes.css';
 @import '/assets/css/inicio.css';
 @import '/assets/css/productosServicios.css';
 @import '/assets/css/verProductoServicio.css';
 @import '/assets/css/personalizacionProducto.css';
 @import '/assets/css/pasos.css';
+@import '/assets/css/informacionDelPedido.css';
+@import '/assets/css/tokens.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 /*
@@ -63,7 +64,6 @@ video {
     padding: 0;
     border: 0;
     vertical-align: baseline;
-    text-decoration: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -79,24 +79,6 @@ menu,
 nav,
 section {
     display: block;
-}
-
-input,
-textarea {
-    background: transparent;
-    border: 0;
-    resize: none;
-    font-family: inherit;
-    font-size: 1.6rem;
-}
-
-input:focus,
-textarea {
-    outline: none;
-}
-
-body {
-    line-height: 1;
 }
 
 ol,
@@ -115,18 +97,47 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+textarea {
+    background: transparent;
+    border: 0;
+    resize: none;
+    font-family: inherit;
+}
+
+input:focus,
+textarea {
+    outline: none;
+}
+
+body {
+    line-height: 1;
 }
 
 /* DISTRIBUCION GENERAL */
-img {
+img,
+svg {
     width: 100%;
     height: 100%;
 }
 
 section {
     padding: 0 6.4rem;
+    height: 100vh;
 }
 
-section {
-    height: 100vh;
+@media screen and (max-width: 576px) {
+    section {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
 }

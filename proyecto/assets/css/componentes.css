@@ -6,36 +6,72 @@
 
 /* BARRA DE NAVEGACION PRINCIPAL */
 .barraNavegacion {
+    /* Distribucion */
     position: absolute;
-    z-index: 1;
-    display: flex;
     justify-content: space-between;
+    display: flex;
+    align-items: center;
     padding: 1.2rem 6.4rem;
 
+    /* Apariencia */
+    z-index: 2;
     width: 100vw;
     max-width: 100%;
-
     background-color: var(--color-primario-a085);
 }
 
-.barraNavegacion__logo,
-.piePagina__logo {
-    width: 9.1rem;
-
-    background-image: url(/assets/svg/logo-ie.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.piePagina__logo {
-    width: 19.3rem;
-    height: 10.2rem;
+.barraNavegacion__logo {
+    width: 10%
 }
 
 .barraNavegacion__tabs {
     display: flex;
-    gap: 1.2rem;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.barraNavegacion__contenedor>.enlace:last-child {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .barraNavegacion {
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    .barraNavegacion__contenedor {
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+    }
+
+    .barraNavegacion__contenedor>.enlace:last-child {
+        display: flex;
+        height: 100%;
+    }
+
+    .barraNavegacion__tabs {
+        display: none;
+    }
+
+    .barraNavegacion__tabs.activo {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .barraNavegacion {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+}
+
+.piePagina__logo {
+    width: 22%;
 }
 
 .separador {
@@ -53,6 +89,74 @@
 ╚█████╔╝╚█████╔╝██║░╚███║░░░██║░░░███████╗██║░╚███║███████╗██████╔╝╚█████╔╝██║░░██║███████╗██████╔╝
 ░╚════╝░░╚════╝░╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚══╝╚══════╝╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚═════╝░
 */
+
+.contenedorResponsivo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+
+    width: 100%;
+    height: 100%;
+}
+
+.slidesContenedor {
+    /* Distribucion */
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    /* Apariencia */
+    overflow: hidden;
+}
+
+.slidesContenedor__control {
+    /* Distribucion */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6.4rem;
+
+    /* Apariencia */
+    width: 100%;
+    z-index: 1;
+}
+
+.slidesContenedor__slides {
+    /* Distribucion */
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    /* Distribucion */
+    flex-shrink: 0;
+    display: flex;
+    padding: 6.4rem;
+
+    /* Apariencia */
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 576px) {
+
+    .slide,
+    .slidesContenedor__control {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+}
 
 .portada {
     display: flex;
@@ -146,7 +250,8 @@
 */
 .cajaBusqueda,
 .cajaAreaTexto,
-.cajaDesplegable {
+.cajaDesplegable,
+.cajaTexto {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -166,22 +271,26 @@
 .cajaBusqueda>input,
 .cajaBusqueda>a,
 .cajaAreaTexto__entrada,
+.cajaTexto,
 .cajaDesplegable {
     color: var(--color-placeholder);
 }
 
-.cajaBusqueda>a {
+.cajaBusqueda>a,
+.cajaTexto {
     z-index: 1;
 }
 
-.cajaBusqueda>input {
+.cajaBusqueda>input,
+.cajaTexto {
     width: 100%;
     height: 100%;
     font-size: 14px;
 }
 
 .cajaBusqueda>input:focus,
-.cajaAreaTexto__entrada {
+.cajaAreaTexto__entrada,
+.cajaTexto {
     color: var(--color-negro);
 }
 
@@ -209,35 +318,16 @@
 }
 
 /*
-██╗░█████╗░░█████╗░███╗░░██╗░█████╗░░██████╗
-██║██╔══██╗██╔══██╗████╗░██║██╔══██╗██╔════╝
-██║██║░░╚═╝██║░░██║██╔██╗██║██║░░██║╚█████╗░
-██║██║░░██╗██║░░██║██║╚████║██║░░██║░╚═══██╗
-██║╚█████╔╝╚█████╔╝██║░╚███║╚█████╔╝██████╔╝
-╚═╝░╚════╝░░╚════╝░╚═╝░░╚══╝░╚════╝░╚═════╝░
-*/
-svg {
-    fill: currentColor;
-}
-
-.icono {
-    background-color: transparent !important;
-    color: var(--color-primario);
-
-    border-radius: 50%;
-}
-
-.avatar {
-    border-radius: 50%;
-}
-
-/*
 ██████╗░░█████╗░████████╗░█████╗░███╗░░██╗███████╗░██████╗
 ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗████╗░██║██╔════╝██╔════╝
 ██████╦╝██║░░██║░░░██║░░░██║░░██║██╔██╗██║█████╗░░╚█████╗░
 ██╔══██╗██║░░██║░░░██║░░░██║░░██║██║╚████║██╔══╝░░░╚═══██╗
 ██████╦╝╚█████╔╝░░░██║░░░╚█████╔╝██║░╚███║███████╗██████╔╝
 ╚═════╝░░╚════╝░░░░╚═╝░░░░╚════╝░╚═╝░░╚══╝╚══════╝╚═════╝░
+*/
+/*
+█▀▄▀█ █▀█ █▀▄ █ █▀▀ █ █▀▀ ▄▀█ █▀▄ █▀█ █▀█ █▀▀ █▀
+█░▀░█ █▄█ █▄▀ █ █▀░ █ █▄▄ █▀█ █▄▀ █▄█ █▀▄ ██▄ ▄█
 */
 .-primario {
     color: var(--color-primario-seleccionado);
@@ -253,31 +343,8 @@ svg {
     color: var(--color-primario);
 }
 
-.enlace,
-.botonIcono,
-.boton,
-.iconoContenedor,
-.controlEstrellas,
-.icono {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4rem;
-
-    text-align: center;
-    text-decoration: none;
-
-    z-index: 1;
-    transition: all 0.3s;
-}
-
-.-primario:hover,
-.enlace:hover {
+.-primario:hover {
     color: var(--color-primario-seleccionado);
-    background-color: var(--color-primario-hover);
-}
-
-.etiqueta:hover {
     background-color: var(--color-primario-hover);
 }
 
@@ -289,25 +356,54 @@ svg {
     background-color: var(--color-primario-seleccionado);
 }
 
+.-grande {
+    height: 4.8rem;
+}
+
+/*
+█▀▄ █ █▀ ▀█▀ █▀█ █ █▄▄ █░█ █▀▀ █ █▀█ █▄░█
+█▄▀ █ ▄█ ░█░ █▀▄ █ █▄█ █▄█ █▄▄ █ █▄█ █░▀█
+*/
+.enlace,
+.botonIcono,
+.boton,
+.controlEstrellas,
+.icono {
+    /* Distribucion */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
+    text-decoration: none;
+
+    /* Apariencia */
+    border-radius: var(--borde-radio-chico);
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.enlace,
+.icono {
+    color: var(--color-primario);
+    background: transparent;
+}
+
+.botonIcono {
+    padding: 1.4rem;
+}
+
+.enlace {
+    /* Distribucion */
+    padding: 0.8rem 1.6rem;
+}
+
+.etiqueta:hover {
+    background-color: var(--color-primario-hover);
+}
+
 .icono:hover {
     color: var(--color-primario-hover);
-}
-
-.boton,
-.enlace {
-    border-radius: var(--borde-radio-chico);
-}
-
-.botonIcono,
-.iconoContenedor {
-    border-radius: 50%;
-}
-
-.botonIcono>svg,
-.iconoContenedor>svg,
-.icono>svg {
-    width: 100%;
-    height: 100%;
 }
 
 .controlEstrellas {
@@ -316,17 +412,6 @@ svg {
 
 .controlEstrellas>li:last-child {
     color: var(--color-negro);
-}
-
-.boton {
-    padding: 1.2rem 2.4rem;
-
-    width: fit-content;
-}
-
-.enlace {
-    color: var(--color-primario);
-    padding: 0.8rem 1.6rem;
 }
 
 .etiqueta {
@@ -339,34 +424,33 @@ svg {
     transition: all 0.3s;
 }
 
-.botonIcono {
-    padding: 1.4rem;
-}
+/*
+██╗░█████╗░░█████╗░███╗░░██╗░█████╗░░██████╗
+██║██╔══██╗██╔══██╗████╗░██║██╔══██╗██╔════╝
+██║██║░░╚═╝██║░░██║██╔██╗██║██║░░██║╚█████╗░
+██║██║░░██╗██║░░██║██║╚████║██║░░██║░╚═══██╗
+██║╚█████╔╝╚█████╔╝██║░╚███║╚█████╔╝██████╔╝
+╚═╝░╚════╝░░╚════╝░╚═╝░░╚══╝░╚════╝░╚═════╝░
+*/
 
 .iconoContenedor {
     position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
 
     color: var(--color-primario);
     background-color: var(--color-primario-seleccionado);
+    transition: all 0.3s;
+}
 
+svg {
+    fill: currentColor;
+    background-color: transparent;
+}
+
+.avatar {
     border-radius: 50%;
-}
-
-.iconoContenedor:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-}
-
-.iconoContenedor>* {
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-}
-
-.iconoContenedor>svg {
-    padding: 2.4rem;
 }
 
 /*
@@ -378,17 +462,17 @@ svg {
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚══════╝░░░╚═╝░░░╚═╝░░╚═╝╚═════╝░
 */
 .tarjetaProducto {
+    /* Distribucion */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    margin: 1.2rem;
 
+    /* Apariencia */
     width: 26.8rem;
     height: 38.8rem;
     background-image: url('https://picsum.photos/1920');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 
     border-radius: var(--borde-radio-grande);
     filter: var(--sombra-mediana);

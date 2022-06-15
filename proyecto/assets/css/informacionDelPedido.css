@@ -1,0 +1,60 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Tue Jun 14 2022
+*  File : informacionDelPedido.css
+*******************************************/
+
+.informacionPedido {
+    display: grid;
+    padding-bottom: 6.4rem;
+    gap: 3.2rem;
+    grid-template-areas:
+        'navegacionProducto navegacionProducto'
+        'personalizacionPedido camposPedido';
+
+    height: 100%;
+}
+
+.personalizacionPedido {
+    position: relative;
+    grid-area: personalizacionPedido;
+    padding: 3.2rem;
+
+    height: 100%;
+
+    background-color: var(--color-blanco);
+
+    border-radius: var(--borde-radio-grande);
+    filter: var(--sombra-mediana);
+    overflow-y: scroll;
+}
+
+.correosRegistrados {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    height: fit-content;
+}
+
+.camposPedido {
+    grid-area: camposPedido;
+    display: flex;
+    flex-direction: column;
+}
+
+.personalizacion__pedido {
+    width: 80%;
+}
+
+.personalizacion__pedido>.pedido__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.personalizacion__pedido>.pedido__formulario>.cajaBusqueda {
+    width: 100%;
+}
