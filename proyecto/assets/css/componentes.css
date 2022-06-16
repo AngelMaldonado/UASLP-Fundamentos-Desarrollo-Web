@@ -560,9 +560,10 @@
     }
 }
 
-.enlace>svg {
+.enlace>svg,
+.boton>svg {
     width: 2rem;
-    width: 2rem;
+    height: 2rem;
 }
 
 .etiqueta {

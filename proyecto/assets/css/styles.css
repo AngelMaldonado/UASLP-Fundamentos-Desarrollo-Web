@@ -8,8 +8,8 @@
 @import '/assets/css/inicio.css';
 @import '/assets/css/ProductosYServicios.css';
 @import '/assets/css/VerProducto.css';
+@import '/assets/css/CrearPedido.css';
 @import '/assets/css/personalizacionProducto.css';
-@import '/assets/css/pasos.css';
 @import '/assets/css/informacionDelPedido.css';
 @import '/assets/css/tokens.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');

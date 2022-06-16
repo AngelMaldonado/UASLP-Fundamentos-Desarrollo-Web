@@ -5,42 +5,47 @@
 *******************************************/
 
 .pasos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.4rem;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
     height: fit-content;
 }
 
-.pasos__trayectoria {
-    height: 100%;
-    width: 2rem;
-    border-radius: 4rem;
-    background-color: var(--color-primario);
-}
-
-.pasos>.contenido {
+.pasos__paso {
     display: flex;
-    flex-direction: column;
-    gap: 10rem;
-    padding-top: 6.4rem;
-    padding-bottom: 6.4rem;
-}
-
-.contenido__paso {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.contenido__paso>.XL {
+    justify-content: space-between;
+    gap: 2.4rem;
+    flex-wrap: wrap;
     color: var(--color-secundario);
 }
 
-.contenido__paso>h3 {
+.pasos__paso>h3 {
+    color: var(--color-negro);
     width: 50rem;
+}
+
+.pasos__paso>.iconoContenedor {
+    width: 20%;
+    padding-bottom: 20%;
+}
+
+@media screen and (max-width: 1200px) {
+    .pasos__paso {
+        justify-content: center;
+    }
+
+    .pasos__paso>h3 {
+        order: 3;
+    }
 }
 
 .notas {
     text-align: center;
     height: fit-content;
-    padding-bottom: 6.4rem;
 }
 
 .notas>ul {
@@ -53,5 +58,6 @@
 }
 
 .notas>.boton {
+    width: 20rem;
     margin: 0 auto;
 }
