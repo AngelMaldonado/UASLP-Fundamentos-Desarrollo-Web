@@ -1,0 +1,19 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Mon Jun 13 2022
+*  File : productosServicios.css
+*******************************************/
+
+.tarjetasProductos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 4rem;
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+
+    height: 100%;
+}
+
+.tarjetasProductos>.tarjetaProducto {
+    margin: 0 auto;
+}

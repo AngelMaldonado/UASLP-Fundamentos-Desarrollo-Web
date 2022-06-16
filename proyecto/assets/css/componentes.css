@@ -5,9 +5,9 @@
 *******************************************/
 
 /* BARRA DE NAVEGACION PRINCIPAL */
-.barraNavegacion {
+.barraNavegacion,
+.barraBusqueda {
     /* Distribucion */
-    position: absolute;
     justify-content: space-between;
     display: flex;
     align-items: center;
@@ -20,8 +20,28 @@
     background-color: var(--color-primario-a085);
 }
 
+.barraBusqueda {
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.barraBusqueda__categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.barraNavegacion {
+    position: absolute;
+}
+
+.barraNavegacion__contenedor {
+    display: flex;
+    align-items: center;
+}
+
 .barraNavegacion__logo {
-    width: 10%
+    width: 9.2rem;
 }
 
 .barraNavegacion__tabs {
@@ -29,6 +49,7 @@
     align-items: center;
     gap: 0.4rem;
 }
+
 
 .barraNavegacion__contenedor>.enlace:last-child {
     display: none;
@@ -41,7 +62,6 @@
     }
 
     .barraNavegacion__contenedor {
-        display: flex;
         justify-content: space-between;
 
         width: 100%;
@@ -64,7 +84,9 @@
 }
 
 @media screen and (max-width: 576px) {
-    .barraNavegacion {
+
+    .barraNavegacion,
+    .barraBusqueda {
         padding-left: 1.2rem;
         padding-right: 1.2rem;
     }
@@ -159,33 +181,31 @@
 }
 
 .portada {
+    /* Distribucion */
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 6.4rem;
-    flex-direction: column;
 
+    /* Apariencia */
     background-image: url('https://picsum.photos/1920');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .portada__titulo {
+    /* Distribucion */
     padding: 1.2rem;
 
+    /* Apariencia */
     width: fit-content;
-
     background-color: var(--color-primario-fondo-a08);
-
     border-radius: var(--borde-radio-mediano);
 }
 
 .paginas {
     display: flex;
     justify-content: center;
-    gap: 1.2rem;
-
-    padding-bottom: 8rem;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 .paginas>ul {
@@ -248,7 +268,6 @@
 ███████╗██║░╚███║░░░██║░░░██║░░██║██║░░██║██████╔╝██║░░██║██████╔╝
 ╚══════╝╚═╝░░╚══╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░
 */
-.cajaBusqueda,
 .cajaAreaTexto,
 .cajaDesplegable,
 .cajaTexto {
@@ -257,10 +276,7 @@
     align-items: center;
     position: relative;
 
-    width: 40.2rem;
-
-    border: 0.2rem solid var(--color-borde-ui);
-    border-radius: var(--borde-radio-chico);
+    width: 100%;
 }
 
 .cajaAreaTexto {
@@ -268,30 +284,42 @@
     gap: 0;
 }
 
-.cajaBusqueda>input,
-.cajaBusqueda>a,
+.cajaTexto>*,
 .cajaAreaTexto__entrada,
-.cajaTexto,
 .cajaDesplegable {
     color: var(--color-placeholder);
 }
 
-.cajaBusqueda>a,
-.cajaTexto {
+.cajaTexto>input {
+    /* Distribucion */
+    position: absolute;
+    padding: 1.2rem;
+    font-size: 14px;
+
+    /* Apariencia */
+    width: 100%;
+    height: 100%;
+    border: 0.2rem solid var(--color-borde-ui);
+    border-radius: var(--borde-radio-chico);
+}
+
+.cajaTexto>input[type=search] {
+    padding-right: 3.2rem;
+}
+
+.cajaTexto>a {
+    margin-right: 1.2rem;
     z-index: 1;
 }
 
-.cajaBusqueda>input,
-.cajaTexto {
-    width: 100%;
-    height: 100%;
-    font-size: 14px;
+.cajaTexto>input:focus {
+    color: var(--color-negro);
+    border-color: var(--color-primario);
+    box-shadow: var(--sombra-input-primario);
 }
 
-.cajaBusqueda>input:focus,
-.cajaAreaTexto__entrada,
-.cajaTexto {
-    color: var(--color-negro);
+.cajaTexto>input:focus~a {
+    color: var(--color-primario);
 }
 
 .controlNumerico {
@@ -368,7 +396,8 @@
 .botonIcono,
 .boton,
 .controlEstrellas,
-.icono {
+.icono,
+.etiqueta {
     /* Distribucion */
     display: flex;
     justify-content: center;
@@ -398,6 +427,10 @@
     padding: 0.8rem 1.6rem;
 }
 
+.etiqueta {
+    padding: 0.4rem 0.8rem;
+}
+
 .etiqueta:hover {
     background-color: var(--color-primario-hover);
 }
@@ -417,16 +450,6 @@
 
 .controlEstrellas>li:last-child {
     color: var(--color-negro);
-}
-
-.etiqueta {
-    padding: 0.2rem 0.8rem;
-
-    color: var(--color-blanco);
-    background-color: var(--color-primario);
-
-    border-radius: var(--borde-radio-chico);
-    transition: all 0.3s;
 }
 
 /*

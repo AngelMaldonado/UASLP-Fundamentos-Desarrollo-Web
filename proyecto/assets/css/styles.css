@@ -6,7 +6,7 @@
 
 @import '/assets/css/componentes.css';
 @import '/assets/css/inicio.css';
-@import '/assets/css/productosServicios.css';
+@import '/assets/css/ProductosYServicios.css';
 @import '/assets/css/verProductoServicio.css';
 @import '/assets/css/personalizacionProducto.css';
 @import '/assets/css/pasos.css';
@@ -93,6 +93,10 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    line-height: 1;
+}
+
 *,
 *:before,
 *:after {
@@ -100,13 +104,6 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-iframe {
-    border: 0;
-    width: 100%;
-    height: fit-content;
-    border-style: none;
 }
 
 a {
@@ -126,8 +123,25 @@ textarea {
     outline: none;
 }
 
-body {
-    line-height: 1;
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
 }
 
 /* DISTRIBUCION GENERAL */
