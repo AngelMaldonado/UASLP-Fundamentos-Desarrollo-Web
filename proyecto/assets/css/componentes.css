@@ -4,13 +4,26 @@
 *  File : components.css
 *******************************************/
 
-/* BARRA DE NAVEGACION PRINCIPAL */
+/*
+███╗░░██╗░█████╗░██╗░░░██╗███████╗░██████╗░░█████╗░░█████╗░██╗░█████╗░███╗░░██╗
+████╗░██║██╔══██╗██║░░░██║██╔════╝██╔════╝░██╔══██╗██╔══██╗██║██╔══██╗████╗░██║
+██╔██╗██║███████║╚██╗░██╔╝█████╗░░██║░░██╗░███████║██║░░╚═╝██║██║░░██║██╔██╗██║
+██║╚████║██╔══██║░╚████╔╝░██╔══╝░░██║░░╚██╗██╔══██║██║░░██╗██║██║░░██║██║╚████║
+██║░╚███║██║░░██║░░╚██╔╝░░███████╗╚██████╔╝██║░░██║╚█████╔╝██║╚█████╔╝██║░╚███║
+╚═╝░░╚══╝╚═╝░░╚═╝░░░╚═╝░░░╚══════╝░╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░╚════╝░╚═╝░░╚══╝
+*/
+.navegacionPagina,
+.barraNavegacion,
+.barraBusqueda,
+.piePagina {
+    display: flex;
+    align-items: center;
+}
+
 .barraNavegacion,
 .barraBusqueda {
     /* Distribucion */
     justify-content: space-between;
-    display: flex;
-    align-items: center;
     padding: 1.2rem 6.4rem;
 
     /* Apariencia */
@@ -18,6 +31,17 @@
     width: 100vw;
     max-width: 100%;
     background-color: var(--color-primario-a085);
+}
+
+.navegacionPagina__ruta {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.navegacionPagina {
+    justify-content: start;
+    gap: 4rem;
+    grid-area: navegacionPagina;
 }
 
 .barraBusqueda {
@@ -56,6 +80,12 @@
 }
 
 @media screen and (max-width: 768px) {
+    .navegacionPagina {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+    }
+
     .barraNavegacion {
         flex-direction: column;
         gap: 2.4rem;
@@ -92,8 +122,60 @@
     }
 }
 
+.piePagina {
+    flex-direction: column;
+    padding: 6.4rem;
+    padding-bottom: 1.2rem;
+    gap: 3.2rem;
+}
+
 .piePagina__logo {
     width: 22%;
+}
+
+.piePagina__navegacion {
+    display: inherit;
+    gap: 1.2rem;
+}
+
+.piePagina__info {
+    display: inherit;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    width: 100%;
+}
+
+.piePagina__info>.info__texto,
+.piePagina__info>.info__texto>* {
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.piePagina__info>.info__texto {
+    align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+    .piePagina {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .piePagina__info>.info__texto {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .piePagina__info>.info__texto>ul:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
 }
 
 .separador {
@@ -214,24 +296,28 @@
 }
 
 .tarjetaComentario {
+    /* Distribucion */
     display: flex;
     align-items: center;
     padding: 1.2rem 2.4rem;
     gap: 3.2rem;
 
+    /* Apariencia */
     width: 100%;
-
     background-color: var(--color-blanco);
-
     border-radius: var(--borde-radio-grande);
     filter: var(--sombra-chica);
 }
 
 .tarjetaComentario__usuario {
+    /* Distribucion */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.2rem;
+
+    /* Apariencia */
+    min-width: 11.2rem;
 }
 
 .tarjetaComentario__comentario {
@@ -244,20 +330,46 @@
 .tarjetaNuevoComentario {
     display: flex;
     gap: 6rem;
+    height: fit-content;
 }
 
-.tarjetaNuevoComentario>.avatar {
-    width: 20.4rem;
-    height: 20.4rem;
+@media screen and (max-width: 768px) {
+
+    .tarjetaComentario,
+    .tarjetaNuevoComentario {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+}
+
+.tarjetaNuevoComentario__usuario {
+    width: 20%;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .tarjetaNuevoComentario__usuario {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .tarjetaNuevoComentario__usuario {
+        width: 50%;
+    }
 }
 
 .tarjetaNuevoComentario__entradas {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     gap: 1.2rem;
 
     width: 100%;
+    height: fit-content;
 }
 
 /*
@@ -271,26 +383,26 @@
 .cajaAreaTexto,
 .cajaDesplegable,
 .cajaTexto {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    position: relative;
 
     width: 100%;
 }
 
 .cajaAreaTexto {
-    justify-content: space-between;
-    gap: 0;
+    height: 10.2rem;
 }
 
 .cajaTexto>*,
-.cajaAreaTexto__entrada,
+.cajaAreaTexto>*,
 .cajaDesplegable {
     color: var(--color-placeholder);
 }
 
-.cajaTexto>input {
+.cajaTexto>input,
+.cajaAreaTexto>textarea {
     /* Distribucion */
     position: absolute;
     padding: 1.2rem;
@@ -312,10 +424,17 @@
     z-index: 1;
 }
 
-.cajaTexto>input:focus {
+.cajaTexto>input:focus,
+.cajaAreaTexto>textarea:focus {
     color: var(--color-negro);
     border-color: var(--color-primario);
     box-shadow: var(--sombra-input-primario);
+}
+
+.cajaAreaTexto>p {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1.2rem;
 }
 
 .cajaTexto>input:focus~a {
@@ -327,11 +446,11 @@
 }
 
 .controlNumerico>.botonIcono:first-child {
-    border-radius: 0.4rem 0 0 0.4rem;
+    border-radius: var(--borde-radio-chico) 0 0 var(--borde-radio-chico);
 }
 
 .controlNumerico>.botonIcono:last-child {
-    border-radius: 0 0.4rem 0.4rem 0;
+    border-radius: 0 var(--borde-radio-chico) var(--borde-radio-chico) 0;
 }
 
 .controlNumerico>p {
@@ -388,6 +507,14 @@
     height: 4.8rem;
 }
 
+.-mediano {
+    height: 4rem;
+}
+
+.-chico {
+    height: 3.2rem;
+}
+
 /*
 █▀▄ █ █▀ ▀█▀ █▀█ █ █▄▄ █░█ █▀▀ █ █▀█ █▄░█
 █▄▀ █ ▄█ ░█░ █▀▄ █ █▄█ █▄█ █▄▄ █ █▄█ █░▀█
@@ -422,9 +549,20 @@
     padding: 1.4rem;
 }
 
+.boton,
 .enlace {
-    /* Distribucion */
     padding: 0.8rem 1.6rem;
+}
+
+@media screen and (max-width: 768px) {
+    .enlace {
+        padding: 0.8rem;
+    }
+}
+
+.enlace>svg {
+    width: 2rem;
+    width: 2rem;
 }
 
 .etiqueta {
@@ -448,10 +586,6 @@
     height: 3.2rem;
 }
 
-.controlEstrellas>li:last-child {
-    color: var(--color-negro);
-}
-
 /*
 ██╗░█████╗░░█████╗░███╗░░██╗░█████╗░░██████╗
 ██║██╔══██╗██╔══██╗████╗░██║██╔══██╗██╔════╝
@@ -461,24 +595,24 @@
 ╚═╝░╚════╝░░╚════╝░╚═╝░░╚══╝░╚════╝░╚═════╝░
 */
 
-.iconoContenedor {
+.iconoContenedor,
+.avatar {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 100%;
 
+    transition: all 0.3s;
+}
+
+.iconoContenedor {
     color: var(--color-primario);
     background-color: var(--color-primario-seleccionado);
-    transition: all 0.3s;
 }
 
 svg {
     fill: currentColor;
     background-color: transparent;
-}
-
-.avatar {
-    border-radius: 50%;
 }
 
 /*
