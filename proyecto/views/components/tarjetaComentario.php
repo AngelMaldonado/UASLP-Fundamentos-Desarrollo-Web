@@ -1,12 +1,7 @@
 <!-- tarjetaComentario -->
 <div class="tarjetaComentario">
     <div class="tarjetaComentario__usuario">
-        <div class="avatar">
-            <div class="contenedorResponsivo">
-                <img class="-r50" src="https://i.pravatar.cc/300
-                                " alt="avatar usuario">
-            </div>
-        </div>
+        <?php require('./views/components/avatar.php'); ?>
         <h4>Diana H.</h4>
     </div>
     <div class="tarjetaComentario__comentario">

@@ -5,6 +5,6 @@
     <div class="tarjetaProducto__caracteristicas">
         <h2>$1850.00</h2>
         <?php require('./views/components/controlEstrellas.php'); ?>
-        <a class="boton -secundario -mediano" href="/">Ver detalles</a>
+        <a class="boton -secundario -mediano" href="./VerProducto.php">Ver detalles</a>
     </div>
 </div>

@@ -181,7 +181,7 @@
                 <!-- slide 1 -->
                 <div class="slide">
                     <div class="usuario">
-                        <img class="avatar -t256" src="https://i.pravatar.cc/300" alt="usuario-avatar">
+                        <?php require('./views/components/avatar.php'); ?>
                         <div class="usuario__info">
                             <h1>
                                 Diana Hernández <br>
@@ -199,14 +199,23 @@
                     </div>
                 </div>
                 <!-- slide 2 -->
-                <div class="slides__slide">
-                    <div class="slide__descripcion">
-                        <h1>Porque recordar es parte de tu éxito2</h1>
+                <div class="slide">
+                    <div class="usuario">
+                        <?php require('./views/components/avatar.php'); ?>
+                        <div class="usuario__info">
+                            <h1>
+                                Diana Hernández <br>
+                                Ing. Civil <br>
+                                Gen. 2012-2016 <br>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="cita">
+                        <?php echo file_get_contents("./assets/svg/cita.svg"); ?>
                         <h3>
-                            La constante lucha por concluír una etapa muy importante de tu vida, debe permanecer
-                            incluso después de haber terminado tus estudios.
+                            Sin duda una de las mejores experiencias que he tenido en mi vida, y lo mejor de
+                            todo, es que lo recordaré por siempre gracias a los productos que IE me dió!
                         </h3>
-                        <a class="boton -primario -grande" href="/">Ver paquetes de graduación</a>
                     </div>
                 </div>
             </div>

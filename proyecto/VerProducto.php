@@ -90,12 +90,7 @@
             <!-- fin tarjetaComentario -->
             <div class="tarjetaNuevoComentario">
                 <div class="tarjetaNuevoComentario__usuario">
-                    <div class="avatar">
-                        <div class="contenedorResponsivo">
-                            <img class="-r50" src="https://i.pravatar.cc/300
-                                    " alt="avatar usuario">
-                        </div>
-                    </div>
+                    <?php require('./views/components/avatar.php'); ?>
                 </div>
                 <form class="tarjetaNuevoComentario__entradas">
                     <?php require('./views/components/controlEstrellas.php'); ?>
