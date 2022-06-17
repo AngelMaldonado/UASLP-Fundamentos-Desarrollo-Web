@@ -48,7 +48,7 @@
     --sombra-mediana: drop-shadow(0px 6px 20px rgba(0, 0, 0, 0.2));
     --sombra-grande: drop-shadow(0px 15px 50px rgba(0, 0, 0, 0.3));
     /* Aplicar con box-shadow */
-    --sombra-input-primario: 0px 0px 8px var(--color-primario);
+    --sombra-cajasEntrada: 0px 0px 8px;
     /*
     ██████╗░░█████╗░██████╗░██████╗░███████╗░██████╗
     ██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝
@@ -121,6 +121,7 @@ p,
 a,
 select,
 input,
+textarea,
 .opcionRadio {
     font-size: 16px;
     font-weight: normal;

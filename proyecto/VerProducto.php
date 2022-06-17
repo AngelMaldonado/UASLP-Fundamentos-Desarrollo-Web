@@ -94,7 +94,7 @@
                 </div>
                 <form class="tarjetaNuevoComentario__entradas">
                     <?php require('./views/components/controlEstrellas.php'); ?>
-                    <div class="cajaAreaTexto">
+                    <div class="cajaAreaTexto -normal">
                         <textarea name="comentario" placeholder="Comentario"></textarea>
                         <p>0/120</p>
                     </div>

@@ -516,6 +516,64 @@
 ███████╗██║░╚███║░░░██║░░░██║░░██║██║░░██║██████╔╝██║░░██║██████╔╝
 ╚══════╝╚═╝░░╚══╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░
 */
+
+/*
+█▀▄▀█ █▀█ █▀▄ █ █▀▀ █ █▀▀ ▄▀█ █▀▄ █▀█ █▀█ █▀▀ █▀
+█░▀░█ █▄█ █▄▀ █ █▀░ █ █▄▄ █▀█ █▄▀ █▄█ █▀▄ ██▄ ▄█
+*/
+/* TODO: crear modificadores normal, error y verificado para los campos de texto */
+.-normal,
+.-normal>* {
+    color: var(--color-placeholder);
+}
+
+.-normal:hover,
+.-normal>*:hover {
+    border-color: var(--color-primario-hover);
+    box-shadow: var(--sombra-cajasEntrada) var(--color-primario-hover);
+}
+
+.-normal:focus,
+.-normal>*:focus {
+    color: var(--color-negro);
+    border-color: var(--color-primario-seleccionado);
+    box-shadow: var(--sombra-cajasEntrada) var(--color-primario-seleccionado);
+}
+
+.-verificado,
+.-verificado>* {
+    color: var(--color-positivo);
+}
+
+.-verificado:hover,
+.-verificado>*:hover {
+    border-color: var(--color-positivo-hover);
+    box-shadow: var(--sombra-cajasEntrada) var(--color-positivo-hover);
+}
+
+.-verificado:focus,
+.-verificado>*:focus {
+    border-color: var(--color-positivo-seleccionado);
+    box-shadow: var(--sombra-cajasEntrada) var(--color-positivo-seleccionado);
+}
+
+.-error,
+.-error>* {
+    color: var(--color-negativo);
+}
+
+.-error:hover,
+.-error>*:hover {
+    border-color: var(--color-negativo-hover);
+    box-shadow: var(--sombra-cajasEntrada) var(--color-negativo-hover);
+}
+
+.-error:focus,
+.-error>*:focus {
+    border-color: var(--color-negativo-seleccionado);
+    box-shadow: var(--sombra-cajasEntrada) var(--color-negativo-seleccionado);
+}
+
 /*
 █▀▄ █ █▀ ▀█▀ █▀█ █ █▄▄ █░█ █▀▀ █ █▀█ █▄░█
 █▄▀ █ ▄█ ░█░ █▀▄ █ █▄█ █▄█ █▄▄ █ █▄█ █░▀█
@@ -533,14 +591,27 @@
 
     /* Apariencia */
     width: 100%;
+    border-radius: var(--borde-radio-chico);
+    cursor: pointer;
 }
 
-.cajaAreaTexto,
-.cajaTexto,
+.cajaTexto>input,
+.cajaAreaTexto>textarea,
 .cajaDesplegable,
-.opcionRadio,
 .opcionRadio {
-    cursor: pointer;
+    /* Distribucion */
+    padding: 1.2rem;
+
+    /* Apariencia */
+    border: 0.2rem solid currentColor;
+}
+
+.cajaTexto>input,
+.cajaAreaTexto>textarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
 }
 
 .cajaAreaTexto,
@@ -556,32 +627,6 @@
     gap: 0.8rem;
 }
 
-.cajaTexto>*,
-.cajaAreaTexto>*,
-.cajaDesplegable,
-.opcionRadio {
-    color: var(--color-placeholder);
-}
-
-.cajaTexto>input,
-.cajaAreaTexto>textarea {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.cajaTexto>input,
-.cajaAreaTexto>textarea,
-.cajaDesplegable,
-.opcionRadio {
-    /* Distribucion */
-    padding: 1.2rem;
-
-    /* Apariencia */
-    border: 0.2rem solid var(--color-borde-ui);
-    border-radius: var(--borde-radio-chico);
-}
-
 .cajaTexto>input[type=search] {
     padding-right: 3.2rem;
 }
@@ -591,26 +636,15 @@
     z-index: 1;
 }
 
-.cajaTexto>input:focus,
-.cajaTexto>input:hover,
-.cajaAreaTexto>textarea:focus,
-.cajaAreaTexto>textarea:hover,
-.cajaDesplegable:focus,
-.cajaDesplegable:hover,
-.opcionRadio:hover,
-.opcionRadio:focus {
-    color: var(--color-negro);
-    border-color: var(--color-primario);
-    box-shadow: var(--sombra-input-primario);
-}
-
 .cajaAreaTexto>p {
     position: absolute;
     bottom: 1.2rem;
     right: 1.2rem;
 }
 
-.cajaTexto>input:focus~a {
+/* TODO: acomodar el icono del campo de texto dentro de los modificadores */
+.cajaTexto>input:focus~a,
+.cajaTexto>input:hover~a {
     color: var(--color-primario);
 }
 
@@ -635,15 +669,6 @@
     width: 7.4rem;
 
     border: 0.2rem solid var(--color-borde-ui);
-}
-
-/*
-█▀▄▀█ █▀█ █▀▄ █ █▀▀ █ █▀▀ ▄▀█ █▀▄ █▀█ █▀█ █▀▀ █▀
-█░▀░█ █▄█ █▄▀ █ █▀░ █ █▄▄ █▀█ █▄▀ █▄█ █▀▄ ██▄ ▄█
-*/
-/* TODO: crear modificadores normal, error y verificado para los campos de texto */
-.-verificado {
-    border-color: var(--color-positivo);
 }
 
 /*

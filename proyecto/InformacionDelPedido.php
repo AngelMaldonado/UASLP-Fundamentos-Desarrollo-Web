@@ -27,7 +27,7 @@
             <form class="formulario" action="">
                 <h1>Alumnos registrados: 2/8</h1>
                 <div class="formulario__campo">
-                    <div class="cajaTexto">
+                    <div class="cajaTexto -normal">
                         <input type="email" placeholder="alumno@correo.com" name="nuevoCorreo">
                     </div>
                     <a class="botonIcono -primario" href="">
@@ -35,16 +35,14 @@
                     </a>
                 </div>
                 <div class="separador"></div>
-                <div class="formulario__campo">
-                    <div class="cajaTexto -grande">
-                        <input class="-verificado" type="email" placeholder="alumno@correo.com" name="correoRegistrado">
-                    </div>
-                    <a class="botonIcono -negativo" href="">
-                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                <div class="cajaTexto -grande -verificado">
+                    <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
+                    <a href="">
+                        <?php echo file_get_contents("./assets/svg/verificado.svg"); ?>
                     </a>
                 </div>
                 <div class="formulario__campo">
-                    <div class="cajaTexto -grande">
+                    <div class="cajaTexto -grande -error">
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
@@ -52,7 +50,7 @@
                     </a>
                 </div>
                 <div class="formulario__campo">
-                    <div class="cajaTexto -grande">
+                    <div class="cajaTexto -grande -normal">
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
@@ -60,7 +58,7 @@
                     </a>
                 </div>
                 <div class="formulario__campo">
-                    <div class="cajaTexto -grande">
+                    <div class="cajaTexto -grande -normal">
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
@@ -68,7 +66,7 @@
                     </a>
                 </div>
                 <div class="formulario__campo">
-                    <div class="cajaTexto -grande">
+                    <div class="cajaTexto -grande -normal">
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
@@ -76,7 +74,7 @@
                     </a>
                 </div>
                 <div class="formulario__campo">
-                    <div class="cajaTexto -grande">
+                    <div class="cajaTexto -grande -normal">
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
@@ -84,7 +82,7 @@
                     </a>
                 </div>
                 <div class="formulario__campo">
-                    <div class="cajaTexto -grande">
+                    <div class="cajaTexto -grande -normal">
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
@@ -92,7 +90,7 @@
                     </a>
                 </div>
                 <div class="formulario__campo">
-                    <div class="cajaTexto -grande">
+                    <div class="cajaTexto -grande -normal">
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
@@ -103,15 +101,15 @@
         </div>
         <form class="formulario" action="">
             <label for="escuela">Escuela</label>
-            <div class="cajaTexto -grande">
+            <div class="cajaTexto -grande -normal">
                 <input type="text" placeholder="Escuela">
             </div>
             <label for="carrera">Carrera</label>
-            <div class="cajaTexto -grande">
+            <div class="cajaTexto -grande -normal">
                 <input type="text" placeholder="Carrera">
             </div>
             <label for="generacion">Generación</label>
-            <div class="cajaTexto -grande">
+            <div class="cajaTexto -grande -normal">
                 <input type="text" placeholder="Generación">
             </div>
             <div class="formulario__botones">

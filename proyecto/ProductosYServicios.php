@@ -14,7 +14,7 @@
             <li><a class="etiqueta -primario" href="/">Trofeos y reconocimientos</a></li>
             <li><a class="etiqueta -primario" href="/">Renta de togas y birretes</a></li>
         </ul>
-        <div class="cajaTexto -chico">
+        <div class="cajaTexto -chico -normal">
             <input type="search" placeholder="Buscar">
             <a href="">
                 <?php echo file_get_contents("./assets/svg/buscar.svg"); ?>

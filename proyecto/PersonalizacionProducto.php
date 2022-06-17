@@ -62,13 +62,13 @@
         <div class="contenedorScroll">
             <form class="formulario" action="">
                 <label for="foto-agradecimiento">Foto del agradecimiento</label>
-                <select class="cajaDesplegable -grande" name="foto-agradecimiento" id="">
+                <select class="cajaDesplegable -grande -normal" name="foto-agradecimiento" id="">
                     <option value="familiar">Familiar</option>
                     <option value="individual">Individual</option>
                     <option value="placa con texto">Placa con texto</option>
                 </select>
                 <label for="color">Color</label>
-                <select class="cajaDesplegable -grande" name="color" id="">
+                <select class="cajaDesplegable -grande -normal" name="color" id="">
                     <option value="vino">Vino</option>
                     <option value="negro">Negro</option>
                     <option value="robotico">Robotico</option>
@@ -78,70 +78,70 @@
                 </select>
                 <h4>Escudo</h4>
                 <div class="cajaOpcionesRadio">
-                    <label class="opcionRadio -grande" for="escultura">
+                    <label class="opcionRadio -grande -normal" for="escultura">
                         <input type="radio" name="escudo" id="escultura" value="escultura">
                         Escultura
                     </label>
-                    <label class="opcionRadio -grande" for="metal">
+                    <label class="opcionRadio -grande -normal" for="metal">
                         <input type="radio" name="escudo" id="metal" value="metal">
                         Metal
                     </label>
-                    <label class="opcionRadio -grande" for="grabado">
+                    <label class="opcionRadio -grande -normal" for="grabado">
                         <input type="radio" name="escudo" id="grabado" value="grabado">
                         Grabado
                     </label>
                 </div>
                 <h4>Foto en papel</h4>
                 <div class="cajaOpcionesRadio">
-                    <label class="opcionRadio -grande" for="formal">
+                    <label class="opcionRadio -grande -normal" for="formal">
                         <input type="radio" name="fotoPapel" id="formal" value="formal">
                         Formal
                     </label>
-                    <label class="opcionRadio -grande" for="uniforme">
+                    <label class="opcionRadio -grande -normal" for="uniforme">
                         <input type="radio" name="fotoPapel" id="uniforme" value="uniforme">
                         Uniforme
                     </label>
-                    <label class="opcionRadio -grande" for="chusca">
+                    <label class="opcionRadio -grande -normal" for="chusca">
                         <input type="radio" name="fotoPapel" id="chusca" value="chusca">
                         Chusca
                     </label>
                 </div>
                 <h4>Anillo (oro o plata)</h4>
                 <div class="cajaOpcionesRadio">
-                    <label class="opcionRadio -grande" for="oro">
+                    <label class="opcionRadio -grande -normal" for="oro">
                         <input type="radio" name="tipoAnillo" id="oro" value="oro">
                         Oro
                     </label>
-                    <label class="opcionRadio -grande" for="plata">
+                    <label class="opcionRadio -grande -normal" for="plata">
                         <input type="radio" name="tipoAnillo" id="plata" value="plata">
                         Plata
                     </label>
                 </div>
                 <h4>Escudo de anillo</h4>
                 <div class="cajaOpcionesRadio">
-                    <label class="opcionRadio -grande" for="escuela">
+                    <label class="opcionRadio -grande -normal" for="escuela">
                         <input type="radio" name="escudoAnillo" id="escuela" value="escuela">
                         Escuela
                     </label>
-                    <label class="opcionRadio -grande" for="carrera">
+                    <label class="opcionRadio -grande -normal" for="carrera">
                         <input type="radio" name="escudoAnillo" id="carrera" value="carrera">
                         Carrera
                     </label>
-                    <label class="opcionRadio -grande" for="facultad">
+                    <label class="opcionRadio -grande -normal" for="facultad">
                         <input type="radio" name="escudoAnillo" id="facultad" value="facultad">
                         Facultad
                     </label>
                 </div>
                 <label for="medida-anillo">Medida del anillo</label>
-                <select class="cajaDesplegable -grande" name="medida-anillo" id="">
+                <select class="cajaDesplegable -grande -normal" name="medida-anillo" id="">
                     <option value="32mm">32mm</option>
                     <option value="64mm">64mm</option>
                     <option value="122mm">122mm</option>
                     <option value="132mm">132mm</option>
                 </select>
                 <div>
-                    <a class="boton -primario -grande" href="">Guardar</a>
-                    <a class="boton -terciario -grande" href="">Cancelar</a>
+                    <a class="boton -primario -grande -normal" href="">Guardar</a>
+                    <a class="boton -terciario -grande -normal" href="">Cancelar</a>
                 </div>
             </form>
 </main>
