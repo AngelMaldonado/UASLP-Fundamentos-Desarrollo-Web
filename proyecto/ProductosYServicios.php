@@ -21,7 +21,7 @@
             </a>
         </div>
     </nav>
-    <section class="tarjetasProductos">
+    <section class="grid4c">
         <?php require("./views/components/tarjetaProducto.php"); ?>
         <?php require("./views/components/tarjetaProducto.php"); ?>
         <?php require("./views/components/tarjetaProducto.php"); ?>

@@ -195,6 +195,23 @@
 ░╚════╝░░╚════╝░╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═╝░░╚══╝╚══════╝╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚═════╝░
 */
 
+/* TODO: contener el ancho del grid al contenido de la celda o centrar el contenido en la celda */
+.grid4c {
+    /* Distribucion */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    row-gap: 4rem;
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+
+    /* Apariencia */
+    height: fit-content;
+}
+
+.grid4c>* {
+    margin: 0 auto;
+}
+
 .grid1f2c {
     display: grid;
     column-gap: 2.4rem;
@@ -852,63 +869,84 @@ svg {
 ░░░██║░░░██║░░██║██║░░██║╚█████╔╝███████╗░░░██║░░░██║░░██║██████╔╝
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚══════╝░░░╚═╝░░░╚═╝░░╚═╝╚═════╝░
 */
+.tarjetaGaleria,
+.tarjetaProducto {
+    position: relative;
+
+    background-image: url('https://picsum.photos/1920');
+    border-radius: var(--borde-radio-grande);
+    overflow: hidden;
+}
+
 .tarjetaProducto {
     /* Distribucion */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
     margin: 1.2rem;
 
     /* Apariencia */
     width: 26.8rem;
     height: 38.8rem;
-    background-image: url('https://picsum.photos/1920');
-
-    border-radius: var(--borde-radio-grande);
     filter: var(--sombra-mediana);
-    overflow: hidden;
+}
+
+.tarjetaGaleria {
+    width: 26rem;
+    height: 26rem;
 }
 
 .tarjetaProducto__titulo {
+    /* Distribucion */
     padding: 1.2rem;
 
+    /* Apariencia */
     width: 100%;
     height: fit-content;
-
     background-color: var(--color-primario-a085);
-
     filter: var(--sombra-chica);
 }
 
-.tarjetaProducto__caracteristicas {
+.tarjetaFiltro {
+    /* Distribucion */
     display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    padding: 1.2rem;
     position: absolute;
-    bottom: -36%;
 
+    /* Apariencia */
     width: 100%;
-    height: fit-content;
-
     background-color: var(--color-primario-a085);
-
     transition: all 0.3s;
 }
 
-.tarjetaProducto__caracteristicas>h2 {
+.tarjetaGaleria>.tarjetaFiltro {
+    align-items: center;
+    justify-content: center;
+    bottom: -100%;
+    height: 100%;
+}
+
+.tarjetaProducto>.tarjetaFiltro {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.2rem;
+    bottom: -36%;
+
+    height: fit-content;
+}
+
+.tarjetaProducto>.tarjetaFiltro>h2 {
     color: var(--color-secundario);
 }
 
-.tarjetaProducto__caracteristicas>.controlEstrellas {
+.tarjetaProducto>.tarjetaFiltro>.controlEstrellas {
     justify-content: flex-start;
 }
 
-.tarjetaProducto__caracteristicas>.boton {
+.tarjetaProducto>.tarjetaFiltro>.boton {
     width: 100%;
 }
 
-.tarjetaProducto:hover .tarjetaProducto__caracteristicas {
+.tarjetaProducto:hover .tarjetaFiltro,
+.tarjetaGaleria:hover .tarjetaFiltro {
     bottom: 0;
 }

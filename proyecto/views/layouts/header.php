@@ -21,7 +21,7 @@
             <li><a class="enlace -primario" href="./index.php">Inicio</a></li>
             <li><a class="enlace -primario" href="./ProductosYServicios.php">Productos y servicios</a></li>
             <li><a class="enlace -primario" href="./CrearPedido.php">Crear pedido</a></li>
-            <li><a class="enlace -primario" href="/">Galería</a></li>
+            <li><a class="enlace -primario" href="./Galeria.php">Galería</a></li>
         </ul>
         <ul class="barraNavegacion__tabs">
             <li>
