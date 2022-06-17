@@ -139,7 +139,7 @@
                     <option value="122mm">122mm</option>
                     <option value="132mm">132mm</option>
                 </select>
-                <div class="campos__botones">
+                <div>
                     <a class="boton -primario -grande" href="">Guardar</a>
                     <a class="boton -terciario -grande" href="">Cancelar</a>
                 </div>

@@ -18,20 +18,6 @@
     height: 25.6rem;
 }
 
-.personalizacion__campos {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-
-    height: fit-content;
-}
-
-.campos__botones {
-    display: flex;
-    gap: 1.2rem;
-}
-
-.campos__botones>.boton {
-    width: 100%;
+.PersonalizacionProducto>.contenedorScroll>.formulario>div:last-child {
+    margin-top: 2.4rem;
 }
