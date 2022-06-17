@@ -1,7 +1,7 @@
 <?php require('./views/layouts/header.php'); ?>
 
 <main>
-    <section class="principalProducto">
+    <section class="VerProducto grid1f2c">
         <nav class="navegacionPagina">
             <a class="botonIcono -primario -r50" href="">
                 <?php echo file_get_contents("./assets/svg/flecha-izquierda.svg"); ?>
@@ -37,13 +37,13 @@
             </ul>
             <img class="exhibidor__actual" src="https://picsum.photos/1920" alt="imagen actual">
         </div>
-        <div class="principalProducto__detalles">
-            <header class="detalles__titulo">
+        <form class="formulario">
+            <header class="formulario__titulo">
                 <h1>Paquete de graduación diamante</h1>
                 <?php require('./views/components/controlEstrellas.php'); ?>
                 <h3>$1850.00</h3>
             </header>
-            <div class="detalles__disponibilidad">
+            <div class="formulario__disponibilidad">
                 <h3>Disponibles: 30</h3>
                 <div class="controlNumerico">
                     <a class="botonIcono -primario -grande" href="/">
@@ -55,12 +55,12 @@
                     </a>
                 </div>
             </div>
-            <div class="detalles__botonesCompra">
+            <div class="formulario__botonesCompra">
                 <a class="boton -primario -mediano" href="/">Comprar ahora</a>
                 <a class="boton -secundario -mediano" href="/">Agregar a la bolsa</a>
                 <a class="boton -terciario -mediano" href="/">Crear pedido</a>
             </div>
-        </div>
+        </form>
     </section>
     <section class="productoDescripcion">
         <div class="separador"></div>

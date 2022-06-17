@@ -89,7 +89,7 @@
             </li>
         </ul>
         <br><br>
-        <a class="boton -primario -grande" href="/">
+        <a class="boton -primario -grande" href="./InformacionDelPedido.php">
             <?php echo file_get_contents("./assets/svg/graduacion.svg"); ?>
             Crear pedido ahora
         </a>

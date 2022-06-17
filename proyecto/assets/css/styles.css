@@ -9,8 +9,8 @@
 @import '/assets/css/ProductosYServicios.css';
 @import '/assets/css/VerProducto.css';
 @import '/assets/css/CrearPedido.css';
-@import '/assets/css/personalizacionProducto.css';
-@import '/assets/css/informacionDelPedido.css';
+@import '/assets/css/PersonalizacionProducto.css';
+@import '/assets/css/InformacionDelPedido.css';
 @import '/assets/css/tokens.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
@@ -116,9 +116,12 @@ textarea {
     border: 0;
     resize: none;
     font-family: inherit;
+    accent-color: currentColor;
 }
 
 input:focus,
+select:focus,
+.opcionRadio:focus,
 textarea {
     outline: none;
 }

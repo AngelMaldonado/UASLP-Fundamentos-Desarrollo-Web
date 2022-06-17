@@ -111,9 +111,7 @@ h5 {
 }
 
 /* Ui text */
-h6,
-option,
-.cajaOpcionesRadio>label {
+h6 {
     font-size: 14px;
     font-weight: normal;
 }
@@ -121,7 +119,9 @@ option,
 /* Paragraph */
 p,
 a,
-select {
+select,
+input,
+.opcionRadio {
     font-size: 16px;
     font-weight: normal;
 }

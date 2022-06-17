@@ -3,112 +3,16 @@
 *  Created On : Mon Jun 13 2022
 *  File : verProductoServicio.css
 *******************************************/
-
-.principalProducto {
-    display: grid;
-    column-gap: 2.4rem;
-    grid-template-areas:
-        "navegacionPagina navegacionPagina"
-        "exhibidor principalProducto__detalles";
-    padding-top: 6.4rem;
+.VerProducto {
     padding-bottom: 3.2rem;
 }
 
-.exhibidor {
-    display: flex;
-    gap: 2.4rem;
-    grid-area: exhibidor;
-}
-
-.exhibidor__imagenes {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-}
-
-.exhibidor__imagenes>.imagenes__imagen {
-    width: 8rem;
-
-    border-radius: var(--borde-radio-mediano);
-    overflow: hidden;
-}
-
-.exhibidor__actual {
-    width: 40rem;
-    height: 40rem;
-
-    border-radius: var(--borde-radio-grande);
-}
-
-.principalProducto__detalles {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    grid-area: principalProducto__detalles;
-}
-
-.detalles__titulo {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.detalles__titulo>.controlEstrellas {
+.VerProducto>.formulario>.formulario__titulo>.controlEstrellas {
     justify-content: flex-start;
 }
 
-.detalles__disponibilidad {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.detalles__botonesCompra {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.detalles__botonesCompra>.boton {
+.formulario__botonesCompra>.boton {
     width: 100%;
-}
-
-@media screen and (max-width: 1200px) {
-    .principalProducto {
-        padding-top: 12rem;
-    }
-
-    .exhibidor {
-        flex-direction: column;
-    }
-
-    .exhibidor__imagenes {
-        flex-direction: row;
-        order: 2;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .principalProducto {
-        /* Distribucion */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2.4rem;
-
-        /* Apariencia */
-        height: fit-content;
-    }
-
-    .exhibidor__imagenes {
-        flex-direction: row;
-        gap: 1.6rem;
-    }
-
-    .principalProducto__detalles {
-        justify-content: start;
-        gap: 1.2rem;
-    }
 }
 
 .productoDescripcion {
