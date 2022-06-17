@@ -202,6 +202,7 @@
     grid-template-areas:
         "arriba arriba"
         "izquierda derecha";
+    grid-template-rows: min-content;
     padding-top: 10rem;
 }
 
@@ -515,6 +516,10 @@
 ███████╗██║░╚███║░░░██║░░░██║░░██║██║░░██║██████╔╝██║░░██║██████╔╝
 ╚══════╝╚═╝░░╚══╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░
 */
+/*
+█▀▄ █ █▀ ▀█▀ █▀█ █ █▄▄ █░█ █▀▀ █ █▀█ █▄░█
+█▄▀ █ ▄█ ░█░ █▀▄ █ █▄█ █▄█ █▄▄ █ █▄█ █░▀█
+*/
 .cajaAreaTexto,
 .cajaTexto,
 .cajaDesplegable,
@@ -633,6 +638,15 @@
 }
 
 /*
+█▀▄▀█ █▀█ █▀▄ █ █▀▀ █ █▀▀ ▄▀█ █▀▄ █▀█ █▀█ █▀▀ █▀
+█░▀░█ █▄█ █▄▀ █ █▀░ █ █▄▄ █▀█ █▄▀ █▄█ █▀▄ ██▄ ▄█
+*/
+/* TODO: crear modificadores normal, error y verificado para los campos de texto */
+.-verificado {
+    border-color: var(--color-positivo);
+}
+
+/*
 ██████╗░░█████╗░████████╗░█████╗░███╗░░██╗███████╗░██████╗
 ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗████╗░██║██╔════╝██╔════╝
 ██████╦╝██║░░██║░░░██║░░░██║░░██║██╔██╗██║█████╗░░╚█████╗░
@@ -649,26 +663,35 @@
     background-color: var(--color-primario);
 }
 
-.-secundario {
-    color: var(--color-blanco);
-    background-color: var(--color-secundario);
-}
-
-.-terciario {
-    color: var(--color-primario);
-}
-
 .-primario:hover {
     color: var(--color-primario-seleccionado);
     background-color: var(--color-primario-hover);
+}
+
+.-secundario {
+    color: var(--color-blanco);
+    background-color: var(--color-secundario);
 }
 
 .-secundario:hover {
     background-color: var(--color-secundario-hover);
 }
 
+.-terciario {
+    color: var(--color-primario);
+}
+
 .-terciario:hover {
     background-color: var(--color-primario-seleccionado);
+}
+
+.-negativo {
+    color: var(--color-blanco);
+    background-color: var(--color-negativo);
+}
+
+.-negativo:hover {
+    background-color: var(--color-negativo-hover);
 }
 
 .-grande {

@@ -12,7 +12,7 @@
                 <a class="botones__boton" href="/">No, cancelar pedido</a>
             </div>
         </div> -->
-    <section class="pedido grid1f2c">
+    <section class="InformacionDelPedido grid1f2c">
         <nav class="navegacionPagina">
             <a class="botonIcono -primario -r50" href="">
                 <?php echo file_get_contents("./assets/svg/flecha-izquierda.svg"); ?>
@@ -23,34 +23,100 @@
             </a>
             <a class="etiqueta -primario" href="/">En espera</a>
         </nav>
-        <div class="grid1f2c__detalles">
-            <form class="detalles__formulario" action="">
-                <label for="escuela">Escuela</label>
-                <div class="cajaTexto -grande">
-                    <input type="text" placeholder="Escuela">
+        <div class="contenedorScroll">
+            <form class="formulario" action="">
+                <h1>Alumnos registrados: 2/8</h1>
+                <div class="formulario__campo">
+                    <div class="cajaTexto">
+                        <input type="email" placeholder="alumno@correo.com" name="nuevoCorreo">
+                    </div>
+                    <a class="botonIcono -primario" href="">
+                        <?php echo file_get_contents("./assets/svg/mas.svg"); ?>
+                    </a>
                 </div>
-                <label for="carrera">Carrera</label>
-                <div class="cajaTexto -grande">
-                    <input type="text" placeholder="Carrera">
+                <div class="separador"></div>
+                <div class="formulario__campo">
+                    <div class="cajaTexto -grande">
+                        <input class="-verificado" type="email" placeholder="alumno@correo.com" name="correoRegistrado">
+                    </div>
+                    <a class="botonIcono -negativo" href="">
+                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                    </a>
                 </div>
-                <label for="generacion">Generación</label>
-                <div class="cajaTexto -grande">
-                    <input type="text" placeholder="Generación">
+                <div class="formulario__campo">
+                    <div class="cajaTexto -grande">
+                        <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
+                    </div>
+                    <a class="botonIcono -negativo" href="">
+                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                    </a>
                 </div>
-                <div class="formulario__botones">
-                    <a class="boton -primario -grande" href="">Guardar</a>
-                    <a class="boton -terciario -grande" href="">Cancelar</a>
+                <div class="formulario__campo">
+                    <div class="cajaTexto -grande">
+                        <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
+                    </div>
+                    <a class="botonIcono -negativo" href="">
+                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                    </a>
+                </div>
+                <div class="formulario__campo">
+                    <div class="cajaTexto -grande">
+                        <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
+                    </div>
+                    <a class="botonIcono -negativo" href="">
+                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                    </a>
+                </div>
+                <div class="formulario__campo">
+                    <div class="cajaTexto -grande">
+                        <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
+                    </div>
+                    <a class="botonIcono -negativo" href="">
+                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                    </a>
+                </div>
+                <div class="formulario__campo">
+                    <div class="cajaTexto -grande">
+                        <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
+                    </div>
+                    <a class="botonIcono -negativo" href="">
+                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                    </a>
+                </div>
+                <div class="formulario__campo">
+                    <div class="cajaTexto -grande">
+                        <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
+                    </div>
+                    <a class="botonIcono -negativo" href="">
+                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                    </a>
+                </div>
+                <div class="formulario__campo">
+                    <div class="cajaTexto -grande">
+                        <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
+                    </div>
+                    <a class="botonIcono -negativo" href="">
+                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                    </a>
                 </div>
             </form>
         </div>
-        <form class="formularioScroll" action="">
-            <div class="formularioScroll__nuevoCorreo">
-                <div class="cajaTexto">
-                    <input type="text" placeholder="Nombre" name="nombre">
-                </div>
-                <a class="botonIcono -primario" href="">
-                    <?php echo file_get_contents("./assets/svg/mas.svg"); ?>
-                </a>
+        <form class="formulario" action="">
+            <label for="escuela">Escuela</label>
+            <div class="cajaTexto -grande">
+                <input type="text" placeholder="Escuela">
+            </div>
+            <label for="carrera">Carrera</label>
+            <div class="cajaTexto -grande">
+                <input type="text" placeholder="Carrera">
+            </div>
+            <label for="generacion">Generación</label>
+            <div class="cajaTexto -grande">
+                <input type="text" placeholder="Generación">
+            </div>
+            <div class="formulario__botones">
+                <a class="boton -primario -grande" href="">Guardar</a>
+                <a class="boton -terciario -grande" href="">Cancelar</a>
             </div>
         </form>
     </section>

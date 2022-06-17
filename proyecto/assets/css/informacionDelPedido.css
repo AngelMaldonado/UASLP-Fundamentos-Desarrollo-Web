@@ -4,66 +4,18 @@
 *  File : InformacionDelPedido.css
 *******************************************/
 
-.pedido.grid1f2c>.grid1f2c__detalles {
-    grid-area: derecha;
-
-    /* height: 100%;
-
-    background-color: var(--color-blanco);
-
-    border-radius: var(--borde-radio-grande);
-    filter: var(--sombra-mediana);
-    overflow-y: scroll; */
+.InformacionDelPedido {
+    padding-bottom: 3.2rem;
 }
 
-.pedido.grid1f2c>.grid1f2c__detalles>.detalles__formulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.InformacionDelPedido>*:nth-child(3) {
+    justify-content: center;
+    gap: 1.2rem;
     height: 100%;
 }
 
-.pedido.grid1f2c>.grid1f2c__detalles>.detalles__formulario>.formulario__botones {
+.InformacionDelPedido>.contenedorScroll>.formulario>.formulario__campo {
     display: flex;
-    gap: 1.2rem;
-    margin-top: 1.2rem;
-}
-
-.pedido.grid1f2c>.grid1f2c__detalles>.detalles__formulario>.formulario__botones>.boton {
-    width: 100%;
-}
-
-.formularioScroll__nuevoCorreo {
-    display: flex;
+    flex-direction: row;
     gap: 0.8rem;
-}
-
-.correosRegistrados {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-
-    height: fit-content;
-}
-
-.camposPedido {
-    grid-area: camposPedido;
-    display: flex;
-    flex-direction: column;
-}
-
-.personalizacion__pedido {
-    width: 80%;
-}
-
-.personalizacion__pedido>.pedido__formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    width: 100%;
-}
-
-.personalizacion__pedido>.pedido__formulario>.cajaBusqueda {
-    width: 100%;
 }
