@@ -552,6 +552,7 @@
 .boton,
 .enlace {
     padding: 0.8rem 1.6rem;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

@@ -13,7 +13,7 @@
     <nav class="barraNavegacion">
         <div class="barraNavegacion__contenedor">
             <a class="barraNavegacion__logo" href="./index.php"><img src="/assets/svg/logo-ie.svg" alt="logo-ie"></a>
-            <a class="menu enlace -primario" href="#">
+            <a class="enlace -primario" onclick="abreBarraNavegacion();">
                 <?php echo file_get_contents("./assets/svg/menu.svg"); ?>
             </a>
         </div>

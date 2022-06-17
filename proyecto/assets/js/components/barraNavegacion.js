@@ -4,12 +4,8 @@
  *  File : barraNavegacion.js
  *******************************************/
 
-let barraNavegacion = document.addEventListener('DOMContentLoaded', () => {
-    const botonMenu = document.getElementsByClassName('menu')[0];
+function abreBarraNavegacion() {
     const enlaces = document.getElementsByClassName('barraNavegacion__tabs');
-
-    botonMenu.addEventListener('click', () => {
-        enlaces[0].classList.toggle('activo');
-        enlaces[1].classList.toggle('activo');
-    });
-});
+    enlaces[0].classList.toggle('activo');
+    enlaces[1].classList.toggle('activo');
+}
