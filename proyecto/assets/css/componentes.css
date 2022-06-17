@@ -710,6 +710,16 @@
     background-color: var(--color-primario-seleccionado);
 }
 
+.-positivo {
+    color: var(--color-positivo);
+    background-color: var(--color-positivo-seleccionado);
+}
+
+.-positivo:hover {
+    color: var(--color-positivo-seleccionado);
+    background-color: var(--color-positivo);
+}
+
 .-negativo {
     color: var(--color-blanco);
     background-color: var(--color-negativo);
@@ -823,6 +833,7 @@
     transition: all 0.3s;
 }
 
+/* TODO: aplicar estilos -positivo -negativo -primario, etc */
 .iconoContenedor {
     color: var(--color-primario);
     background-color: var(--color-primario-seleccionado);
