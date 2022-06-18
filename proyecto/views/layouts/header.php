@@ -38,7 +38,7 @@ $root = dirname(__FILE__, 3);
             </li>
             <li>
                 <!-- enlace+icono -->
-                <a class="enlace -primario" href="#">
+                <a class="enlace -primario" href="/views/Perfil.php">
                     Perfil
                     <?php echo file_get_contents("$root/assets/svg/usuario.svg"); ?>
                 </a>
