@@ -15,17 +15,17 @@
             <ul>
                 <li class="redes__icono">
                     <a class="icono -t32" href="/">
-                        <?php echo file_get_contents("./assets/svg/facebook.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/facebook.svg"); ?>
                     </a>
                 </li>
                 <li class="redes__icono">
                     <a class="icono -t32" href="/">
-                        <?php echo file_get_contents("./assets/svg/instagram.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/instagram.svg"); ?>
                     </a>
                 </li>
                 <li class="redes__icono">
                     <a class="icono -t32" href="/">
-                        <?php echo file_get_contents("./assets/svg/whatsapp.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/whatsapp.svg"); ?>
                     </a>
                 </li>
             </ul>
@@ -33,14 +33,14 @@
                 <li>
                     <!-- enlace+icono -->
                     <a class="enlace -primario" href="/">
-                        <?php echo file_get_contents("./assets/svg/celular.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/celular.svg"); ?>
                         (+52)4445489505
                     </a>
                 </li>
                 <li>
                     <!-- enlace+icono -->
                     <a class="enlace -primario" href="/">
-                        <?php echo file_get_contents("./assets/svg/correo.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/correo.svg"); ?>
                         industriaemblematica@gmail.com
                     </a>
                 </li>

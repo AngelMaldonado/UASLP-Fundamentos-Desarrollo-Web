@@ -1,29 +1,29 @@
-<?php require('./views/layouts/header.php'); ?>
+<?php require('./layouts/header.php'); ?>
 
 <main>
     <section class="VerProducto grid1f2c">
         <nav class="navegacionPagina">
             <a class="botonIcono -primario -r50" href="">
-                <?php echo file_get_contents("./assets/svg/flecha-izquierda.svg"); ?>
+                <?php echo file_get_contents("$root/assets/svg/flecha-izquierda.svg"); ?>
             </a>
             <ul class="navegacionPagina__ruta">
                 <li>
                     <a class="enlace -primario" href="/">
-                        <?php echo file_get_contents("./assets/svg/dashboard.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/dashboard.svg"); ?>
                         <h6>Productos y servicios</h6>
-                        <?php echo file_get_contents("./assets/svg/diamante-derecha.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/diamante-derecha.svg"); ?>
                     </a>
                 </li>
                 <li>
                     <a class="enlace -primario" href="/">
-                        <?php echo file_get_contents("./assets/svg/folder.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/folder.svg"); ?>
                         <h6>Paquetes de graduación</h6>
-                        <?php echo file_get_contents("./assets/svg/diamante-derecha.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/diamante-derecha.svg"); ?>
                     </a>
                 </li>
                 <li>
                     <a class="enlace -primario" href="/">
-                        <?php echo file_get_contents("./assets/svg/archivo.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/archivo.svg"); ?>
                         <h6>Productos y servicios</h6>
                     </a>
                 </li>
@@ -40,18 +40,18 @@
         <form class="formulario">
             <header class="formulario__titulo">
                 <h1>Paquete de graduación diamante</h1>
-                <?php require('./views/components/controlEstrellas.php'); ?>
+                <?php require('./components/controlEstrellas.php'); ?>
                 <h3>$1850.00</h3>
             </header>
             <div class="formulario__disponibilidad">
                 <h3>Disponibles: 30</h3>
                 <div class="controlNumerico">
                     <a class="botonIcono -primario -grande" href="/">
-                        <?php echo file_get_contents("./assets/svg/menos.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/menos.svg"); ?>
                     </a>
                     <p>1</p>
                     <a class="botonIcono -primario -grande" href="/">
-                        <?php echo file_get_contents("./assets/svg/mas.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/mas.svg"); ?>
                     </a>
                 </div>
             </div>
@@ -83,17 +83,17 @@
     <section class="comentarios">
         <h1>Comentarios</h1>
         <div class="comentarios__tarjetas">
-            <?php require('./views/components/tarjetaComentario.php'); ?>
-            <?php require('./views/components/tarjetaComentario.php'); ?>
-            <?php require('./views/components/tarjetaComentario.php'); ?>
-            <?php require('./views/components/tarjetaComentario.php'); ?>
+            <?php require('./components/tarjetaComentario.php'); ?>
+            <?php require('./components/tarjetaComentario.php'); ?>
+            <?php require('./components/tarjetaComentario.php'); ?>
+            <?php require('./components/tarjetaComentario.php'); ?>
             <!-- fin tarjetaComentario -->
             <div class="tarjetaNuevoComentario">
                 <div class="tarjetaNuevoComentario__usuario">
-                    <?php require('./views/components/avatar.php'); ?>
+                    <?php require('./components/avatar.php'); ?>
                 </div>
                 <form class="tarjetaNuevoComentario__entradas">
-                    <?php require('./views/components/controlEstrellas.php'); ?>
+                    <?php require('./components/controlEstrellas.php'); ?>
                     <div class="cajaAreaTexto -normal">
                         <textarea name="comentario" placeholder="Comentario"></textarea>
                         <p>0/120</p>
@@ -105,4 +105,4 @@
     </section>
 </main>
 
-<?php require('./views/layouts/footer.php'); ?>
+<?php require('./layouts/footer.php'); ?>

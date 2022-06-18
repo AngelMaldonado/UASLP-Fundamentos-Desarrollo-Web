@@ -1,4 +1,4 @@
-<?php require('./views/layouts/header.php') ?>
+<?php require('./layouts/header.php') ?>
 
 <main>
     <!-- <div class="popup">
@@ -15,10 +15,10 @@
     <section class="InformacionDelPedido grid1f2c">
         <nav class="navegacionPagina">
             <a class="botonIcono -primario -r50" href="">
-                <?php echo file_get_contents("./assets/svg/flecha-izquierda.svg"); ?>
+                <?php echo file_get_contents("$root/assets/svg/flecha-izquierda.svg"); ?>
             </a>
             <a class="enlace -primario" href="/">
-                <?php echo file_get_contents("./assets/svg/folder.svg"); ?>
+                <?php echo file_get_contents("$root/assets/svg/folder.svg"); ?>
                 <h6>Paquetes de graduación</h6>
             </a>
             <a class="etiqueta -primario" href="/">En espera</a>
@@ -31,14 +31,14 @@
                         <input type="email" placeholder="alumno@correo.com" name="nuevoCorreo">
                     </div>
                     <a class="botonIcono -primario" href="">
-                        <?php echo file_get_contents("./assets/svg/mas.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/mas.svg"); ?>
                     </a>
                 </div>
                 <div class="separador"></div>
                 <div class="cajaTexto -grande -verificado">
                     <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     <a href="">
-                        <?php echo file_get_contents("./assets/svg/verificado.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/verificado.svg"); ?>
                     </a>
                 </div>
                 <div class="formulario__campo">
@@ -46,7 +46,7 @@
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
-                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/eliminar.svg"); ?>
                     </a>
                 </div>
                 <div class="formulario__campo">
@@ -54,7 +54,7 @@
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
-                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/eliminar.svg"); ?>
                     </a>
                 </div>
                 <div class="formulario__campo">
@@ -62,7 +62,7 @@
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
-                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/eliminar.svg"); ?>
                     </a>
                 </div>
                 <div class="formulario__campo">
@@ -70,7 +70,7 @@
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
-                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/eliminar.svg"); ?>
                     </a>
                 </div>
                 <div class="formulario__campo">
@@ -78,7 +78,7 @@
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
-                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/eliminar.svg"); ?>
                     </a>
                 </div>
                 <div class="formulario__campo">
@@ -86,7 +86,7 @@
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
-                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/eliminar.svg"); ?>
                     </a>
                 </div>
                 <div class="formulario__campo">
@@ -94,7 +94,7 @@
                         <input type="email" placeholder="alumno@correo.com" name="correoRegistrado">
                     </div>
                     <a class="botonIcono -negativo" href="">
-                        <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/eliminar.svg"); ?>
                     </a>
                 </div>
             </form>
@@ -120,4 +120,4 @@
     </section>
 </main>
 
-<?php require('./views/layouts/footer.php') ?>
+<?php require('./layouts/footer.php') ?>

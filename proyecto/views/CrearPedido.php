@@ -1,4 +1,4 @@
-<?php require('./views/layouts/header.php'); ?>
+<?php require('./layouts/header.php'); ?>
 
 <main>
     <!-- <div class="popup">
@@ -30,7 +30,7 @@
             </h3>
             <a class="iconoContenedor -primario -r50">
                 <div class="contenedorResponsivo">
-                    <?php echo file_get_contents("./assets/svg/grupo.svg"); ?>
+                    <?php echo file_get_contents("$root/assets/svg/grupo.svg"); ?>
                 </div>
             </a>
         </div>
@@ -44,7 +44,7 @@
             </h3>
             <a class="iconoContenedor -primario -r50">
                 <div class="contenedorResponsivo">
-                    <?php echo file_get_contents("./assets/svg/arroba.svg"); ?>
+                    <?php echo file_get_contents("$root/assets/svg/arroba.svg"); ?>
                 </div>
             </a>
         </div>
@@ -59,7 +59,7 @@
             </h3>
             <a class="iconoContenedor -primario -r50">
                 <div class="contenedorResponsivo">
-                    <?php echo file_get_contents("./assets/svg/verificado.svg"); ?>
+                    <?php echo file_get_contents("$root/assets/svg/verificado.svg"); ?>
                 </div>
             </a>
         </div>
@@ -90,10 +90,10 @@
         </ul>
         <br><br>
         <a class="boton -primario -grande" href="./InformacionDelPedido.php">
-            <?php echo file_get_contents("./assets/svg/graduacion.svg"); ?>
+            <?php echo file_get_contents("$root/assets/svg/graduacion.svg"); ?>
             Crear pedido ahora
         </a>
     </section>
 </main>
 
-<?php require('./views/layouts/footer.php'); ?>
+<?php require('./layouts/footer.php'); ?>

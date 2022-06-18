@@ -11,11 +11,11 @@
         <h4>Disponibles: 30</h4>
         <div class="controlNumerico">
             <a class="botonIcono -primario -grande" href="/">
-                <?php echo file_get_contents("./assets/svg/menos.svg"); ?>
+                <?php echo file_get_contents("$root/assets/svg/menos.svg"); ?>
             </a>
             <p>1</p>
             <a class="botonIcono -primario -grande" href="/">
-                <?php echo file_get_contents("./assets/svg/mas.svg"); ?>
+                <?php echo file_get_contents("$root/assets/svg/mas.svg"); ?>
             </a>
         </div>
     </div>
@@ -23,16 +23,16 @@
     <div class="tarjetaBolsa__talon">
         <div>
             <a class="botonIcono -negativo -t32" href="#">
-                <?php echo file_get_contents("./assets/svg/eliminar.svg"); ?>
+                <?php echo file_get_contents("$root/assets/svg/eliminar.svg"); ?>
             </a>
             <a class="botonIcono -secundario -t32" href="#">
-                <?php echo file_get_contents("./assets/svg/editar.svg"); ?>
+                <?php echo file_get_contents("$root/assets/svg/editar.svg"); ?>
             </a>
         </div>
         <p>
             Personalizado
             <span class="icono -positivo -t20">
-                <?php echo file_get_contents("./assets/svg/verificado.svg"); ?>
+                <?php echo file_get_contents("$root/assets/svg/verificado.svg"); ?>
             </span>
         </p>
     </div>

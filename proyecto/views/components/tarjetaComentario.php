@@ -1,11 +1,11 @@
 <!-- tarjetaComentario -->
 <div class="tarjetaComentario">
     <div class="tarjetaComentario__usuario">
-        <?php require('./views/components/avatar.php'); ?>
+        <?php require('./components/avatar.php'); ?>
         <h4>Diana H.</h4>
     </div>
     <div class="tarjetaComentario__comentario">
-        <?php require('./views/components/controlEstrellas.php'); ?>
+        <?php require('./components/controlEstrellas.php'); ?>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In ea exercitationem commodi
             repellat quia repudiandae at ab sequi ratione, tempora sint qui eaque minima optio amet

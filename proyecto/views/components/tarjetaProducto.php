@@ -4,7 +4,7 @@
     </header>
     <div class="tarjetaFiltro">
         <h2>$1850.00</h2>
-        <?php require('./views/components/controlEstrellas.php'); ?>
-        <a class="boton -secundario -mediano" href="./VerProducto.php">Ver detalles</a>
+        <?php require('controlEstrellas.php'); ?>
+        <a class="boton -secundario -mediano" href="/views/VerProducto.php">Ver detalles</a>
     </div>
 </div>

@@ -1,10 +1,10 @@
-<?php require('./views/layouts/header.php'); ?>
+<?php require('./layouts/header.php'); ?>
 
 <main>
     <section class="PedidoConfirmado">
         <div class="iconoContenedor -primario -r50">
             <div class="contenedorResponsivo">
-                <?php echo file_get_contents("./assets/svg/verificado.svg") ?>
+                <?php echo file_get_contents("$root/assets/svg/verificado.svg") ?>
             </div>
         </div>
         <h3>
@@ -18,4 +18,4 @@
     </section>
 </main>
 
-<?php require('./views/layouts/footer.php'); ?>
+<?php require('./layouts/footer.php'); ?>

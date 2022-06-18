@@ -1,29 +1,29 @@
-<?php require('./views/layouts/header.php'); ?>
+<?php require('./layouts/header.php'); ?>
 
 <main>
     <section class="PersonalizacionProducto grid1f2c">
         <nav class="navegacionPagina">
             <a class="botonIcono -primario -r50" href="">
-                <?php echo file_get_contents("./assets/svg/flecha-izquierda.svg"); ?>
+                <?php echo file_get_contents("$root/assets/svg/flecha-izquierda.svg"); ?>
             </a>
             <ul class="navegacionPagina__ruta">
                 <li>
                     <a class="enlace -primario" href="/">
-                        <?php echo file_get_contents("./assets/svg/dashboard.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/dashboard.svg"); ?>
                         <h6>Productos y servicios</h6>
-                        <?php echo file_get_contents("./assets/svg/diamante-derecha.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/diamante-derecha.svg"); ?>
                     </a>
                 </li>
                 <li>
                     <a class="enlace -primario" href="/">
-                        <?php echo file_get_contents("./assets/svg/folder.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/folder.svg"); ?>
                         <h6>Paquetes de graduación</h6>
-                        <?php echo file_get_contents("./assets/svg/diamante-derecha.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/diamante-derecha.svg"); ?>
                     </a>
                 </li>
                 <li>
                     <a class="enlace -primario" href="/">
-                        <?php echo file_get_contents("./assets/svg/archivo.svg"); ?>
+                        <?php echo file_get_contents("$root/assets/svg/archivo.svg"); ?>
                         <h6>Productos y servicios</h6>
                     </a>
                 </li>
@@ -35,7 +35,7 @@
             </div>
             <header class="formulario__titulo">
                 <h1>Paquete de graduación diamante</h1>
-                <?php require('./views/components/controlEstrellas.php'); ?>
+                <?php require('./components/controlEstrellas.php'); ?>
                 <h3>$1850.00</h3>
             </header>
             <div class="formulario__disponibilidad">
@@ -146,4 +146,4 @@
             </form>
 </main>
 
-<?php require('./views/layouts/footer.php'); ?>
+<?php require('./layouts/footer.php'); ?>
