@@ -26,7 +26,7 @@
         <ul class="barraNavegacion__tabs">
             <li>
                 <!-- enlace+icono -->
-                <a class="enlace -primario" href="#">
+                <a class="enlace -primario" href="./Bolsa.php">
                     Bolsa
                     <?php echo file_get_contents("./assets/svg/bolsa.svg"); ?>
                 </a>

@@ -727,22 +727,27 @@
     background-color: var(--color-primario-seleccionado);
 }
 
-.-positivo {
+.-positivo,
+.icono.-positivo {
     color: var(--color-positivo);
     background-color: var(--color-positivo-seleccionado);
 }
 
-.-positivo:hover {
+.-positivo:hover,
+.icono.-positivo:hover {
     color: var(--color-positivo-seleccionado);
     background-color: var(--color-positivo);
 }
 
-.-negativo {
+.-negativo,
+.icono.-negativo {
     color: var(--color-blanco);
     background-color: var(--color-negativo);
 }
 
-.-negativo:hover {
+.-negativo:hover,
+.icono.-negativo:hover {
+    color: var(--color-blanco);
     background-color: var(--color-negativo-hover);
 }
 
@@ -782,6 +787,7 @@
     transition: all 0.3s;
 }
 
+/* TODO: enlace e icono para aplicar modificadores de colores */
 .enlace,
 .icono {
     color: var(--color-primario);
@@ -790,6 +796,10 @@
 
 .botonIcono {
     padding: 1.4rem;
+}
+
+.botonIcono.-t32 {
+    padding: 0.4rem;
 }
 
 .boton,
@@ -869,26 +879,85 @@ svg {
 ░░░██║░░░██║░░██║██║░░██║╚█████╔╝███████╗░░░██║░░░██║░░██║██████╔╝
 ░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚══════╝░░░╚═╝░░░╚═╝░░╚═╝╚═════╝░
 */
+
+.tarjetaBolsa,
 .tarjetaGaleria,
 .tarjetaProducto {
     position: relative;
-
-    background-image: url('https://picsum.photos/1920');
     border-radius: var(--borde-radio-grande);
     overflow: hidden;
 }
 
+.tarjetaGaleria,
+.tarjetaProducto {
+    background-image: url('https://picsum.photos/1920');
+}
+
+.tarjetaBolsa,
 .tarjetaProducto {
     /* Distribucion */
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+
+    /* Apariencia */
+    filter: var(--sombra-chica);
+}
+
+/* TODO: hacer la altura de la tarjeta automatica; quitar height fixed */
+.tarjetaBolsa {
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--color-blanco);
+    padding-right: 2.4rem;
+}
+
+.tarjetaBolsa>* {
+    display: flex;
+    align-items: center;
+}
+
+.tarjetaBolsa__producto {
+    gap: 1.2rem;
+}
+
+@media screen and (max-width: 870px) {
+    .tarjetaBolsa__producto>img {
+        border-radius: 0 0 var(--borde-radio-grande) 0;
+    }
+}
+
+/* TODO: alinear titulo y decripcion de los detalles */
+.tarjetaBolsa__detalle {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3.2rem;
+    gap: 1.2rem;
+}
+
+.tarjetaBolsa__talon {
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1.2rem 1.2rem 1.2rem 0;
+    height: 100%;
+}
+
+.tarjetaBolsa__talon>* {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.tarjetaProducto {
+    /* Distribucion */
+    flex-direction: column;
     margin: 1.2rem;
 
     /* Apariencia */
     width: 26.8rem;
     height: 38.8rem;
-    filter: var(--sombra-mediana);
 }
 
 .tarjetaGaleria {

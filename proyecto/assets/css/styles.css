@@ -13,6 +13,7 @@
 @import '/assets/css/InformacionDelPedido.css';
 @import '/assets/css/PedidoConfirmado.css';
 @import '/assets/css/Galeria.css';
+@import '/assets/css/Bolsa.css';
 @import '/assets/css/tokens.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
@@ -93,6 +94,7 @@ html {
     font-size: 62.5%;
     /** Reset para REMS - 62.5% = 10px de 16px **/
     font-family: 'Roboto', sans-serif;
+    color: var(--color-negro);
 }
 
 body {
@@ -109,6 +111,7 @@ body {
 }
 
 a {
+    color: inherit;
     text-decoration: none;
 }
 
