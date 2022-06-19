@@ -1,0 +1,57 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Sat Jun 18 2022
+*  File : IniciarSesion.css
+*******************************************/
+
+.IniciarSesion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 3.2rem;
+}
+
+.IniciarSesion>.navegacionPagina {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .IniciarSesion>.navegacionPagina {
+        flex-direction: row;
+    }
+}
+
+.tarjetaPerfil {
+    /* Distribucion */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.4rem;
+
+    /* Apariencia */
+    width: 42rem;
+    max-height: 560rem;
+    border-radius: var(--borde-radio-grande);
+    filter: var(--sombra-mediana);
+    background-color: var(--color-blanco);
+}
+
+@media screen and (max-width: 576px) {
+    .tarjetaPerfil {
+        width: 100%;
+    }
+}
+
+.IniciarSesion>.tarjetaPerfil>.avatar {
+    width: 60%;
+    padding-bottom: 60%;
+}
+
+.IniciarSesion>.tarjetaPerfil>.formulario {
+    justify-content: center;
+    gap: 1.2rem;
+    width: 100%;
+}

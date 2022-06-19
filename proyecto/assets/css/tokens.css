@@ -1,0 +1,181 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Thu Jun 09 2022
+*  File : tokens.css
+*******************************************/
+
+/* TODO: espaciados, paddings y margenes */
+
+:root {
+    /*
+    ░█████╗░░█████╗░██╗░░░░░░█████╗░██████╗░███████╗░██████╗
+    ██╔══██╗██╔══██╗██║░░░░░██╔══██╗██╔══██╗██╔════╝██╔════╝
+    ██║░░╚═╝██║░░██║██║░░░░░██║░░██║██████╔╝█████╗░░╚█████╗░
+    ██║░░██╗██║░░██║██║░░░░░██║░░██║██╔══██╗██╔══╝░░░╚═══██╗
+    ╚█████╔╝╚█████╔╝███████╗╚█████╔╝██║░░██║███████╗██████╔╝
+    ░╚════╝░░╚════╝░╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝╚═════╝░
+    */
+    --color-primario: #105F7D;
+    --color-primario-hover: #4F9BB9;
+    --color-primario-seleccionado: #B5EAFF;
+    --color-primario-a085: rgba(181, 234, 255, 0.85);
+    --color-primario-fondo-a08: rgba(255, 255, 255, 0.8);
+    --color-secundario: #00C875;
+    --color-secundario-hover: #037f4c;
+    --color-positivo: #258750;
+    --color-positivo-hover: #007038;
+    --color-positivo-seleccionado: #BBDBC9;
+    --color-negativo: #D83A52;
+    --color-negativo-hover: #B63546;
+    --color-negativo-seleccionado: #F4C3CB;
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --color-gris: #8F9BB3;
+    --color-amarillo-habilitado: #FFCB00;
+    --color-amarillo-deshabilitado: #CAB641;
+    --color-borde-ui: #C5C7D0;
+    --color-placeholder: #676879;
+
+    /*
+    ░██████╗░█████╗░███╗░░░███╗██████╗░██████╗░░█████╗░░██████╗
+    ██╔════╝██╔══██╗████╗░████║██╔══██╗██╔══██╗██╔══██╗██╔════╝
+    ╚█████╗░██║░░██║██╔████╔██║██████╦╝██████╔╝███████║╚█████╗░
+    ░╚═══██╗██║░░██║██║╚██╔╝██║██╔══██╗██╔══██╗██╔══██║░╚═══██╗
+    ██████╔╝╚█████╔╝██║░╚═╝░██║██████╦╝██║░░██║██║░░██║██████╔╝
+    ╚═════╝░░╚════╝░╚═╝░░░░░╚═╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░
+    Aplicar con filter()*/
+    --sombra-chica: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.200691));
+    --sombra-mediana: drop-shadow(0px 6px 20px rgba(0, 0, 0, 0.2));
+    --sombra-grande: drop-shadow(0px 15px 50px rgba(0, 0, 0, 0.3));
+    /* Aplicar con box-shadow */
+    --sombra-cajasEntrada: 0px 0px 8px;
+    /*
+    ██████╗░░█████╗░██████╗░██████╗░███████╗░██████╗
+    ██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝
+    ██████╦╝██║░░██║██████╔╝██║░░██║█████╗░░╚█████╗░
+    ██╔══██╗██║░░██║██╔══██╗██║░░██║██╔══╝░░░╚═══██╗
+    ██████╦╝╚█████╔╝██║░░██║██████╔╝███████╗██████╔╝
+    ╚═════╝░░╚════╝░╚═╝░░╚═╝╚═════╝░╚══════╝╚═════╝░
+    Aplicar con border-radius*/
+    --borde-radio-grande: 16px;
+    --borde-radio-mediano: 8px;
+    --borde-radio-chico: 4px;
+}
+
+.-r50 {
+    border-radius: 50%;
+}
+
+/*
+████████╗██╗██████╗░░█████╗░░██████╗░██████╗░░█████╗░███████╗██╗░█████╗░
+╚══██╔══╝██║██╔══██╗██╔══██╗██╔════╝░██╔══██╗██╔══██╗██╔════╝██║██╔══██╗
+░░░██║░░░██║██████╔╝██║░░██║██║░░██╗░██████╔╝███████║█████╗░░██║███████║
+░░░██║░░░██║██╔═══╝░██║░░██║██║░░╚██╗██╔══██╗██╔══██║██╔══╝░░██║██╔══██║
+░░░██║░░░██║██║░░░░░╚█████╔╝╚██████╔╝██║░░██║██║░░██║██║░░░░░██║██║░░██║
+░░░╚═╝░░░╚═╝╚═╝░░░░░░╚════╝░░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝
+*/
+
+/* Main heading */
+h1 {
+    font-size: 32px;
+    font-weight: medium;
+    letter-spacing: -1px;
+}
+
+/* Secondary title */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.2px;
+}
+
+/* Tertiary heading */
+h3 {
+    font-size: 24px;
+    font-weight: lighter;
+    letter-spacing: -0.2px;
+}
+
+/* Fourth heading */
+h4,
+label {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Paragraph bold */
+h5 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Ui text */
+h6 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Paragraph */
+p,
+a,
+select,
+input,
+textarea,
+.opcionRadio {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Medium text */
+span {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/*
+████████╗░█████╗░███╗░░░███╗░█████╗░███╗░░██╗░█████╗░░██████╗
+╚══██╔══╝██╔══██╗████╗░████║██╔══██╗████╗░██║██╔══██╗██╔════╝
+░░░██║░░░███████║██╔████╔██║███████║██╔██╗██║██║░░██║╚█████╗░
+░░░██║░░░██╔══██║██║╚██╔╝██║██╔══██║██║╚████║██║░░██║░╚═══██╗
+░░░██║░░░██║░░██║██║░╚═╝░██║██║░░██║██║░╚███║╚█████╔╝██████╔╝
+░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚════╝░╚═════╝░
+*/
+.-t20 {
+    width: 2rem;
+    height: 2rem;
+}
+
+.-t32 {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.-t40 {
+    width: 4rem;
+    height: 4rem;
+}
+
+.-t112 {
+    width: 11.2rem;
+    height: 11.2rem;
+}
+
+.-t172 {
+    width: 17.2rem;
+    height: 17.2rem;
+}
+
+.-t235 {
+    width: 23.5rem;
+    height: 23.5rem;
+}
+
+.-t256 {
+    width: 25.6rem;
+    height: 25.6rem;
+}
+
+.XL {
+    font-size: 12.8rem;
+}

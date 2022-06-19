@@ -1,0 +1,83 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Fri Jun 17 2022
+*  File : Bolsa.css
+*******************************************/
+
+.Bolsa {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding-top: 10rem;
+    height: fit-content;
+}
+
+.Bolsa>.navegacionPagina {
+    flex-direction: row;
+    align-items: center;
+}
+
+.Bolsa__vacia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10rem;
+    gap: 2.4rem;
+    height: 100%;
+}
+
+.Bolsa__vacia>.iconoContenedor {
+    width: 20%;
+    padding-bottom: 20%;
+}
+
+@media screen and (max-width: 768px) {
+    .Bolsa__vacia {
+        flex-direction: column;
+    }
+
+    .Bolsa__vacia>.iconoContenedor {
+        width: 40%;
+        padding-bottom: 40%;
+    }
+}
+
+.Bolsa__tarjetasBolsa {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.Bolsa__talon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    gap: 1.2rem;
+}
+
+.Bolsa__talon>.talon__botones {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.Bolsa__talon>.talon__botones>.boton {
+    width: 22rem;
+}
+
+@media screen and (max-width: 768px) {
+    .Bolsa__talon {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Bolsa__talon>.talon__botones {
+        width: 100%;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .Bolsa__talon>.talon__botones>.boton {
+        width: 100%;
+    }
+}

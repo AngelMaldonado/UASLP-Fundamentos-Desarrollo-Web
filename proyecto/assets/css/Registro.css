@@ -1,0 +1,76 @@
+/******************************************
+*  Author : @AngelMaldonadoS   
+*  Created On : Sat Jun 18 2022
+*  File : Registro.css
+*******************************************/
+
+/* TODO: sacar componentes para registro e inicio de sesion */
+.Registro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 3.2rem;
+    height: fit-content;
+}
+
+.Registro>.navegacionPagina {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .Registro>.navegacionPagina {
+        flex-direction: row;
+    }
+}
+
+.tarjetaPerfil {
+    /* Distribucion */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.4rem;
+
+    /* Apariencia */
+    width: 52rem;
+    max-height: 560rem;
+    border-radius: var(--borde-radio-grande);
+    filter: var(--sombra-mediana);
+    background-color: var(--color-blanco);
+}
+
+@media screen and (max-width: 576px) {
+    .tarjetaPerfil {
+        width: 100%;
+    }
+}
+
+.Registro>.tarjetaPerfil>.avatar {
+    width: 30%;
+    padding-bottom: 30%;
+}
+
+.Registro>.tarjetaPerfil>.formulario {
+    justify-content: center;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.Registro>.tarjetaPerfil>.formulario>.campos {
+    flex-direction: row;
+}
+
+@media screen and (max-width: 576px) {
+    .Registro>.tarjetaPerfil>.formulario>.campos {
+        flex-direction: column;
+    }
+}
+
+.Registro>.tarjetaPerfil>.formulario>.campos>* {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+}

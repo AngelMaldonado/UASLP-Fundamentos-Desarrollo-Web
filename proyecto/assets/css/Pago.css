@@ -1,0 +1,46 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Sat Jun 18 2022
+*  File : Pago.css
+*******************************************/
+
+.Pago {
+    padding-bottom: 6.4rem;
+}
+
+.Pago>.formulario>.cajaOpcionesRadio {
+    flex-direction: column;
+}
+
+.Pago__informacion,
+.Pago__informacion>* {
+    display: flex;
+    flex-direction: column;
+}
+
+.Pago__informacion {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Pago__informacion>* {
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.Pago__informacion>.informacion__botones {
+    flex-direction: row;
+    justify-content: end;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .Pago__informacion>.informacion__botones {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.Pago__informacion>.informacion__botones>.boton {
+    width: 100%;
+}

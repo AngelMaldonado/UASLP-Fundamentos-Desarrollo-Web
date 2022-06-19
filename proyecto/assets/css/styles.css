@@ -1,0 +1,176 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Thu Jun 09 2022
+*  File : styles.css
+*******************************************/
+
+@import '/assets/css/Componentes.css';
+@import '/assets/css/Index.css';
+@import '/assets/css/ProductosYServicios.css';
+@import '/assets/css/VerProducto.css';
+@import '/assets/css/CrearPedido.css';
+@import '/assets/css/PersonalizacionProducto.css';
+@import '/assets/css/InformacionDelPedido.css';
+@import '/assets/css/PedidoConfirmado.css';
+@import '/assets/css/Galeria.css';
+@import '/assets/css/Bolsa.css';
+@import '/assets/css/Pago.css';
+@import '/assets/css/IniciarSesion.css';
+@import '/assets/css/Registro.css';
+@import '/assets/css/Perfil.css';
+@import '/assets/css/tokens.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/*
+██████╗░███████╗░██████╗███████╗████████╗
+██╔══██╗██╔════╝██╔════╝██╔════╝╚══██╔══╝
+██████╔╝█████╗░░╚█████╗░█████╗░░░░░██║░░░
+██╔══██╗██╔══╝░░░╚═══██╗██╔══╝░░░░░██║░░░
+██║░░██║███████╗██████╔╝███████╗░░░██║░░░
+╚═╝░░╚═╝╚══════╝╚═════╝░╚══════╝░░░╚═╝░░░
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+address,
+cite,
+img,
+strong,
+center,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+tr,
+th,
+td,
+aside,
+embed,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /** Reset para REMS - 62.5% = 10px de 16px **/
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-negro);
+}
+
+body {
+    line-height: 1;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+textarea {
+    background: transparent;
+    border: 0;
+    resize: none;
+    font-family: inherit;
+    accent-color: currentColor;
+}
+
+input:focus,
+select:focus,
+.opcionRadio:focus,
+textarea {
+    outline: none;
+}
+
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+/* DISTRIBUCION GENERAL */
+img,
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    padding: 0 6.4rem;
+    height: 100vh;
+}
+
+@media screen and (max-width: 576px) {
+    section {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+}
