@@ -37,14 +37,12 @@ class BDConexion
             $query->bindParam(':valor', $valor, PDO::PARAM_STR);
             $query->execute();
             if ($query->rowCount() > 0) {
-                return true;
-                echo "Existe";
-                exit();
+                return $query->fetch(PDO::FETCH_ASSOC);
             } else {
                 return false;
             }
-        } catch (PDOException $e) {
-            throw new ExcepcionErrorDeConsulta($sql);
+        } catch (PDOException $ex) {
+            throw new ExcepcionErrorDeConsulta($sql . '\nPDOException: ' . $ex->getMessage());
         }
     }
 
@@ -65,8 +63,8 @@ class BDConexion
             $query = self::$conexion->prepare($sql);
             $query->execute();
             return true;
-        } catch (PDOException $e) {
-            throw new ExcepcionErrorDeConsulta($sql . '\nPDOException: ' . $e->getMessage());
+        } catch (PDOException $ex) {
+            throw new ExcepcionErrorDeConsulta($sql . '\nPDOException: ' . $ex->getMessage());
         }
     }
 }

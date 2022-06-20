@@ -31,6 +31,51 @@ class Usuario
     {
     }
 
+    public static function Usuario($conexion, $correo, $pswd)
+    {
+        /* Valida los campos */
+        if (empty($correo) || empty($pswd)) {
+            throw new ExcepcionCamposRequeridos();
+        }
+        /* Valida el correo */
+        if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+            throw new ExcepcionCorreoInvalido();
+        }
+        /* Valida la contrasena */
+        if (strlen($pswd) < 14) {
+            throw new ExcepcionPswdInvalida();
+        }
+        /* Verifica que el correo SI este en la base de datos */
+        try {
+            $registro = $conexion->existeRegistro('usuarios', 'correo', $correo);
+            if ($registro !== false) {
+                $usuario = new Usuario();
+                $usuario->_correo = $registro["correo"];
+                $usuario->_pswd = $registro["pswd"];
+                /* Valida la contrasena */
+                if (password_verify($pswd, $usuario->_pswd)) {
+                    /* Obten el resto de los datos del usuario */
+                    $usuario->_id = $registro["usuario_ID"];
+                    $usuario->_nombre = $registro["nombre"];
+                    $usuario->_tel = $registro["tel"];
+                    $usuario->_escuela = $registro["escuela"];
+                    $usuario->_estudios = $registro["estudios"];
+                    $usuario->_generacion = $registro["generacion"];
+                    $usuario->_tipoUsuario = $registro["tipoUsuario"];
+                    $usuario->_foto = $registro["foto"];
+                } else {
+                    throw new ExcepcionPswdInvalida();
+                }
+            } else {
+                throw new ExcepcionCorreoInexistente();
+            }
+        } catch (ExcepcionErrorDeConsulta $ex) {
+            throw new Exception('Error en la tabla del usuario!\n' . $ex->getMessage());
+        }
+
+        return $usuario;
+    }
+
     /**
      * TODO:aumentar seguridad de la contrasena */
     public static function nuevoUsuario(
@@ -83,7 +128,7 @@ class Usuario
             throw new ExcepcionPswdInvalida();
         }
         /* Verifica que el correo no este en la base de datos */
-        if ($conexion->existeRegistro('usuarios', 'correo', $correo)) {
+        if ($conexion->existeRegistro('usuarios', 'correo', $correo) !== false) {
             throw new ExcepcionCorreoExistente();
         }
 
@@ -102,6 +147,24 @@ class Usuario
         $nuevoUsuario->_foto = $foto;
 
         return $nuevoUsuario;
+    }
+
+    public function logueaUsuario($conexion)
+    {
+        if (session_start()) {
+            $_SESSION['usuario_id'] = $this->_id;
+            $_SESSION['usuario_nombre'] = $this->_nombre;
+            $_SESSION['usuario_correo'] = $this->_correo;
+            $_SESSION['usuario_pswd'] = $this->_pswd;
+            $_SESSION['usuario_tel'] = $this->_tel;
+            $_SESSION['usuario_escuela'] = $this->_escuela;
+            $_SESSION['usuario_estudios'] = $this->_estudios;
+            $_SESSION['usuario_generacion'] = $this->_generacion;
+            $_SESSION['usuario_tipoUsuario'] = $this->_tipoUsuario;
+            $_SESSION['usuario_foto'] = $this->_foto;
+        } else {
+            throw new ExcepcionErrorDeSesion();
+        }
     }
 
     public function registraUsuario($conexion)
@@ -212,5 +275,21 @@ class ExcepcionCorreoExistente extends Exception
     public function __construct($code = 9, Exception $previous = null)
     {
         parent::__construct("Correo existente", $code, $previous);
+    }
+}
+
+class ExcepcionCorreoInexistente extends Exception
+{
+    public function __construct($code = 10, Exception $previous = null)
+    {
+        parent::__construct("Correo inexistente", $code, $previous);
+    }
+}
+
+class ExcepcionErrorDeSesion extends Exception
+{
+    public function __construct($code = 11, Exception $previous = null)
+    {
+        parent::__construct("Error de sesion", $code, $previous);
     }
 }

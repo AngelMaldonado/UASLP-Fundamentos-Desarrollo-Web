@@ -6,59 +6,52 @@
  * File : controladorAcceso.php
  *******************************************/
 
-include("../models/BDConexion.php");
+include('../models/BDConexion.php');
+include('../models/Usuario.php');
 
 try {
-    $conexion = BDConexion::obtenConexion();
+    $conexion = new BDConexion();
 } catch (PDOException $ex) {
     echo $ex->getMessage();
+
     exit();
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($_POST["_method"] === "POST") {
-
+        try {
+            $loginUsuario = Usuario::Usuario(
+                $conexion,
+                $_POST['correo'],
+                $_POST['pswd'],
+            );
+        } catch (ExcepcionCamposRequeridos $ex) {
+            header("location: ../views/IniciarSesion.php?error=registroVacio");
+            exit();
+        } catch (ExcepcionCorreoInvalido $ex) {
+            header("location: ../views/IniciarSesion.php?error=correoInvalido");
+            exit();
+        } catch (ExcepcionCorreoInexistente $ex) {
+            header("location: ../views/IniciarSesion.php?error=correoInexistente");
+            exit();
+        } catch (ExcepcionPswdInvalida $ex) {
+            header("location: ../views/IniciarSesion.php?error=pswdInvalida");
+            exit();
+        }
 
         try {
-            $query = $conexion->prepare('SELECT * FROM usuarios WHERE correo = :correo');
-            $query->bindParam(':correo', $correo, PDO::PARAM_STR);
-            $query->execute();
-
-            if ($query->rowCount() === 0) {
-                echo "Usuario no encontrado";
-                // header('Location: http://localhost/twitter/');
-                // exit();
-            }
-
-            $user;
-
-            while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-                $user = new User($row["id"], $row["username"], $row["password"], $row["photo"], $row["type"]);
-            }
-
-            if (!password_verify($password, $user->getPassword())) {
-                echo "Contraseña inválida";
-                exit();
-            }
-
-            session_start();
-
-            $_SESSION["id"] = $user->getId();
-            $_SESSION["username"] = $user->getUsername();
-            $_SESSION["photo"] = $user->getPhoto();
-            $_SESSION["type"] = $user->getType();
-
-            header('Location: http://localhost/twitter/views/');
+            $loginUsuario->logueaUsuario($conexion);
+            header("location: ../");
+        } catch (ExcepcionErrorDeSesion $ex) {
+            header("location: ../views/IniciarSesion.php?error=errorDeSesion");
             exit();
-        } catch (PDOException $e) {
-            echo $e;
         }
     } else if ($_POST["_method"] === "DELETE") {
         session_start();
 
         session_destroy();
 
-        header('Location: http://localhost/twitter/');
+        header('Location: ../');
 
         exit();
     }

@@ -1,6 +1,7 @@
 <?php
 // Variable con el directorio raiz del proyecto
 $root = dirname(__FILE__, 3);
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -39,16 +40,41 @@ $root = dirname(__FILE__, 3);
             <li>
                 <!-- enlace+icono -->
                 <a class="enlace -primario" href="/views/IniciarSesion.php">
-                    Iniciar sesión<br>
-                    o Registrarse
+                    <?php
+                    if (isset($_SESSION['usuario_id'])) {
+                        echo "Hola, " . strtok($_SESSION['usuario_nombre'], " ");
+                    } else {
+                        echo "Iniciar sesión<br>o Registrarse";
+                    }
+                    ?>
                     <?php echo file_get_contents("$root/assets/svg/usuario.svg"); ?>
                 </a>
             </li>
-            <li>
-                <a class="enlace -primario" href="#">
-                    Dashboard
-                    <?php echo file_get_contents("$root/assets/svg/dashboard.svg"); ?>
-                </a>
-            </li>
+            <?php
+            if (isset($_SESSION['usuario_tipoUsuario']) && $_SESSION['usuario_tipoUsuario'] == "administrador") {
+                echo
+                "
+                <li>
+                    <a class='enlace -primario' href='#'>
+                        Dashboard
+                        <?php echo file_get_contents('$root/assets/svg/dashboard.svg'); ?>
+                    </a>
+                </li>
+                ";
+            }
+            ?>
+            <?php
+            if (isset($_SESSION['usuario_id'])) {
+                echo
+                "
+                <li>
+                    <form action='/controllers/controladorAcceso.php' method='POST'>
+                        <input type='hidden' name='_method' value='DELETE'>
+                        <a id='submit' class='boton -negativo -chico'>Cerrar sesión</a>
+                    </form>
+                </li>
+                ";
+            }
+            ?>
         </ul>
     </nav>

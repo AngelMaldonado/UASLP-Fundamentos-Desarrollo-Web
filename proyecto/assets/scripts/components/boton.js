@@ -5,5 +5,5 @@
  *******************************************/
 
 document.getElementById("submit").onclick = function () {
-    document.getElementsByClassName("formulario")[0].submit();
+    document.getElementsByTagName("form")[0].submit();
 }
