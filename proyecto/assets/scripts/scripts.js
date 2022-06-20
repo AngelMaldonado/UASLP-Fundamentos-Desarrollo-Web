@@ -4,8 +4,9 @@
  *  File : script.js
  *******************************************/
 
-cargaScript('/assets/js/components/barraNavegacion.js');
-cargaScript('/assets/js/components/opcionRadio.js');
+cargaScript('/assets/scripts/components/barraNavegacion.js');
+cargaScript('/assets/scripts/components/opcionRadio.js');
+cargaScript('/assets/scripts/components/boton.js');
 
 function cargaScript(url) {
     var head = document.getElementsByTagName('head')[0];

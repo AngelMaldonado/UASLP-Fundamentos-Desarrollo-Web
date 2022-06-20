@@ -45,9 +45,13 @@
     }
 }
 
-.IniciarSesion>.tarjetaPerfil>.avatar {
+.IniciarSesion>.tarjetaPerfil>.iconoContenedor {
     width: 60%;
     padding-bottom: 60%;
+}
+
+.IniciarSesion>.tarjetaPerfil>.iconoContenedor>.contenedorResponsivo {
+    padding: 3.2rem;
 }
 
 .IniciarSesion>.tarjetaPerfil>.formulario {

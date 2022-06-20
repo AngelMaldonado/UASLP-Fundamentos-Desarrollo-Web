@@ -11,7 +11,7 @@ $root = dirname(__FILE__, 3);
     <meta name="author" content="AngelMaldonado">
     <title>Industria Emblemática</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <script src="/assets/js/script.js"></script>
+    <script src="/assets/scripts/scripts.js"></script>
 </head>
 
 <body>
@@ -38,8 +38,9 @@ $root = dirname(__FILE__, 3);
             </li>
             <li>
                 <!-- enlace+icono -->
-                <a class="enlace -primario" href="/views/Perfil.php">
-                    Perfil
+                <a class="enlace -primario" href="/views/IniciarSesion.php">
+                    Iniciar sesión<br>
+                    o Registrarse
                     <?php echo file_get_contents("$root/assets/svg/usuario.svg"); ?>
                 </a>
             </li>

@@ -1,5 +1,5 @@
 <?php require('./layouts/header.php'); ?>
-
+<?php include("../controllers/controladorUsuario.php"); ?>
 <main>
     <section class="Perfil grid1f2c">
         <nav class="navegacionPagina">

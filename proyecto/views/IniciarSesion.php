@@ -3,17 +3,21 @@
 <main>
     <section class="IniciarSesion">
         <nav class="navegacionPagina">
-            <a class="botonIcono -primario -r50" href="">
+            <a class="botonIcono -primario -r50" href="javascript:history.back();">
                 <?php echo file_get_contents("$root/assets/svg/flecha-izquierda.svg"); ?>
             </a>
-            <a class="enlace -primario" href="/">
-                <?php echo file_get_contents("$root/assets/svg/folder.svg"); ?>
-                <h6>Paquetes de graduación</h6>
-            </a>
+            <div class="enlace -primario">
+                <?php echo file_get_contents("$root/assets/svg/usuario.svg"); ?>
+                <h6>Iniciar sesión</h6>
+            </div>
         </nav>
         <div class="tarjetaPerfil">
-            <?php require('./components/avatar.php'); ?>
-            <form class="formulario" action="">
+            <div class="iconoContenedor -primario -r50">
+                <div class="contenedorResponsivo">
+                    <?php echo file_get_contents("$root/assets/svg/usuario.svg"); ?>
+                </div>
+            </div>
+            <form class="formulario" action="/controllers/controladorAcceso.php" method="POST">
                 <div>
                     <label for="correo">Correo</label>
                     <div class="cajaTexto -grande -normal">
@@ -28,7 +32,7 @@
                 </div>
                 <div>
                     <a class="boton -primario -grande" href="">Iniciar sesión</a>
-                    <a class="boton -secundario -grande" href="">Registrarse</a>
+                    <a class="boton -secundario -grande" href="/views/Registro.php">Registrarse</a>
                 </div>
             </form>
         </div>
