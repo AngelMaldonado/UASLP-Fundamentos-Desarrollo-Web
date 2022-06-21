@@ -47,9 +47,13 @@
     }
 }
 
-.Registro>.tarjetaPerfil>.avatar {
+.Registro>.tarjetaPerfil>.iconoContenedor {
     width: 30%;
     padding-bottom: 30%;
+}
+
+.Registro>.tarjetaPerfil>.iconoContenedor>.contenedorResponsivo {
+    padding: 3.2rem;
 }
 
 .Registro>.tarjetaPerfil>.formulario {
