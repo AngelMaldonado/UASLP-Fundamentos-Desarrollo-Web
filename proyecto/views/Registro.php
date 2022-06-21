@@ -12,8 +12,51 @@
             </a>
         </nav>
         <div class="tarjetaPerfil">
-            <?php require('./components/avatar.php'); ?>
-            <form class="formulario" action="">
+            <?php
+            if (isset($_GET["error"])) {
+                if ($_GET["error"] == "registroVacio") {
+                    echo "<p>Los campos con '*' son requeridos</p><br>";
+                }
+                if ($_GET["error"] == "nombreInvalido") {
+                    echo "<p>El nombre del usuario contiene caracteres inválidos </p><br>";
+                }
+                if ($_GET["error"] == "correoInvalido") {
+                    echo "<p>El correo no es válido</p><br>";
+                }
+                if ($_GET["error"] == "telefonoInvalido") {
+                    echo "<p>El telefono no es válido</p><br>";
+                }
+                if ($_GET["error"] == "estudiosInvalido") {
+                    echo "<p>Los estudios contienen caracteres inválidos</p><br>";
+                }
+                if ($_GET["error"] == "escuelaInvalida") {
+                    echo "<p>La escuela contiene caracteres inválidos</p><br>";
+                }
+                if ($_GET["error"] == "generacionInvalida") {
+                    echo "<p>La generación no es válida</p><br>";
+                }
+                if ($_GET["error"] == "pswdsNoCoinciden") {
+                    echo "<p>Las contraseñas no coinciden</p><br>";
+                }
+                if ($_GET["error"] == "pswdInvalida") {
+                    echo "<p>La contraseña no es válida, al menos 12 caracteres</p><br>";
+                }
+                if ($_GET["error"] == "correoExistente") {
+                    echo "<p>El correo ya está registrado</p><br>";
+                }
+                if ($_GET["error"] == "registroExitoso") {
+                    echo "<p>Registro exitoso, ahora puede iniciar sesión</p><br>";
+                }
+            }
+            ?>
+            <div class="iconoContenedor -primario -r50">
+                <div class="contenedorResponsivo">
+                    <?php echo file_get_contents("$root/assets/svg/usuario.svg"); ?>
+                </div>
+            </div>
+            <br><br>
+            <form class="formulario" action="/controllers/controladorRegistro.php" method="POST">
+                <input type="hidden" name="_method" value="POST">
                 <div class="campos">
                     <div>
                         <label for="nombre">Nombre*</label>
@@ -36,30 +79,38 @@
                         </div>
                     </div>
                     <div>
-                        <label for="carrera">Carrera</label>
+                        <label for="estudios">Estudios</label>
                         <div class="cajaTexto -grande -normal">
-                            <input type="text" placeholder="Carrera" name="carrera">
+                            <input type="text" placeholder="Estudios" name="estudios">
+                        </div>
+                    </div>
+                </div>
+                <div class="campos">
+                    <div>
+                        <label for="generacion">Generación</label>
+                        <div class="cajaTexto -grande -normal">
+                            <input type="text" placeholder="Generación" name="generacion">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="escuela">Escuela</label>
+                        <div class="cajaTexto -grande -normal">
+                            <input type="text" placeholder="Escuela" name="escuela">
                         </div>
                     </div>
                 </div>
                 <div>
-                    <label for="generacion">Generación</label>
+                    <label for="pswd">Contraseña*</label>
                     <div class="cajaTexto -grande -normal">
-                        <input type="text" placeholder="Generación" name="generacion">
+                        <input type="password" placeholder="Contraseña" name="pswd" required>
+                    </div>
+                    <div class="cajaTexto -grande -normal">
+                        <input type="password" placeholder="Confirmar contraseña" name="repswd" required>
                     </div>
                 </div>
                 <div>
-                    <label for="contraseña">Contraseña*</label>
-                    <div class="cajaTexto -grande -normal">
-                        <input type="password" placeholder="Contraseña" name="contraseña" required>
-                    </div>
-                    <div class="cajaTexto -grande -normal">
-                        <input type="password" placeholder="Confirmar contraseña" name="contraseña" required>
-                    </div>
-                </div>
-                <div>
-                    <a class="boton -primario -grande" href="">Registrarme</a>
-                    <a class="boton -secundario -grande" href="">Volver al inicio de sesión</a>
+                    <a id="submit" class="boton -primario -grande">Registrarme</a>
+                    <a class="boton -secundario -grande" href="/views/IniciarSesion.php">Volver al inicio de sesión</a>
                 </div>
             </form>
         </div>
