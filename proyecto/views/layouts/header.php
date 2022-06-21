@@ -55,12 +55,10 @@ session_start();
                 echo
                 "
                 <li>
-                    <a class='enlace -primario' href='#'>
-                        Dashboard
-                        <?php echo file_get_contents('$root/assets/svg/dashboard.svg'); ?>
-                    </a>
-                </li>
-                ";
+                    <a class='enlace -primario' href='/views/admin/'>
+                        Dashboard";
+                echo file_get_contents("$root/assets/svg/dashboard.svg");
+                echo "</a></li>";
             }
             ?>
             <?php

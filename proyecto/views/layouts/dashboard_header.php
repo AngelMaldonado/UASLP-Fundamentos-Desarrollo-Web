@@ -2,6 +2,11 @@
 // Variable con el directorio raiz del proyecto
 $root = dirname(__FILE__, 3);
 session_start();
+
+// Redirigir si no se ha iniciado sesion o si el usuario no es administrador
+if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_tipoUsuario'] != "administrador") {
+    header('Location: ../../');
+}
 ?>
 
 <!DOCTYPE html>

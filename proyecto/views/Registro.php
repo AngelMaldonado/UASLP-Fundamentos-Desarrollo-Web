@@ -57,6 +57,7 @@
             <br><br>
             <form class="formulario" action="/controllers/controladorRegistro.php" method="POST">
                 <input type="hidden" name="_method" value="POST">
+                <input type="hidden" name="tipoUsuario" value="cliente">
                 <div class="campos">
                     <div>
                         <label for="nombre">Nombre*</label>
