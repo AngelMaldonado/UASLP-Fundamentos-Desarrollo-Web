@@ -28,26 +28,3 @@
     width: 20%;
     padding-bottom: 20%;
 }
-
-.Perfil>.tarjetaPerfil>.formulario {
-    justify-content: center;
-    gap: 1.2rem;
-    width: 100%;
-}
-
-.Perfil>.tarjetaPerfil>.formulario>.campos {
-    flex-direction: row;
-}
-
-@media screen and (max-width: 576px) {
-    .Perfil>.tarjetaPerfil>.formulario>.campos {
-        flex-direction: column;
-    }
-}
-
-.Perfil>.tarjetaPerfil>.formulario>.campos>* {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    width: 100%;
-}

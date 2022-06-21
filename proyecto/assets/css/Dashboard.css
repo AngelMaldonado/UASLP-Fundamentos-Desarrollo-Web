@@ -1,0 +1,93 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Mon Jun 20 2022
+*  File : Dashboard.css
+*******************************************/
+section {
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    section {
+        padding-top: 12rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding-top: 10rem;
+    }
+}
+
+.barraNavegacion {
+    background-color: var(--color-secundario-fondo-a08);
+}
+
+.tarjetasUsuario {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.tarjetaUsuario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1.2rem;
+    width: 100%;
+    height: 15.4rem;
+    background-color: var(--color-blanco);
+    border-radius: var(--borde-radio-grande);
+    filter: var(--sombra-mediana);
+    overflow: hidden;
+}
+
+.tarjetaUsuario>img {
+    width: auto;
+}
+
+.tarjetaUsuario>form {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 3.2rem;
+    width: 30rem;
+}
+
+.Inventario {
+    height: fit-content;
+}
+
+.Inventario>.formulario {
+    justify-content: center;
+    gap: 1.2rem;
+    height: fit-content;
+}
+
+.tarjetaProducto>*>.tarjetaFiltro {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    gap: 1.2rem;
+    bottom: 0;
+}
+
+.cajaDesplegable {
+    padding: 0;
+}
+
+.tarjetaProducto {
+    width: 30rem;
+    height: 69rem;
+}
+
+.tarjetaBolsa>.tarjetaBolsa__detalle>.boton {
+    width: 100%;
+}
+
+.Bolsa {
+    margin-bottom: 3.2rem;
+}

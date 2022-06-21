@@ -525,6 +525,29 @@
     }
 }
 
+.Perfil>.tarjetaPerfil>.formulario {
+    justify-content: center;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.formulario>.campos {
+    flex-direction: row;
+}
+
+@media screen and (max-width: 576px) {
+    .formulario>.campos {
+        flex-direction: column;
+    }
+}
+
+.formulario>.campos>* {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+}
+
 /*
 ███████╗███╗░░██╗████████╗██████╗░░█████╗░██████╗░░█████╗░░██████╗
 ██╔════╝████╗░██║╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝
@@ -792,6 +815,11 @@
 .icono {
     color: var(--color-primario);
     background: transparent;
+}
+
+/*Solucion temporal */
+.enlace.-secundario {
+    color: var(--color-blanco);
 }
 
 .botonIcono {
