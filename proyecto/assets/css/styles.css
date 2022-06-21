@@ -120,7 +120,8 @@ a {
 }
 
 input,
-textarea {
+textarea,
+select {
     background: transparent;
     border: 0;
     resize: none;
