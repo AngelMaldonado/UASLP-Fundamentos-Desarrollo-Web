@@ -120,8 +120,7 @@ a {
 }
 
 input,
-textarea,
-select {
+textarea {
     background: transparent;
     border: 0;
     resize: none;
@@ -130,7 +129,6 @@ select {
 }
 
 input:focus,
-select:focus,
 .opcionRadio:focus,
 textarea {
     outline: none;
@@ -147,6 +145,18 @@ input[type=search]::-ms-reveal {
     display: none;
     width: 0;
     height: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 /* clears the ‘X’ from Chrome */

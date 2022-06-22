@@ -49,12 +49,21 @@ section {
     width: auto;
 }
 
+.tarjetaUsuario>form>select {
+    width: 40rem;
+}
+
 .tarjetaUsuario>form {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-direction: row;
     gap: 3.2rem;
     width: 30rem;
+}
+
+.tarjetaUsuario>form>div>a {
+    width: 6.2rem;
 }
 
 .Inventario {
@@ -81,7 +90,7 @@ section {
 
 .tarjetaProducto {
     width: 30rem;
-    height: 69rem;
+    height: 80rem;
 }
 
 .tarjetaBolsa>.tarjetaBolsa__detalle>.boton {
