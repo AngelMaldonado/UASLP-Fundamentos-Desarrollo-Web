@@ -1,6 +1,6 @@
 <?php require('./layouts/header.php'); ?>
 
-<main>
+<main class="ProductosServicios">
     <section class="portada">
         <div class="portada__titulo">
             <h1>Productos y servicios</h1>

@@ -4,6 +4,10 @@
 *  File : pasos.css
 *******************************************/
 
+.Pedido>.portada {
+    background-image: url(/assets/img/pedido-portada.jpg);
+}
+
 .pasos {
     display: flex;
     flex-direction: column;

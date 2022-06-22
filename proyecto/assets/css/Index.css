@@ -19,7 +19,7 @@
     justify-content: end;
 
     /* Apariencia */
-    background-image: url('https://picsum.photos/1920');
+    background-image: url('/assets/img/hero.jpg');
 }
 
 .slide__descripcion {
@@ -56,10 +56,10 @@
     filter: var(--sombra-grande);
 }
 
-.introduccionIzquierda>.tarjetaInicio:first-child,
+/* .introduccionIzquierda>.tarjetaInicio:first-child,
 .introduccionDerecha>.tarjetaInicio:first-child {
     background-image: url('https://picsum.photos/1920');
-}
+} */
 
 .introduccionIzquierda>.tarjetaInicio:first-child,
 .introduccionDerecha>.tarjetaInicio:last-child {
@@ -184,8 +184,6 @@
     align-items: center;
     padding: 0 12.8rem;
 
-    /* Apariencia */
-    background-image: url('https://picsum.photos/1920');
 }
 
 @media screen and (max-width: 768px) {
@@ -243,7 +241,6 @@
     gap: 2.4rem;
 
     /* Apariencia */
-    background-image: url('https://picsum.photos/1920');
     border-radius: 0 0 5rem 5rem;
 }
 

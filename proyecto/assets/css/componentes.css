@@ -359,9 +359,6 @@
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 6.4rem;
-
-    /* Apariencia */
-    background-image: url('https://picsum.photos/1920');
 }
 
 .portada__titulo {

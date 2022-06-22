@@ -1,7 +1,7 @@
 <?php require('./views/layouts/header.php') ?>
 
 <main>
-    <section class="hero">
+    <section style="background-image: url('/assets/img/hero.jpg');" class="hero">
         <div class="slidesContenedor">
             <div class="slidesContenedor__control">
                 <a class="botonIcono -primario -r50" href="">
@@ -40,7 +40,7 @@
         </div>
     </section>
     <section class="introduccionIzquierda">
-        <div class="tarjetaInicio"></div>
+        <div class="tarjetaInicio" style="background-image: url('/assets/img/tarjeta-inicio1.jpg');"></div>
         <div class="tarjetaInicio">
             <h1>Paquetes de graduación</h1>
             <h3>
@@ -59,7 +59,7 @@
         </div>
     </section>
     <section class="introduccionDerecha">
-        <div class="tarjetaInicio"></div>
+        <div class="tarjetaInicio" style="background-image: url('/assets/img/tarjeta-inicio2.jpg');"></div>
         <div class="tarjetaInicio">
             <h1>Artículos promocionales</h1>
             <h3>
@@ -78,7 +78,7 @@
         </div>
     </section>
     <section class="introduccionIzquierda">
-        <div class="tarjetaInicio"></div>
+        <div class="tarjetaInicio" style="background-image: url('/assets/img/tarjeta-inicio3.jpg');"></div>
         <div class="tarjetaInicio">
             <h1>Trofeos y reconocimientos</h1>
             <h3>
@@ -97,7 +97,7 @@
         </div>
     </section>
     <section class="introduccionDerecha">
-        <div class="tarjetaInicio"></div>
+        <div class="tarjetaInicio" style="background-image: url('/assets/img/tarjeta-inicio4.jpg');"></div>
         <div class="tarjetaInicio">
             <h1>Renta de togas y birretes</h1>
             <h3>
@@ -166,7 +166,7 @@
             <li><?php require('./views/components/tarjetaProducto.php'); ?></li>
         </ul> <!-- fin mejoresProductos__tarjetas -->
     </section>
-    <section class="testimoniales">
+    <section class="testimoniales" style="background-image: url('/assets/img/fondo-testimoniales.jpg');">
         <div class="slidesContenedor">
             <div class="slidesContenedor__control">
                 <a class="botonIcono -primario -r50" href="">
@@ -222,7 +222,7 @@
             <!-- fin slides -->
         </div>
     </section>
-    <section class="siguenos">
+    <section class="siguenos" style="background-image: url('/assets/img/redes-sociales.jpg');">
         <h1>Síguenos</h1>
         <nav>
             <ul class="redes">

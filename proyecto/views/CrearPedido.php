@@ -1,6 +1,6 @@
 <?php require('./layouts/header.php'); ?>
 
-<main>
+<main class="Pedido">
     <!-- <div class="popup">
             <a href="/"><img src="" alt="icono-cerrar"></a>
             <i class="popup__contenedorIcono">icono</i>
