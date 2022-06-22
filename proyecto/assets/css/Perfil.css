@@ -1,0 +1,30 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Sat Jun 18 2022
+*  File : Pefil.css
+*******************************************/
+
+.Perfil {
+    height: fit-content;
+}
+
+/* TODO: sacar componentes para registro e inicio de sesion */
+.Perfil>.tarjetaPerfil {
+    /* Distribucion */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 2.4rem;
+
+    /* Apariencia */
+    width: 100%;
+    border-radius: var(--borde-radio-grande);
+    filter: var(--sombra-mediana);
+    background-color: var(--color-blanco);
+}
+
+.Perfil>.tarjetaPerfil>.avatar {
+    width: 20%;
+    padding-bottom: 20%;
+}

@@ -1,0 +1,260 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Sun Jun 12 2022
+*  File : inicio.css
+*******************************************/
+
+.hero,
+.introduccionIzquierda,
+.introduccionDerecha,
+.testimoniales,
+.siguenos {
+    padding: 0;
+}
+
+.hero>.slidesContenedor>.slidesContenedor__slides>.slide {
+    /* Distribucion */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    /* Apariencia */
+    background-image: url('/assets/img/hero.jpg');
+}
+
+.slide__descripcion {
+    /* Distribucion */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.8rem;
+    padding: 1.2rem;
+
+    /* Apariencia */
+    max-width: 61.1rem;
+    border-radius: var(--borde-radio-mediano);
+    background-color: var(--color-primario-fondo-a08);
+}
+
+.introduccionIzquierda,
+.introduccionDerecha {
+    position: relative;
+}
+
+.tarjetaInicio {
+    /* Distribucion */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.2rem 6.4rem 3.2rem 3.2rem;
+    /* Apariencia */
+    width: 58vw;
+    height: 68vh;
+    color: var(--color-blanco);
+    background-color: var(--color-secundario);
+    filter: var(--sombra-grande);
+}
+
+/* .introduccionIzquierda>.tarjetaInicio:first-child,
+.introduccionDerecha>.tarjetaInicio:first-child {
+    background-image: url('https://picsum.photos/1920');
+} */
+
+.introduccionIzquierda>.tarjetaInicio:first-child,
+.introduccionDerecha>.tarjetaInicio:last-child {
+    top: 10%;
+    border-radius: 0 5rem 5rem 0;
+}
+
+.introduccionIzquierda>.tarjetaInicio:last-child,
+.introduccionDerecha>.tarjetaInicio:first-child {
+    right: 0;
+    bottom: 10%;
+    border-radius: 5rem 0 0 5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .tarjetaInicio>h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .tarjetaInicio>h3 {
+        font-size: 16px;
+    }
+}
+
+.experiencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+}
+
+.experiencia__tarjetas {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .experiencia__tarjetas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.4rem;
+    }
+}
+
+.tarjetaExperiencia {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+
+    text-align: center;
+
+    max-width: 29rem;
+}
+
+.tarjetaExperiencia>h1 {
+    color: var(--color-positivo);
+}
+
+.tarjetaExperiencia>.iconoContenedor {
+    width: 70%;
+    padding-bottom: 70%;
+}
+
+.mejoresProductos {
+    /* Distribucion */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+    gap: 2.4rem;
+
+    /* Apariencia */
+    height: fit-content;
+    background-color: var(--color-primario-hover);
+}
+
+.mejoresProductos>h1 {
+    color: var(--color-blanco);
+}
+
+.mejoresProductos__tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    .mejoresProductos__tarjetas {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.testimoniales {
+    position: relative;
+}
+
+.testimoniales>.contenido>h1 {
+    position: absolute;
+    z-index: 1;
+
+    top: 6.4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: var(--color-blanco);
+}
+
+.testimoniales>.slidesContenedor>.slidesContenedor__slides>.slide {
+    /* Distribucion */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12.8rem;
+
+}
+
+@media screen and (max-width: 768px) {
+    .testimoniales>.slidesContenedor>.slidesContenedor__slides>.slide {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.2rem;
+    }
+}
+
+.slide>.usuario {
+    /* Distribucion */
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    text-align: center;
+
+    /* Apariencia */
+    max-width: 25.6rem;
+    height: fit-content;
+}
+
+.usuario__info {
+    /* Distribucion */
+    padding: 1.2rem;
+
+    /* Apariencia */
+    background: var(--color-primario-fondo-a08);
+    border-radius: var(--borde-radio-mediano);
+}
+
+.slide>.cita {
+    /* Distribucion */
+    padding: 1.2rem;
+    margin-left: 1.2rem;
+
+    /* Apariencia */
+    max-width: 61.1rem;
+    color: black;
+    background-color: var(--color-primario-fondo-a08);
+    border-radius: var(--borde-radio-mediano);
+}
+
+.slide>.cita>svg {
+    width: 4rem;
+    height: 4rem;
+}
+
+.siguenos {
+    /* Distribucion */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+
+    /* Apariencia */
+    border-radius: 0 0 5rem 5rem;
+}
+
+.redes {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+    .redes {
+        flex-direction: column;
+        align-items: center;
+    }
+}

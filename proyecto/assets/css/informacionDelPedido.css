@@ -1,0 +1,21 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Tue Jun 14 2022
+*  File : InformacionDelPedido.css
+*******************************************/
+
+.InformacionDelPedido {
+    padding-bottom: 3.2rem;
+}
+
+.InformacionDelPedido>*:nth-child(3) {
+    justify-content: center;
+    gap: 1.2rem;
+    height: 100%;
+}
+
+.InformacionDelPedido>.contenedorScroll>.formulario>.formulario__campo {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+}

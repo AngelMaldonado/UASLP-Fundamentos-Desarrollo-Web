@@ -1,0 +1,9 @@
+/******************************************
+*  Author : @AngelMaldonado   
+*  Created On : Mon Jun 13 2022
+*  File : productosServicios.css
+*******************************************/
+
+.ProductosServicios>.portada {
+    background-image: url(/assets/img/productos-portada.jpg);
+}
