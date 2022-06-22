@@ -21,15 +21,8 @@
             </a>
         </div>
     </nav>
-    <section class="grid4c">
-        <?php require("./components/tarjetaProducto.php"); ?>
-        <?php require("./components/tarjetaProducto.php"); ?>
-        <?php require("./components/tarjetaProducto.php"); ?>
-        <?php require("./components/tarjetaProducto.php"); ?>
-        <?php require("./components/tarjetaProducto.php"); ?>
-        <?php require("./components/tarjetaProducto.php"); ?>
-        <?php require("./components/tarjetaProducto.php"); ?>
-        <?php require("./components/tarjetaProducto.php"); ?>
+    <section class="tarjetasProductos grid4c">
+        <!-- /assets/scripts/tarjetasProducto.js -->
     </section>
     <nav class="paginas">
         <a class="enlace -primario -grande" href="/">

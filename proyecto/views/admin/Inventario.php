@@ -2,9 +2,23 @@
 
 <main>
     <section class="Inventario">
-        <form class="formulario" action="/controllers/controladorProductos.php" method="POST">
+        <form id="nuevoProducto" class="formulario" action="/controllers/controladorProductos.php" method="POST">
             <input type="hidden" name="_method" value="POST">
             <h1>Nuevo producto (ID:#1)</h1>
+            <div class="campos">
+                <div>
+                    <label for="nombre">Nombre del producto</label>
+                    <div class="cajaTexto -grande -normal">
+                        <input type="text" placeholder="Nombre" name="nombre">
+                    </div>
+                </div>
+                <div>
+                    <label for="descripcion">Descripcion del producto</label>
+                    <div class="cajaTexto -grande -normal">
+                        <input type="text" placeholder="Descripcion" name="descripcion">
+                    </div>
+                </div>
+            </div>
             <div class="campos">
                 <div>
                     <label for="costoProduccion">Costo de producción</label>
@@ -58,19 +72,12 @@
                 </div>
             </div>
             <div>
-                <a id="submit" class="boton -positivo -grande">Agregar</a>
+                <a onclick="formSubmit('nuevoProducto', '');" class="boton -positivo -grande">Agregar</a>
             </div>
         </form>
     </section>
-    <section class="grid4c">
-        <?php require("../components/tarjetaInventario.php"); ?>
-        <?php require("../components/tarjetaInventario.php"); ?>
-        <?php require("../components/tarjetaInventario.php"); ?>
-        <?php require("../components/tarjetaInventario.php"); ?>
-        <?php require("../components/tarjetaInventario.php"); ?>
-        <?php require("../components/tarjetaInventario.php"); ?>
-        <?php require("../components/tarjetaInventario.php"); ?>
-        <?php require("../components/tarjetaInventario.php"); ?>
+    <section class="tarjetasInventario grid4c">
+        <!-- /assets/scripts/components/tarjetasInventario.js -->
     </section>
     <nav class="paginas">
         <a class="enlace -primario -grande" href="/">

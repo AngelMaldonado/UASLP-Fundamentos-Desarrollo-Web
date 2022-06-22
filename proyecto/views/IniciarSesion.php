@@ -33,7 +33,7 @@
                     <?php echo file_get_contents("$root/assets/svg/usuario.svg"); ?>
                 </div>
             </div>
-            <form class="formulario" action="/controllers/controladorAcceso.php" method="POST">
+            <form id="iniciarSesion" class="formulario" action="/controllers/controladorAcceso.php" method="POST">
                 <input type="hidden" name="_method" value="POST">
                 <div>
                     <label for="correo">Correo</label>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div>
-                    <a id="submit" class="boton -primario -grande">Iniciar sesión</a>
+                    <a onclick="formSubmit('iniciarSesion', '');" class="boton -primario -grande">Iniciar sesión</a>
                     <a class="boton -secundario -grande" href="/views/Registro.php">Registrarse</a>
                 </div>
             </form>

@@ -8,7 +8,7 @@
             </a>
             <a class="enlace -primario" href="/">
                 <?php echo file_get_contents("$root/assets/svg/folder.svg"); ?>
-                <h6>Paquetes de graduación</h6>
+                <h6>Bolsa</h6>
             </a>
         </nav>
         <!-- <div class="Bolsa__vacia">

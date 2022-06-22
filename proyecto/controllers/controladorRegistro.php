@@ -22,52 +22,96 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         try {
             $nuevoUsuario = Usuario::nuevoUsuario(
                 $conexion,
-                $_POST['nombre'],
-                $_POST['correo'],
-                $_POST['pswd'],
-                $_POST['repswd'],
-                $_POST['telefono'],
-                $_POST['escuela'],
-                $_POST['estudios'],
-                $_POST['generacion'],
-                TipoUsuario::cliente,
-                null // Foto
+                isset($_POST['nombre']) ? $_POST['nombre'] : null,
+                isset($_POST['correo']) ? $_POST['correo'] : null,
+                isset($_POST['pswd']) ? $_POST['pswd'] : null,
+                isset($_POST['repswd']) ? $_POST['repswd'] : null,
+                isset($_POST['tel']) ? $_POST['tel'] : null,
+                isset($_POST['escuela']) ? $_POST['escuela'] : null,
+                isset($_POST['estudios']) ? $_POST['estudios'] : null,
+                isset($_POST['generacion']) ? $_POST['generacion'] : null,
+                isset($_POST['tipoUsuario']) ? $_POST['tipoUsuario'] : null,
+                isset($_POST['foto']) ? $_POST['foto'] : null
             );
         } catch (ExcepcionCamposRequeridos $ex) {
-            header("location: ../views/Registro.php?error=registroVacio");
+            if ($_POST['tipoUsuario'] == 'administrador') {
+                header("location: ../views/admin/Usuarios.php?error=registroVacio");
+            } else {
+                header("location: ../views/Registro.php?error=registroVacio");
+            }
             exit();
         } catch (ExcepcionNombreInvalido $ex) {
-            header("location: ../views/Registro.php?error=nombreInvalido");
+            if ($_POST['tipoUsuario'] == 'administrador') {
+                header("location: ../views/admin/Usuarios.php?error=nombreInvalido");
+            } else {
+                header("location: ../views/Registro.php?error=nombreInvalido");
+            }
             exit();
         } catch (ExcepcionCorreoInvalido $ex) {
-            header("location: ../views/Registro.php?error=correoInvalido");
+            if ($_POST['tipoUsuario'] == 'administrador') {
+                header("location: ../views/admin/Usuarios.php?error=correoInvalido");
+            } else {
+                header("location: ../views/Registro.php?error=correoInvalido");
+            }
             exit();
         } catch (ExcepcionTelefonoInvalido $ex) {
-            header("location: ../views/Registro.php?error=telefonoInvalido");
+            if ($_POST['tipoUsuario'] == 'administrador') {
+                header("location: ../views/admin/Usuarios.php?error=telefonoInvalido");
+            } else {
+                header("location: ../views/Registro.php?error=telefonoInvalido");
+            }
             exit();
         } catch (ExcepcionEstudiosInvalido $ex) {
-            header("location: ../views/Registro.php?error=estudiosInvalido");
+            if ($_POST['tipoUsuario'] == 'administrador') {
+                header("location: ../views/admin/Usuarios.php?error=estudiosInvalido");
+            } else {
+                header("location: ../views/Registro.php?error=estudiosInvalido");
+            }
             exit();
         } catch (ExcepcionEscuelaInvalida) {
-            header("location: ../views/Registro.php?error=escuelaInvalida");
+            if ($_POST['tipoUsuario'] == 'administrador') {
+                header("location: ../views/admin/Usuarios.php?error=escuelaInvalida");
+            } else {
+                header("location: ../views/Registro.php?error=escuelaInvalida");
+            }
             exit();
         } catch (ExcepcionGeneracionInvalida $ex) {
-            header("location: ../views/Registro.php?error=generacionInvalida");
+            if ($_POST['tipoUsuario'] == 'administrador') {
+                header("location: ../views/admin/Usuarios.php?error=generacionInvalida");
+            } else {
+                header("location: ../views/Registro.php?error=generacionInvalida");
+            }
             exit();
         } catch (ExcepcionPswdsNoCoinciden $ex) {
-            header("location: ../views/Registro.php?error=pswdsNoCoinciden");
+            if ($_POST['tipoUsuario'] == 'administrador') {
+                header("location: ../views/admin/Usuarios.php?error=pswdsNoCoinciden");
+            } else {
+                header("location: ../views/Registro.php?error=pswdsNoCoinciden");
+            }
             exit();
         } catch (ExcepcionPswdInvalida $ex) {
-            header("location: ../views/Registro.php?error=pswdInvalida");
+            if ($_POST['tipoUsuario'] == 'administrador') {
+                header("location: ../views/admin/Usuarios.php?error=pswdInvalida");
+            } else {
+                header("location: ../views/Registro.php?error=pswdInvalida");
+            }
             exit();
         } catch (ExcepcionCorreoExistente $ex) {
-            header("location: ../views/Registro.php?error=correoExistente");
+            if ($_POST['tipoUsuario'] == 'administrador') {
+                header("location: ../views/admin/Usuarios.php?error=correoExistente");
+            } else {
+                header("location: ../views/Registro.php?error=correoExistente");
+            }
             exit();
         }
 
         try {
             $nuevoUsuario->registraUsuario($conexion);
-            header("location: ../views/Registro.php?error=registroExitoso");
+            if ($_POST['tipoUsuario'] == 'administrador') {
+                header("location: ../views/admin/Usuarios.php?error=registroExitoso");
+            } else {
+                header("location: ../views/Registro.php?error=registroExitoso");
+            }
         } catch (Exception $ex) {
             echo $ex->getMessage();
             exit();

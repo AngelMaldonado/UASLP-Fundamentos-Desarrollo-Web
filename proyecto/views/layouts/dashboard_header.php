@@ -2,6 +2,11 @@
 // Variable con el directorio raiz del proyecto
 $root = dirname(__FILE__, 3);
 session_start();
+
+// Redirigir si no se ha iniciado sesion o si el usuario no es administrador
+if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_tipoUsuario'] != "administrador") {
+    header('Location: ../../');
+}
 ?>
 
 <!DOCTYPE html>
@@ -47,9 +52,9 @@ session_start();
                 <a class='enlace -secundario' href="/">Volver a la tienda</a>
             </li>
             <li>
-                <form action='/controllers/controladorAcceso.php' method='POST'>
+                <form id="cerrarSesion" action='/controllers/controladorAcceso.php' method='POST'>
                     <input type='hidden' name='_method' value='DELETE'>
-                    <a id='submit' class='boton -negativo -chico'>Cerrar sesión</a>
+                    <a onclick="formSubmit('cerrarSesion', '');" class='boton -negativo -chico'>Cerrar sesión</a>
                 </form>
             </li>
         </ul>

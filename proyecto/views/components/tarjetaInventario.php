@@ -1,12 +1,15 @@
 <div class="tarjetaProducto">
     <form action="/controllers/controladorProductos.php" method="POST">
-        <input type="hidden" name="_method" value="POST">
         <header class="tarjetaProducto__titulo">
             <div class="cajaTexto -chico -normal">
                 <input type="text" value="Nombre del producto" name="nombre">
             </div>
         </header>
         <div class="tarjetaFiltro">
+            <label for="descripcion">Descripcion del producto</label>
+            <div class="cajaTexto -chico -normal">
+                <input type="text" placeholder="Descripcion" name="descripcion">
+            </div>
             <label for="costoProduccion">Costo de producción</label>
             <div class="cajaTexto -chico -normal">
                 <input type="number" value="1000.00" name="costoProduccion" min=1 step="0.01">
@@ -39,8 +42,8 @@
             <div class="-chico">
                 <input type="file" name="foto3">
             </div>
-            <a class="boton -positivo -chico" href="/views/VerProducto.php">Guardar</a>
-            <a class="boton -negativo -chico" href="/views/VerProducto.php">Eliminar</a>
+            <a onclick="formSubmit('form${i}', 'UPDATE');" class="boton -positivo -chico" href="/views/VerProducto.php">Guardar</a>
+            <a onclick="formSubmit('form${i}', 'DELETE');" class="boton -negativo -chico" href="/views/VerProducto.php">Eliminar</a>
         </div>
     </form>
 </div>
