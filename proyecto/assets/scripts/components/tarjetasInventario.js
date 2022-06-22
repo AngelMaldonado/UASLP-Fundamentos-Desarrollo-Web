@@ -6,10 +6,10 @@
 
 // Carga las tarjetas solo si se esta en la pagina de views/admin/Usuarios.php
 if (window.location.href.includes('http://localhost/views/admin/Inventario.php')) {
-    window.onload = cargaTarjetasProducto();
+    window.onload = cargaTarjetasInventario();
 }
 
-function cargaTarjetasProducto() {
+function cargaTarjetasInventario() {
     let xhttp = new XMLHttpRequest();
 
     xhttp.open("GET", "../../../controllers/controladorProductos.php", true);
@@ -19,7 +19,7 @@ function cargaTarjetasProducto() {
         if (this.readyState === 4) {
             if (this.status === 200) {
                 let listaProductos = JSON.parse(this.responseText);
-                pintaListaProductos(listaProductos);
+                pintaListaInventario(listaProductos);
             } else {
                 console.log("Error");
             }
@@ -27,7 +27,7 @@ function cargaTarjetasProducto() {
     };
 }
 
-function pintaListaProductos(listaProductos) {
+function pintaListaInventario(listaProductos) {
     let html = '';
     for (let i = 0; i < listaProductos.length; i++) {
         html +=
