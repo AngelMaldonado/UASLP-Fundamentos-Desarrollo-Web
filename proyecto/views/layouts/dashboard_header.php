@@ -52,9 +52,9 @@ if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_tipoUsuario'] != "admi
                 <a class='enlace -secundario' href="/">Volver a la tienda</a>
             </li>
             <li>
-                <form action='/controllers/controladorAcceso.php' method='POST'>
+                <form id="cerrarSesion" action='/controllers/controladorAcceso.php' method='POST'>
                     <input type='hidden' name='_method' value='DELETE'>
-                    <a id='submit' class='boton -negativo -chico'>Cerrar sesión</a>
+                    <a onclick="formSubmit('cerrarSesion', '');" class='boton -negativo -chico'>Cerrar sesión</a>
                 </form>
             </li>
         </ul>

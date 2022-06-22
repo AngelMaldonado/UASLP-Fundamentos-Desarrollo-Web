@@ -5,10 +5,10 @@
  *******************************************/
 // Carga las tarjetas solo si se esta en la pagina de views/admin/Usuarios.php
 if (window.location.href.includes('http://localhost/views/admin/Usuarios.php')) {
-    window.onload = cargaTarjetas();
+    window.onload = cargaTarjetasUsuario();
 }
 
-function cargaTarjetas() {
+function cargaTarjetasUsuario() {
     let xhttp = new XMLHttpRequest();
 
     xhttp.open("GET", "../../../controllers/controladorUsuarios.php", true);
