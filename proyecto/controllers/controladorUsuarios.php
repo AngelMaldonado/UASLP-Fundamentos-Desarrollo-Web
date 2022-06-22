@@ -51,7 +51,7 @@ if ($_SESSION['usuario_tipoUsuario'] === "administrador") {
                     $usuario = Usuario::UsuarioDesdeRegistro($registro);
                     $usuarios[] = $usuario->obtenArreglo();
                 }
-                echo json_encode($usuarios);
+                echo json_encode($registros);
             } catch (Exception $ex) {
                 echo $ex->getMessage();
                 exit();
@@ -61,9 +61,12 @@ if ($_SESSION['usuario_tipoUsuario'] === "administrador") {
         if (isset($_POST['id'])) {
             try {
                 $foto = "";
-                if (sizeof($_FILES) > 0) {
+                // TODO: corregir bug de foto vacia
+                if ($_FILES["foto"] > 0) {
                     $tmp_name = $_FILES["foto"]["tmp_name"];
                     $foto = file_get_contents($tmp_name);
+                } else {
+                    $foto = $conexion->existeRegistro("usuarios", "usuario_ID", $_POST['id'])["foto"];
                 }
                 // Crea una instancia para el usuario que se va a actualizar
                 $usuario = Usuario::UsuarioUpdateDelete(
@@ -77,11 +80,11 @@ if ($_SESSION['usuario_tipoUsuario'] === "administrador") {
                     isset($_POST['estudios']) ? $_POST['estudios'] : null,
                     isset($_POST['generacion']) ? $_POST['generacion'] : null,
                     isset($_POST['tipoUsuario']) ? $_POST['tipoUsuario'] : null,
-                    sizeof($_FILES) > 0 ? $foto : null
+                    $foto > 0 ? $foto : null
                 );
             } catch (Exception $ex) {
-                //echo $ex->getMessage();
-                header("location: " . $_POST['paginaAnterior']); //. "?id=-1&op=update");
+                echo $ex->getMessage();
+                // header("location: " . $_POST['paginaAnterior']); //. "?id=-1&op=update");
                 exit();
             }
 
@@ -96,8 +99,8 @@ if ($_SESSION['usuario_tipoUsuario'] === "administrador") {
                 header("location: " . $_POST['paginaAnterior']); //. "?id=" . $_POST['id'] . "&op=update");
                 exit();
             } catch (Exception $ex) {
-                // echo $ex->getMessage();
-                header("location: " . $_POST['paginaAnterior'] . "?id=-2&op=update");
+                echo $ex->getMessage();
+                // header("location: " . $_POST['paginaAnterior'] . "?id=-2&op=update");
                 exit();
             }
         }

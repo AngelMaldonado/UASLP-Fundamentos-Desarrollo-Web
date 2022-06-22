@@ -314,7 +314,7 @@ class Usuario
         }
 
         try {
-            $conexion->actualizaRegistro('usuarios', $campos, $valores, "usuario_ID=$id");
+            $conexion->actualizaRegistro('usuarios', $campos, $valores, "usuario_ID=" . $id);
         } catch (ExcepcionErrorDeConsulta $ex) {
             throw new Exception('Error en la actualizacion del usuario!\n' . $ex->getMessage());
         }
