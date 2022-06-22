@@ -1,8 +1,8 @@
 <?php require('../layouts/dashboard_header.php'); ?>
 
 <main>
-    <section>
-        <form class="formulario" action="/controllers/controladorRegistro.php" method="POST">
+    <section class="Usuarios">
+        <form id="nuevoUsuarioAdministrador" class="formulario" action="/controllers/controladorRegistro.php" method="POST">
             <input type="hidden" name="_method" value="POST">
             <input type="hidden" name="tipoUsuario" value="administrador">
             <h1>Nuevo usuario ADMINISTRADOR (ID:#1)</h1>
@@ -81,18 +81,12 @@
                         <input type="file" name="foto">
                     </div>
                 </div>
-                <a class="submit boton -positivo -grande">Agregar</a>
+                <a onclick="formSubmit('nuevoUsuarioAdministrador', '');" class=" boton -positivo -grande">Agregar</a>
             </div>
         </form>
         <div class="tarjetasUsuario">
-            <?php require('../components/tarjetaUsuario.php'); ?>
-            <?php require('../components/tarjetaUsuario.php'); ?>
-            <?php require('../components/tarjetaUsuario.php'); ?>
-            <?php require('../components/tarjetaUsuario.php'); ?>
-            <?php require('../components/tarjetaUsuario.php'); ?>
-            <?php require('../components/tarjetaUsuario.php'); ?>
-            <?php require('../components/tarjetaUsuario.php'); ?>
-            <?php require('../components/tarjetaUsuario.php'); ?>
+            <!-- /assets/scripts/components/tarjetasUsuario.js -->
         </div>
+        <br><br>
     </section>
 </main>

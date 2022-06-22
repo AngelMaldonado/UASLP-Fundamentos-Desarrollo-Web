@@ -7,6 +7,7 @@
 cargaScript('/assets/scripts/components/barraNavegacion.js');
 cargaScript('/assets/scripts/components/opcionRadio.js');
 cargaScript('/assets/scripts/components/boton.js');
+cargaScript('/assets/scripts/components/tarjetasUsuario.js');
 
 function cargaScript(url) {
     var head = document.getElementsByTagName('head')[0];
@@ -15,4 +16,24 @@ function cargaScript(url) {
     script.src = url;
 
     head.appendChild(script);
+}
+
+function formSubmit(formId, operation) {
+    let form = document.getElementById(formId);
+    if (operation.length > 0) {
+        let op = document.createElement('input');
+        op.type = 'hidden';
+        op.name = '_method';
+        switch (operation) {
+            case 'UPDATE':
+                op.value = operation;
+                form.appendChild(op);
+                break;
+            case 'DELETE':
+                op.value = operation;
+                form.appendChild(op);
+                break;
+        }
+    }
+    document.getElementById(formId).submit();
 }

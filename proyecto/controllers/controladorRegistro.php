@@ -20,35 +20,19 @@ try {
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($_POST["_method"] === "POST") {
         try {
-            if ($_POST['tipoUsuario'] == 'administrador') {
-                $nuevoUsuario = Usuario::nuevoUsuario(
-                    $conexion,
-                    $_POST['nombre'],
-                    $_POST['correo'],
-                    $_POST['pswd'],
-                    $_POST['repswd'],
-                    null,
-                    null,
-                    null,
-                    null,
-                    TipoUsuario::administrador,
-                    null // Foto
-                );
-            } else {
-                $nuevoUsuario = Usuario::nuevoUsuario(
-                    $conexion,
-                    $_POST['nombre'],
-                    $_POST['correo'],
-                    $_POST['pswd'],
-                    $_POST['repswd'],
-                    $_POST['telefono'],
-                    $_POST['escuela'],
-                    $_POST['estudios'],
-                    $_POST['generacion'],
-                    TipoUsuario::cliente,
-                    null // Foto
-                );
-            }
+            $nuevoUsuario = Usuario::nuevoUsuario(
+                $conexion,
+                isset($_POST['nombre']) ? $_POST['nombre'] : null,
+                isset($_POST['correo']) ? $_POST['correo'] : null,
+                isset($_POST['pswd']) ? $_POST['pswd'] : null,
+                isset($_POST['repswd']) ? $_POST['repswd'] : null,
+                isset($_POST['tel']) ? $_POST['tel'] : null,
+                isset($_POST['escuela']) ? $_POST['escuela'] : null,
+                isset($_POST['estudios']) ? $_POST['estudios'] : null,
+                isset($_POST['generacion']) ? $_POST['generacion'] : null,
+                isset($_POST['tipoUsuario']) ? $_POST['tipoUsuario'] : null,
+                isset($_POST['foto']) ? $_POST['foto'] : null
+            );
         } catch (ExcepcionCamposRequeridos $ex) {
             if ($_POST['tipoUsuario'] == 'administrador') {
                 header("location: ../views/admin/Usuarios.php?error=registroVacio");

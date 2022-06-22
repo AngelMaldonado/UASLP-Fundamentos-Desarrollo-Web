@@ -120,8 +120,7 @@ a {
 }
 
 input,
-textarea,
-select {
+textarea {
     background: transparent;
     border: 0;
     resize: none;
@@ -130,7 +129,6 @@ select {
 }
 
 input:focus,
-select:focus,
 .opcionRadio:focus,
 textarea {
     outline: none;

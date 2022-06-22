@@ -55,7 +55,7 @@
                 </div>
             </div>
             <br><br>
-            <form class="formulario" action="/controllers/controladorRegistro.php" method="POST">
+            <form id="registrarse" class="formulario" action="/controllers/controladorRegistro.php" method="POST">
                 <input type="hidden" name="_method" value="POST">
                 <input type="hidden" name="tipoUsuario" value="cliente">
                 <div class="campos">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <div>
-                    <a id="submit" class="boton -primario -grande">Registrarme</a>
+                    <a onclick="formSubmit('registrarse', '');" class="boton -primario -grande">Registrarme</a>
                     <a class="boton -secundario -grande" href="/views/IniciarSesion.php">Volver al inicio de sesión</a>
                 </div>
             </form>

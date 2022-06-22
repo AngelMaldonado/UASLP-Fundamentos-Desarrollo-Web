@@ -66,9 +66,9 @@ session_start();
                 echo
                 "
                 <li>
-                    <form action='/controllers/controladorAcceso.php' method='POST'>
+                    <form id='cerrarSesion' action='/controllers/controladorAcceso.php' method='POST'>
                         <input type='hidden' name='_method' value='DELETE'>
-                        <a id='submit' class='boton -negativo -chico'>Cerrar sesión</a>
+                        <a onclick=\"formSubmit('cerrarSesion', '');\" class='boton -negativo -chico'>Cerrar sesión</a>
                     </form>
                 </li>
                 ";

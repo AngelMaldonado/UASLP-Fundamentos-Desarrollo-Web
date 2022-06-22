@@ -29,6 +29,44 @@ class BDConexion
         return self::$conexion;
     }
 
+    /**
+     * @brief Actualiza un registro en la tabla indicada con los datos del array
+     * @param $tabla Nombre de la tabla (string)
+     * @param $valores Array con los nuevos valores de los campos (array) - Ejemplo: array("nombre='Juan'", "apellido='Perez'", "edad='23'")
+     * @param $condicion Condicion para filtrar los registros a actualizar (string) - Ejemplo: "id = 1"
+     * @return bool True si se actualizo correctamente, de lo contrario arroja una Excepcion de Error de Consulta
+     */
+    public function actualizaRegistro($tabla, $valores, $condicion)
+    {
+        $valores = implode(',', $valores);
+        $sql = "UPDATE $tabla SET $valores WHERE $condicion";
+        try {
+            $query = self::obtenConexion()->prepare($sql);
+            $query->execute();
+            // TODO: Verificar si se actualizo correctamente (devolver registro actualizado)
+            return true;
+        } catch (PDOException $ex) {
+            throw new ExcepcionErrorDeConsulta($sql . '\nPDOException: ' . $ex->getMessage());
+        }
+    }
+
+    public function obtenRegistros($tabla, $condicion)
+    {
+        if ($condicion == null || empty($condicion)) {
+            $sql = "SELECT * FROM $tabla";
+        } else {
+            $sql = "SELECT * FROM $tabla WHERE $condicion";
+        }
+        try {
+            $query = self::obtenConexion()->prepare($sql);
+            $query->execute();
+            $registros = $query->fetchAll(PDO::FETCH_ASSOC);
+            return $registros;
+        } catch (PDOException $ex) {
+            throw new ExcepcionErrorDeConsulta($sql . '\nPDOException: ' . $ex->getMessage());
+        }
+    }
+
     public function existeRegistro($tabla, $campo, $valor)
     {
         $sql = "SELECT * FROM $tabla WHERE $campo = :valor";
