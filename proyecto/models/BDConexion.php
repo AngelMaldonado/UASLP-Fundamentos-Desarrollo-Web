@@ -36,15 +36,35 @@ class BDConexion
      * @param $condicion Condicion para filtrar los registros a actualizar (string) - Ejemplo: "id = 1"
      * @return bool True si se actualizo correctamente, de lo contrario arroja una Excepcion de Error de Consulta
      */
-    public function actualizaRegistro($tabla, $valores, $condicion)
+    public function actualizaRegistro($tabla, $campos, $valores, $condicion)
     {
-        $valores = implode(',', $valores);
-        $sql = "UPDATE $tabla SET $valores WHERE $condicion";
+        $sql = "UPDATE $tabla SET ";
+        for ($i = 0; $i < count($valores); $i++) {
+            $sql .= $campos[$i] . "=?";
+            if ($i < count($valores) - 1) {
+                $sql .= ",";
+            }
+        }
+        $sql .= " WHERE " . $condicion;
         try {
             $query = self::obtenConexion()->prepare($sql);
+            for ($i = 0; $i < count($valores); $i++) {
+                $query->bindParam($i + 1, $valores[$i]);
+            }
             $query->execute();
             // TODO: Verificar si se actualizo correctamente (devolver registro actualizado)
             return true;
+        } catch (PDOException $ex) {
+            throw new ExcepcionErrorDeConsulta($sql . '\nPDOException: ' . $ex->getMessage());
+        }
+    }
+
+    public function eliminaRegistro($tabla, $condicion)
+    {
+        $sql = "DELETE FROM $tabla WHERE " . $condicion;
+        try {
+            $query = self::obtenConexion()->prepare($sql);
+            $query->execute();
         } catch (PDOException $ex) {
             throw new ExcepcionErrorDeConsulta($sql . '\nPDOException: ' . $ex->getMessage());
         }

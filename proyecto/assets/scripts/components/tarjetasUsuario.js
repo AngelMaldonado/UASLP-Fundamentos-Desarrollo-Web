@@ -11,14 +11,14 @@ if (window.location.href.includes('http://localhost/views/admin/Usuarios.php')) 
 function cargaTarjetasUsuario() {
     let xhttp = new XMLHttpRequest();
 
-    xhttp.open("GET", "../../../controllers/controladorUsuarios.php", true);
+    xhttp.open("GET", "../../../controllers/controladorUsuarios.php/", true);
     xhttp.send();
 
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4) {
             if (this.status === 200) {
+                // console.log(this.responseText);
                 let listaUsuarios = JSON.parse(this.responseText);
-                //console.log(this.responseText);
                 pintaListaUsuarios(listaUsuarios);
             } else {
                 console.log("Error");
@@ -33,14 +33,20 @@ function pintaListaUsuarios(listaUsuarios) {
         html +=
             `
             <div class="tarjetaUsuario">
-                <img src="https://www.gravatar.com/avatar/200" alt="imagen-usuario">
-                <h3>Nombre: <p>${listaUsuarios[i].nombre} (#${listaUsuarios[i].id})</p></h3>
-                <h3>Correo: <p>${listaUsuarios[i].correo}</p></h3>
-                <h3>Tel: <p>${listaUsuarios[i].tel}</p></h3>
-                <h3>Escuela: <p>${listaUsuarios[i].escuela}</p></h3>
-                <h3>Estudios: <p>${listaUsuarios[i].estudios}</p></h3>
-                <h3>Generación: <p>${listaUsuarios[i].generacion}</p></h3>
-                <form id="form${i}" action="/controllers/controladorUsuarios.php" method="POST">
+                <img src="data:image/jpeg;base64,${listaUsuarios[i].foto}" alt="imagen-usuario">
+                <div>
+                    <h3>Nombre: <p>${listaUsuarios[i].nombre} (#${listaUsuarios[i].id})</p></h3>
+                    <h3>Correo: <p>${listaUsuarios[i].correo}</p></h3>
+                </div>
+                <div>
+                    <h3>Tel: <p>${listaUsuarios[i].tel}</p></h3>
+                    <h3>Escuela: <p>${listaUsuarios[i].escuela}</p></h3>
+                </div>
+                <div>
+                    <h3>Estudios: <p>${listaUsuarios[i].estudios}</p></h3>
+                    <h3>Generación: <p>${listaUsuarios[i].generacion}</p></h3>
+                </div>
+                <form id="form${i}" action="/controllers/controladorUsuarios.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="${listaUsuarios[i].id}">
                     <input type="hidden" name="paginaAnterior" value="${window.location.href}">
                     <input type="hidden" name="nombre" value="${listaUsuarios[i].nombre}">
@@ -49,7 +55,7 @@ function pintaListaUsuarios(listaUsuarios) {
                     <input type="hidden" name="escuela" value="${listaUsuarios[i].escuela}">
                     <input type="hidden" name="estudios" value="${listaUsuarios[i].estudios}">
                     <input type="hidden" name="generacion" value="${listaUsuarios[i].generacion}">
-                    <select name="tipoUsuario" class="cajaDesplegable -grande">
+                    <select name="tipoUsuario" class="cajaDesplegable -chico">
             `;
         switch (listaUsuarios[i].tipoUsuario) {
             case 'cliente':
@@ -77,13 +83,17 @@ function pintaListaUsuarios(listaUsuarios) {
         html += `
                     </select>
                     <div>
+                        <div class="-chico">
+                            <input type="file" name="foto">
+                        </div>
                         <a onclick="formSubmit('form${i}', 'UPDATE');" class="actualiza boton -positivo">
                             <h6>Guardar</h6>
                         </a>
                         <br>
-                            <a onclick="formSubmit('form${i}', 'DELETE');" class="elimina boton -negativo">
-                                <h6>Eliminar</h6>
-                            </a>
+                        <a onclick="formSubmit('form${i}', 'DELETE');" class="elimina boton -negativo">
+                            <h6>Eliminar</h6>
+                        </a>
+                        <label for="foto">Foto</label>
                     </div>
                 </form>
             </div>

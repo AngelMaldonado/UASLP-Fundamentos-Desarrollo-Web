@@ -196,18 +196,29 @@ class Producto
         return $arreglo;
     }
 
+    public function eliminaProducto($conexion, $id)
+    {
+        try {
+            $conexion->eliminaRegistro('productos', 'producto_ID=' . $id);
+        } catch (ExcepcionErrorDeConsulta $ex) {
+            throw new Exception('Error en la eliminacion del producto!\n' . $ex->getMessage());
+        }
+    }
+
     public function actualizaProducto($conexion, $id)
     {
         $keys = self::obtenArreglo();
+        $campos = array();
         $valores = array();
 
         /* Armar la estructura de los valores: campo='nuevoValor' */
         foreach ($keys as $key => $value) {
-            $valores[] = "$key='" . $value . "'";
+            $campos[] = $key;
+            $valores[] = $value;
         }
 
         try {
-            $conexion->actualizaRegistro('productos', $valores, "producto_ID=$id");
+            $conexion->actualizaRegistro('productos', $campos, $valores, "producto_ID=$id");
         } catch (ExcepcionErrorDeConsulta $ex) {
             throw new Exception('Error en la actualizacion del usuario!\n' . $ex->getMessage());
         }

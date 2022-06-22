@@ -80,7 +80,7 @@ class Usuario
         } else if ($tipoUsuario == 'administrador') {
             $usuario->_tipoUsuario = TipoUsuario::administrador;
         }
-        $usuario->_foto = $foto;
+        $usuario->_foto = base64_encode($foto);
         $usuario->_activo = 1;
 
         return $usuario;
@@ -105,7 +105,7 @@ class Usuario
         } else if ($registro["tipoUsuario"] == 'administrador') {
             $usuario->_tipoUsuario = TipoUsuario::administrador;
         }
-        $usuario->_foto = $registro["foto"];
+        $usuario->_foto = base64_encode($registro["foto"]);
         $usuario->_activo = $registro["activo"];
         return $usuario;
     }
@@ -141,7 +141,7 @@ class Usuario
                     $usuario->_estudios = $registro["estudios"];
                     $usuario->_generacion = $registro["generacion"];
                     $usuario->_tipoUsuario = $registro["tipoUsuario"];
-                    $usuario->_foto = $registro["foto"];
+                    $usuario->_foto = base64_encode($registro["foto"]);
                     $usuario->_activo = $registro["activo"];
                 } else {
                     throw new ExcepcionPswdInvalida();
@@ -304,15 +304,17 @@ class Usuario
     public function actualizaUsuario($conexion, $id)
     {
         $keys = self::obtenArreglo();
+        $campos = array();
         $valores = array();
 
         /* Armar la estructura de los valores: campo='nuevoValor' */
         foreach ($keys as $key => $value) {
-            $valores[] = "$key='" . $value . "'";
+            $campos[] = $key;
+            $valores[] = $value;
         }
 
         try {
-            $conexion->actualizaRegistro('usuarios', $valores, "usuario_ID=$id");
+            $conexion->actualizaRegistro('usuarios', $campos, $valores, "usuario_ID=$id");
         } catch (ExcepcionErrorDeConsulta $ex) {
             throw new Exception('Error en la actualizacion del usuario!\n' . $ex->getMessage());
         }
@@ -330,7 +332,7 @@ class Usuario
             $_SESSION['usuario_estudios'] = $this->_estudios;
             $_SESSION['usuario_generacion'] = $this->_generacion;
             $_SESSION['usuario_tipoUsuario'] = $this->_tipoUsuario;
-            $_SESSION['usuario_foto'] = $this->_foto;
+            $_SESSION['usuario_foto'] = (string)$this->_foto;
         } else {
             throw new ExcepcionErrorDeSesion();
         }

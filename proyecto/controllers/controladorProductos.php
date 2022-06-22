@@ -121,10 +121,11 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         }
 
         // Si se va a eliminar el producto (verificar que no haya pedidos asociados)
-        //if ($_POST['_method'] === 'DELETE') {
-        // No eliminar por completo el usuario, sino que cambiar el estado a inactivo
-        //$usuario->cambiaActivo(0);
-        //}
+        if ($_POST['_method'] === 'DELETE') {
+            // No eliminar por completo el usuario, sino que cambiar el estado a inactivo
+            $producto->eliminaProducto($conexion, $_POST['id']);
+        }
+
         // Utiliza la nueva instancia de la clase para actualizar el registro en la BD
         try {
             $producto->actualizaProducto($conexion, $_POST['id']);
