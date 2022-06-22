@@ -10,6 +10,7 @@ cargaScript('/assets/scripts/components/tarjetasUsuario.js');
 cargaScript('/assets/scripts/components/tarjetasInventario.js');
 cargaScript('/assets/scripts/components/tarjetasProducto.js');
 cargaScript('/assets/scripts/components/producto.js');
+cargaScript('/assets/scripts/components/controlNumerico.js');
 
 function cargaScript(url) {
     var head = document.getElementsByTagName('head')[0];

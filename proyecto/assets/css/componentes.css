@@ -690,6 +690,7 @@
 
 .controlNumerico {
     display: flex;
+    cursor: pointer;
 }
 
 .controlNumerico>.botonIcono:first-child {
@@ -700,11 +701,12 @@
     border-radius: 0 var(--borde-radio-chico) var(--borde-radio-chico) 0;
 }
 
-.controlNumerico>p {
+.controlNumerico>input {
     /*alinear horizontal y verticalmente*/
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
     width: 7.4rem;
 

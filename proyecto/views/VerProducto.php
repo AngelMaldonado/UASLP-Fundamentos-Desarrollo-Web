@@ -41,7 +41,8 @@
             </ul>
             <img class="exhibidor__actual" src="https://picsum.photos/1920" alt="imagen actual">
         </div>
-        <form class="formulario">
+        <form id="formularioProducto" class="formulario" action="Bolsa.php">
+            <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
             <header class="formulario__titulo">
                 <h1 id="principalNombreProducto">
                     <!-- /assets/scripts/components/producto.js -->
@@ -56,18 +57,18 @@
                     <!-- /assets/scripts/components/producto.js -->
                 </h3>
                 <div class="controlNumerico">
-                    <a class="botonIcono -primario -grande" href="/">
+                    <a onclick="actualizaControl(-1, 'cuentaProductos');" class="botonIcono -primario -grande">
                         <?php echo file_get_contents("$root/assets/svg/menos.svg"); ?>
                     </a>
-                    <p>1</p>
-                    <a class="botonIcono -primario -grande" href="/">
+                    <input id="cuentaProductos" type="number" name="cantidad" value="1" min="1" step="1">
+                    <a onclick="actualizaControl(1, 'cuentaProductos');" class="botonIcono -primario -grande">
                         <?php echo file_get_contents("$root/assets/svg/mas.svg"); ?>
                     </a>
                 </div>
             </div>
-            <div class="formulario__botonesCompra">
+            <div class=" formulario__botonesCompra">
                 <a class="boton -primario -mediano" href="/">Comprar ahora</a>
-                <a class="boton -secundario -mediano" href="/">Agregar a la bolsa</a>
+                <a onclick="formSubmit('formularioProducto', '');" class="boton -secundario -mediano">Agregar a la bolsa</a>
                 <a class="boton -terciario -mediano" href="/">Crear pedido</a>
             </div>
         </form>

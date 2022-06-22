@@ -10,11 +10,11 @@
     <div class="tarjetaBolsa__detalle">
         <h4>Disponibles: 30</h4>
         <div class="controlNumerico">
-            <a class="botonIcono -primario -grande" href="/">
+            <a onclick="actualizaControl(-1, 'cuentaProductos');" class="botonIcono -primario -grande">
                 <?php echo file_get_contents("$root/assets/svg/menos.svg"); ?>
             </a>
-            <p>1</p>
-            <a class="botonIcono -primario -grande" href="/">
+            <input id="cuentaProductos" type="number" name="cantidad" value="1" min="1" step="1">
+            <a onclick="actualizaControl(-1, 'cuentaProductos');" class="botonIcono -primario -grande">
                 <?php echo file_get_contents("$root/assets/svg/mas.svg"); ?>
             </a>
         </div>

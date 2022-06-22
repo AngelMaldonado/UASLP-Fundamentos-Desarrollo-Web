@@ -3,7 +3,7 @@
 /******************************************
  * Author : @AngelMaldonado
  * Created On : Wed Jun 22 2022
- * File : controladorProductos.php
+ * File : controladorPedidos.php
  *******************************************/
 
 include('../models/BDConexion.php');
