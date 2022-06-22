@@ -1,6 +1,6 @@
 <?php require('./layouts/header.php') ?>
 
-<main>
+<main class="Galeria">
     <!-- <div class="popupImagen">
         <a href="/"><img src="" alt="icono-cerrar"></a>
     </div> -->

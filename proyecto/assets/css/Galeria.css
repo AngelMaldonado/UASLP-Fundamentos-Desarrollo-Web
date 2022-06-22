@@ -3,3 +3,7 @@
 *  Created On : Fri Jun 17 2022
 *  File : Galeria.css
 *******************************************/
+
+.Galeria>.portada {
+    background-image: url(/assets/img/galeria-portada.jpg);
+}
