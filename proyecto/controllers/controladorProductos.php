@@ -17,29 +17,19 @@ try {
     exit();
 }
 
-session_start();
+session_status() == PHP_SESSION_ACTIVE ? true : session_start();
 // Para el GET no hace falta ser administrador ni que se haya iniciado sesión
 // Metodos GET
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     //Obtener un solo registro
     if (array_key_exists("id", $_GET)) {
-        // try {
-        //     $id = $_GET["id"];
-
-        //     $query = $connection->prepare('SELECT * FROM tweets WHERE id = :id');
-        //     $query->bindParam(':id', $id, PDO::PARAM_INT);
-        //     $query->execute();
-
-        //     $tweet;
-
-        //     while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-        //         $tweet = new Tweet($row['id'], $row['text'], $row['timestamp'], $row['active']);
-        //     }
-
-        //     echo json_encode($tweet->getArray());
-        // } catch (PDOException $e) {
-        //     echo $e;
-        // }
+        try {
+            $registro = $conexion->obtenRegistros("productos", "producto_ID=" . $_GET["id"])[0];
+            $producto = Producto::ProductoDesdeRegistro($registro);
+            echo json_encode($registro);
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
     } else {
         // Obtener TODOS los registros
         try {

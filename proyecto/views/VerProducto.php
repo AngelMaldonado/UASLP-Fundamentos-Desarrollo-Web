@@ -17,14 +17,18 @@
                 <li>
                     <a class="enlace -primario" href="/">
                         <?php echo file_get_contents("$root/assets/svg/folder.svg"); ?>
-                        <h6>Paquetes de graduación</h6>
+                        <h6 id="categoriaProducto">
+                            <!-- /assets/scripts/components/producto.js -->
+                        </h6>
                         <?php echo file_get_contents("$root/assets/svg/diamante-derecha.svg"); ?>
                     </a>
                 </li>
                 <li>
                     <a class="enlace -primario" href="/">
                         <?php echo file_get_contents("$root/assets/svg/archivo.svg"); ?>
-                        <h6>Productos y servicios</h6>
+                        <h6 id="rutaNombreProducto">
+                            <!-- /assets/scripts/components/producto.js -->
+                        </h6>
                     </a>
                 </li>
             </ul>
@@ -39,12 +43,18 @@
         </div>
         <form class="formulario">
             <header class="formulario__titulo">
-                <h1>Paquete de graduación diamante</h1>
+                <h1 id="principalNombreProducto">
+                    <!-- /assets/scripts/components/producto.js -->
+                </h1>
                 <?php require('./components/controlEstrellas.php'); ?>
-                <h3>$1850.00</h3>
+                <h3 id="principalPrecioVenta">
+                    <!-- /assets/scripts/components/producto.js -->
+                </h3>
             </header>
             <div class="formulario__disponibilidad">
-                <h3>Disponibles: 30</h3>
+                <h3 id="principalDisponibles">
+                    <!-- /assets/scripts/components/producto.js -->
+                </h3>
                 <div class="controlNumerico">
                     <a class="botonIcono -primario -grande" href="/">
                         <?php echo file_get_contents("$root/assets/svg/menos.svg"); ?>
@@ -67,15 +77,8 @@
         <div class="contenido">
             <h1>Descripción</h1>
             <br>
-            <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim inventore officiis, tempore facilis
-                quis
-                eligendi reprehenderit! Exercitationem placeat itaque sunt, cum, dolor enim cupiditate neque
-                quibusdam
-                quis quae nesciunt ullam!
-                Repellendus corporis maxime a, repellat mollitia quas, expedita voluptate veniam molestiae placeat
-                sapiente nulla exercitationem ab praesentium quae possimus. Natus repellat dolores veniam iure sit
-                itaque voluptatum, nobis id esse?
+            <h3 id="principalDescripcion">
+                <!-- /assets/scripts/components/producto.js -->
             </h3>
         </div>
         <div class="separador"></div>

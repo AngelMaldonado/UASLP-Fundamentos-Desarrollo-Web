@@ -9,6 +9,7 @@ cargaScript('/assets/scripts/components/opcionRadio.js');
 cargaScript('/assets/scripts/components/tarjetasUsuario.js');
 cargaScript('/assets/scripts/components/tarjetasInventario.js');
 cargaScript('/assets/scripts/components/tarjetasProducto.js');
+cargaScript('/assets/scripts/components/producto.js');
 
 function cargaScript(url) {
     var head = document.getElementsByTagName('head')[0];
