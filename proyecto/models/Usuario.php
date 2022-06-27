@@ -93,7 +93,7 @@ class Usuario
         $usuario->_id = $registro["usuario_ID"];
         $usuario->_nombre = $registro["nombre"];
         $usuario->_correo = $registro["correo"];
-        $usuario->_pswd = null;
+        $usuario->_pswd = $registro["pswd"];
         $usuario->_tel = $registro["tel"];
         $usuario->_escuela = $registro["escuela"];
         $usuario->_estudios = $registro["estudios"];
@@ -105,7 +105,7 @@ class Usuario
         } else if ($registro["tipoUsuario"] == 'administrador') {
             $usuario->_tipoUsuario = TipoUsuario::administrador;
         }
-        $usuario->_foto = base64_encode($registro["foto"]);
+        $usuario->_foto = $registro["foto"];
         $usuario->_activo = $registro["activo"];
         return $usuario;
     }

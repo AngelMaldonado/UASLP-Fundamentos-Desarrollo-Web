@@ -27,6 +27,7 @@ class Producto
     private $_categoria;
     private $_personalizacion;
     private $_calificacion;
+    private $_imagenes;
 
     /* Patron Factory */
     private function __construct()
@@ -177,6 +178,15 @@ class Producto
         if (!preg_match("/^[a-zA-Z áéíóúüñÁÉÍÓÚÜÑ]*$/", $nombre)) {
             throw new ExcepcionNombreInvalido();
         }
+    }
+
+    /**
+     * @brief Inicializa el arreglo de imagenes del producto.
+     * @param $imagenes Arreglo con registros de las imagenes de la tabla imagenes_productos.
+     */
+    public function cargaImagenes($imagenes)
+    {
+        $this->_imagenes = $imagenes;
     }
 
     public function obtenArreglo()

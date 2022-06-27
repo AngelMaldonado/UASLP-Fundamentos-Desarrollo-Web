@@ -7,7 +7,7 @@
                 <a class="botonIcono -primario -r50" href="">
                     <?php echo file_get_contents("./assets/svg/flecha-izquierda.svg"); ?>
                 </a>
-                <a class="botonIcono -primario -r50" href="/">
+                <a class="botonIcono -primario -r50" href="">
                     <?php echo file_get_contents("./assets/svg/flecha-derecha.svg"); ?>
                 </a>
             </div>
@@ -21,7 +21,7 @@
                             La constante lucha por concluír una etapa muy importante de tu vida, debe permanecer
                             incluso después de haber terminado tus estudios.
                         </h3>
-                        <a class="boton -primario -grande" href="/">Ver paquetes de graduación</a>
+                        <a class="boton -primario -grande" href="/views/ProductosYServicios.php">Ver paquetes de graduación</a>
                     </div>
                 </div>
                 <!-- slide 2 -->
@@ -32,7 +32,7 @@
                             La constante lucha por concluír una etapa muy importante de tu vida, debe permanecer
                             incluso después de haber terminado tus estudios.
                         </h3>
-                        <a class="boton -primario -grande" href="/">Ver paquetes de graduación</a>
+                        <a class="boton -primario -grande" href="/views/ProductosYServicios.php">Ver paquetes de graduación</a>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                 fuga
                 distinctio nisi.
             </h3>
-            <a class="boton -primario -grande" href="/">Ver paquetes de graduación</a>
+            <a class="boton -primario -grande" href="/views/ProductosYServicios.php">Ver paquetes de graduación</a>
         </div>
     </section>
     <section class="introduccionDerecha">
@@ -74,7 +74,7 @@
                 fuga
                 distinctio nisi.
             </h3>
-            <a class="boton -primario -grande" href="/">Ver artículos promocionales</a>
+            <a class="boton -primario -grande" href="/views/ProductosYServicios.php">Ver artículos promocionales</a>
         </div>
     </section>
     <section class="introduccionIzquierda">
@@ -93,7 +93,7 @@
                 fuga
                 distinctio nisi.
             </h3>
-            <a class="boton -primario -grande" href="/">Ver trofeos y reconocimientos</a>
+            <a class="boton -primario -grande" href="/views/ProductosYServicios.php">Ver trofeos y reconocimientos</a>
         </div>
     </section>
     <section class="introduccionDerecha">
@@ -112,7 +112,7 @@
                 fuga
                 distinctio nisi.
             </h3>
-            <a class="boton -primario -grande" href="/">Cotizar renta</a>
+            <a class="boton -primario -grande" href="/views/ProductosYServicios.php">Cotizar renta</a>
         </div>
     </section>
     <section class="experiencia">
@@ -227,7 +227,7 @@
         <nav>
             <ul class="redes">
                 <li>
-                    <a class="icono -t172" href="/">
+                    <a class="icono -t172" href="https://www.facebook.com/Industria-Emblem%C3%A1tica-351335471558011">
                         <?php echo file_get_contents("./assets/svg/facebook.svg"); ?>
                     </a>
                 </li>

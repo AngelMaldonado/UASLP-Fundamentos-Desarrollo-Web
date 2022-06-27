@@ -14,7 +14,7 @@
             <p>Copyright ©️ AngelMaldonado | Industria Emblemática</p>
             <ul>
                 <li class="redes__icono">
-                    <a class="icono -t32" href="/">
+                    <a class="icono -t32" href="https://www.facebook.com/Industria-Emblem%C3%A1tica-351335471558011">
                         <?php echo file_get_contents("$root/assets/svg/facebook.svg"); ?>
                     </a>
                 </li>

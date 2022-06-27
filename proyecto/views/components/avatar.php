@@ -1,6 +1,5 @@
 <div class="avatar">
-    <div class="contenedorResponsivo">
-        <img class="-r50" src="https://i.pravatar.cc/300
-                                    " alt="avatar usuario">
+    <div id="imagenUsuario" class="contenedorResponsivo">
+        <img src="https://i.pravatar.cc/300" class="-r50" alt="">
     </div>
 </div>

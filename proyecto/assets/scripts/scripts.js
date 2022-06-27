@@ -11,6 +11,7 @@ cargaScript('/assets/scripts/components/tarjetasInventario.js');
 cargaScript('/assets/scripts/components/tarjetasProducto.js');
 cargaScript('/assets/scripts/components/producto.js');
 cargaScript('/assets/scripts/components/controlNumerico.js');
+cargaScript('/assets/scripts/components/tarjetaPerfil.js');
 
 function cargaScript(url) {
     var head = document.getElementsByTagName('head')[0];

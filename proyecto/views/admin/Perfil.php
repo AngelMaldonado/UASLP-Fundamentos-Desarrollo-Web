@@ -1,4 +1,4 @@
-<?php require('./layouts/header.php'); ?>
+<?php require('../layouts/dashboard_header.php'); ?>
 
 <main>
     <section class="Perfil grid1f2c">
@@ -11,13 +11,7 @@
         </nav>
         <div class="tarjetaPerfil">
             <?php require("./components/avatar.php"); ?>
-            <form id="tarjetaDePerfil" class="formulario" action="/controllers/controladorUsuarios.php" method="POST">
-                <input type="hidden" name="id" value="<?php echo $_SESSION['usuario_id']; ?>">
-                <input type="hidden" name="paginaAnterior" value="<?php echo $root . '/views/Perfil.php?id=' . $_SESSION['usuario_id']; ?>">
-                <label for="foto">Foto</label>
-                <div class="-chico">
-                    <input type="file" name="foto">
-                </div>
+            <form class="formulario" action="">
                 <div class="campos">
                     <div>
                         <label for="nombre">Nombre*</label>
@@ -34,9 +28,9 @@
                 </div>
                 <div class="campos">
                     <div>
-                        <label id="telUsuario" for="tel">Telefono (10 dígitos)</label>
+                        <label id="telUsuario" for="telefono">Telefono (10 dígitos)</label>
                         <div class="cajaTexto -grande -normal">
-                            <input type="tel" placeholder="Teléfono" pattern="[0-9]{10}" name="tel">
+                            <input type="tel" placeholder="Teléfono" pattern="[0-9]{10}" name="telefono">
                         </div>
                     </div>
                     <div>
@@ -61,18 +55,7 @@
                         <input type="password" placeholder="Confirmar contraseña" name="repswd" required>
                     </div>
                 </div>
-                <?php if ($_SESSION['usuario_tipoUsuario'] === 'cliente') {
-                    echo
-                    "<label class='opcionRadio -grande -normal' for='escultura'>
-                        <input type='radio' name='tipoUsuario' value='representante'>
-                        Representante
-                    </label>";
-                } else if ($_SESSION['usuario_tipoUsuario'] === 'representante') {
-                    echo "<label class='opcionRadio -grande -normal' for='escultura'>
-                        <input type='radio' name='tipoUsuario' value='cliente'>
-                        Cliente";
-                } ?>
-                <a onclick="formSubmit('tarjetaDePerfil', 'UPDATE');" class="boton -primario -grande">Guardar cambios</a>
+                <a class="boton -primario -grande" href="">Guardar cambios</a>
             </form>
         </div>
     </section>

@@ -33,9 +33,9 @@ function pintaListaInventario(listaProductos) {
         html +=
             `
             <div class="tarjetaProducto">
-                <form id="form${i}" action="/controllers/controladorProductos.php" method="POST">
+                <form id="form${i}" action="/controllers/controladorProductos.php" method="POST"  enctype='multipart/form-data'>
                     <input type="hidden" name="id" value="${listaProductos[i].id}">
-                    <input type="hidden" name="paginaAnterior" value="${window.location.href}">
+                    <input type="hidden" name="paginaAnterior" value="http://localhost/views/admin/Inventario.php">
                     <header class="tarjetaProducto__titulo">
                         <div class="cajaTexto -chico -normal">
                             <input type="text" value="${listaProductos[i].nombre}" name="nombre">
@@ -110,17 +110,9 @@ function pintaListaInventario(listaProductos) {
                         <div class="cajaTexto -chico -normal">
                             <input type="number" value="1" name="stock" min=1 step="1">
                         </div>
-                        <label for="foto1">Foto 1</label>
+                        <label for="imagenes">Imagenes (máximo-3)</label>
                         <div class="-chico">
-                            <input type="file" name="foto1">
-                        </div>
-                        <label for="foto2">Foto 2</label>
-                        <div class="-chico">
-                            <input type="file" name="foto2">
-                        </div>
-                        <label for="foto3">Foto 3</label>
-                        <div class="-chico">
-                            <input type="file" name="foto3">
+                            <input type="file" name="imagenes[]" multiple>
                         </div>
                         <a onclick="formSubmit('form${i}', 'UPDATE');" class="boton -positivo -chico">Guardar</a>
                         <a onclick="formSubmit('form${i}', 'DELETE');" class="boton -negativo -chico">Eliminar</a>
