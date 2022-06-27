@@ -8,6 +8,7 @@
 
 include('../models/BDConexion.php');
 include('../models/Producto.php');
+include('../models/ImagenesProductos.php');
 
 try {
     $conexion = new BDConexion();
@@ -114,17 +115,35 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
                 isset($_POST['personalizacion']) ? $_POST['personalizacion'] : null,
                 isset($_POST['calificacion']) ? (float)$_POST['calificacion'] : null
             );
+
+            // Crea las instancias de las imagenes que se van a actualizar
+            // echo count($_FILES['imagenes']['name']);
+            // if (isset($_POST['imagenes'])) {
+            //     $imagenes = array();
+            //     foreach ($_POST['imagenes'] as $imagen) {
+            //         $contenido = "";
+            //         $tmp_name = $imagen["tmp_name"];
+            //         $contenido = file_get_contents($tmp_name);
+
+            //         $imagenes[] = new ImagenesProductos($_POST['id'], $contenido);
+            //     }
+            //     echo $imagenes;
+            // } else {
+            //     header("location: " . $_POST['paginaAnterior'] . "?id=-3&op=update");
+            //     exit();
+            // }
+
+            // Si se va a eliminar el producto (verificar que no haya pedidos asociados)
+            if ($_POST['_method'] === 'DELETE') {
+                // No eliminar por completo, sino que cambiar el estado a inactivo
+                $producto->eliminaProducto($conexion, $_POST['id']);
+            }
         } catch (Exception $ex) {
-            //echo $ex->getMessage();
-            header("location: " . $_POST['paginaAnterior']); //. "?id=-1&op=update");
+            echo $ex->getMessage();
+            header("location: " . $_POST['paginaAnterior'] . "?id=-1&op=update");
             exit();
         }
 
-        // Si se va a eliminar el producto (verificar que no haya pedidos asociados)
-        if ($_POST['_method'] === 'DELETE') {
-            // No eliminar por completo el usuario, sino que cambiar el estado a inactivo
-            $producto->eliminaProducto($conexion, $_POST['id']);
-        }
 
         // Utiliza la nueva instancia de la clase para actualizar el registro en la BD
         try {
@@ -132,7 +151,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             header("location: " . $_POST['paginaAnterior']); //. "?id=" . $_POST['id'] . "&op=update");
             exit();
         } catch (Exception $ex) {
-            //echo $ex->getMessage();
+            echo $ex->getMessage();
             header("location: " . $_POST['paginaAnterior']); //. "?id=-2&op=update");
             exit();
         }

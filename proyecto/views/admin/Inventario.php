@@ -4,7 +4,7 @@
     <section class="Inventario">
         <form id="nuevoProducto" class="formulario" action="/controllers/controladorProductos.php" method="POST">
             <input type="hidden" name="_method" value="POST">
-            <h1>Nuevo producto (ID:#1)</h1>
+            <h1>Nuevo producto</h1>
             <div class="campos">
                 <div>
                     <label for="nombre">Nombre del producto</label>
@@ -94,4 +94,9 @@
             <?php echo file_get_contents("$root/assets/svg/diamante-derecha.svg"); ?>
         </a>
     </nav>
+    <?php
+    if ($_GET['id'] == '-3') {
+        echo '<script>alert("Solo se pueden agregar 3 imagenes al producto");</script>';
+    }
+    ?>
 </main>

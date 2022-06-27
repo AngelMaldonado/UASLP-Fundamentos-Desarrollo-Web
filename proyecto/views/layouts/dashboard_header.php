@@ -39,7 +39,7 @@ if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_tipoUsuario'] != "admi
         <ul class="barraNavegacion__tabs">
             <li>
                 <!-- enlace+icono -->
-                <a class="enlace -secundario" href="/views/Perfil.php">
+                <a class="enlace -secundario" href="/views/admin/Perfil.php">
                     <?php
                     if (isset($_SESSION['usuario_id'])) {
                         echo "Hola, " . strtok($_SESSION['usuario_nombre'], " ");

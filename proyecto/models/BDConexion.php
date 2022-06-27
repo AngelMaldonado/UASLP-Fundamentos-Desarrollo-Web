@@ -89,10 +89,9 @@ class BDConexion
 
     public function existeRegistro($tabla, $campo, $valor)
     {
-        $sql = "SELECT * FROM $tabla WHERE $campo = :valor";
+        $sql = "SELECT * FROM $tabla WHERE $campo = '$valor'";
         try {
             $query = self::$conexion->prepare($sql);
-            $query->bindParam(':valor', $valor, PDO::PARAM_STR);
             $query->execute();
             if ($query->rowCount() > 0) {
                 return $query->fetch(PDO::FETCH_ASSOC);

@@ -19,6 +19,7 @@ function cargaTarjetasUsuario() {
             if (this.status === 200) {
                 // console.log(this.responseText);
                 let listaUsuarios = JSON.parse(this.responseText);
+                console.log(listaUsuarios);
                 pintaListaUsuarios(listaUsuarios);
             } else {
                 console.log("Error");
@@ -35,7 +36,7 @@ function pintaListaUsuarios(listaUsuarios) {
             <div class="tarjetaUsuario">
                 <img src="data:image/jpeg;base64,${listaUsuarios[i].foto}" alt="imagen-usuario">
                 <div>
-                    <h3>Nombre: <p>${listaUsuarios[i].nombre} (#${listaUsuarios[i].id})</p></h3>
+                    <h3>Nombre: <p>${listaUsuarios[i].nombre} (#${listaUsuarios[i].usuario_ID})</p></h3>
                     <h3>Correo: <p>${listaUsuarios[i].correo}</p></h3>
                 </div>
                 <div>
@@ -47,7 +48,7 @@ function pintaListaUsuarios(listaUsuarios) {
                     <h3>Generación: <p>${listaUsuarios[i].generacion}</p></h3>
                 </div>
                 <form id="form${i}" action="/controllers/controladorUsuarios.php" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="id" value="${listaUsuarios[i].id}">
+                    <input type="hidden" name="id" value="${listaUsuarios[i].usuario_ID}">
                     <input type="hidden" name="paginaAnterior" value="${window.location.href}">
                     <input type="hidden" name="nombre" value="${listaUsuarios[i].nombre}">
                     <input type="hidden" name="correo" value="${listaUsuarios[i].correo}">

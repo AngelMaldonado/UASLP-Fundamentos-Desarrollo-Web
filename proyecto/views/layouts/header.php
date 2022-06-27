@@ -39,7 +39,11 @@ session_start();
             </li>
             <li>
                 <!-- enlace+icono -->
-                <a class="enlace -primario" href="/views/IniciarSesion.php">
+                <a class="enlace -primario" href="<?php if (isset($_SESSION['usuario_id'])) {
+                                                        echo '/views/Perfil.php?id=' . $_SESSION['usuario_id'];
+                                                    } else {
+                                                        echo '/views/IniciarSesion.php';
+                                                    } ?>">
                     <?php
                     if (isset($_SESSION['usuario_id'])) {
                         echo "Hola, " . strtok($_SESSION['usuario_nombre'], " ");

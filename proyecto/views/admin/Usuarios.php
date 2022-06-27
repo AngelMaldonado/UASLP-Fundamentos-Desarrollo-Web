@@ -5,7 +5,7 @@
         <form id="nuevoUsuarioAdministrador" class="formulario" action="/controllers/controladorRegistro.php" method="POST">
             <input type="hidden" name="_method" value="POST">
             <input type="hidden" name="tipoUsuario" value="administrador">
-            <h1>Nuevo usuario ADMINISTRADOR (ID:#1)</h1>
+            <h1>Nuevo usuario ADMINISTRADOR</h1>
             <br>
             <?php
             if (isset($_GET["error"])) {
