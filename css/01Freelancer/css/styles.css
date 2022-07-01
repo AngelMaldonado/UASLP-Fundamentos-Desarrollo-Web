@@ -25,6 +25,15 @@ html {
 
 html {
     font-size: 62.5%;
+    scroll-snap-type: y mandatory;
+}
+
+/* Scroll-snap */
+.servicios,
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 body {
