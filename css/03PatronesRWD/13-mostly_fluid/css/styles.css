@@ -14,6 +14,7 @@ body {
     font-size: 1.6rem;
     line-height: 2;
 }
+
 h1 {
     font-size: 4rem;
 }
@@ -37,3 +38,24 @@ p {
 }
 
 /** CODIGO AQUI **/
+.contenedor {
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    .contenedor {
+        width: 60%;
+    }
+}
+
+img {
+    max-width: 100%;
+}
