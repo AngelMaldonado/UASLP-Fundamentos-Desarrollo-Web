@@ -5,11 +5,13 @@
  *******************************************/
 const { src, dest, watch } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
+const plumber = require("gulp-plumber");
 
 function css(done) {
 
     // Identificar el archivo de SASS
     src("src/scss/**/*.scss")
+        .pipe(plumber())
         // Compilarlo
         .pipe(sass())
         // Almacenarlos
