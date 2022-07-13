@@ -1,9 +1,9 @@
 /******************************************
- *  Author : Angel Maldonado   
+ *  Author : Angel Maldonado
  *  Created On : Mon Jul 11 2022
  *  File : gulpfile.js
  *******************************************/
-const { src, dest, watch } = require("gulp");
+const {src, dest, watch} = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
 
@@ -13,7 +13,7 @@ function css(done) {
     src("src/scss/**/*.scss")
         .pipe(plumber())
         // Compilarlo
-        .pipe(sass())
+        .pipe(sass(null, null))
         // Almacenarlos
         .pipe(dest("build/css"));
 
