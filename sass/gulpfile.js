@@ -13,6 +13,9 @@ const cssnano = require("cssnano"); // comprimir codigo css
 const postcss = require("gulp-postcss"); // transformaciones utilizando los 2 anteriores
 const sourcemaps = require("gulp-sourcemaps");
 
+// Javascript
+const terser = require("gulp-terser-js");
+
 // Imagenes
 const imagemin = require("gulp-imagemin");
 const cache = require("gulp-cache");
@@ -49,6 +52,9 @@ function imagenes(done) {
 
 function javascript(done) {
     src("src/js/**/*.js")
+        .pipe(sourcemaps.init())
+        .pipe(terser())
+        .pipe(sourcemaps.write("."))
         .pipe(dest("build/js"));
 
     done();
