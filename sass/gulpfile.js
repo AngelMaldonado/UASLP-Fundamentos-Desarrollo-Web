@@ -40,6 +40,13 @@ function imagenes(done) {
     done();
 }
 
+function javascript(done) {
+    src("src/js/**/*.js")
+        .pipe(dest("build/js"));
+
+    done();
+}
+
 function versionWebp(done) {
     const opciones = {
         quality: 50
@@ -66,11 +73,13 @@ function versionAvif(done) {
 
 function dev(done) {
     watch("src/scss/**/*.scss", css);
+    watch("src/js/**/*.js", javascript);
     done();
 }
 
 exports.css = css;
+exports.js = javascript;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
 exports.imagenes = imagenes;
-exports.dev = parallel(imagenes, versionWebp, versionAvif, dev);
+exports.dev = parallel(imagenes, versionWebp, versionAvif, javascript, dev);
