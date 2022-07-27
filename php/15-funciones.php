@@ -11,4 +11,9 @@ function sumar(int $numero1 = 0, int $numero2 = 0)
 sumar(1, 1);
 echo "<br>";
 
+sumar(numero1: 1, numero2: 3);
+echo "<br>";
+sumar(numero2: 4, numero1: 10);
+echo "<br>";
+
 include 'includes/footer.php';
