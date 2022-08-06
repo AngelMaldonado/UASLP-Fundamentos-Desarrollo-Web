@@ -19,8 +19,10 @@ table.propiedades {
     margin-top: 4rem;
     width: 100%;
     border-spacing: 0;
+
     thead {
         background-color: $verde;
+
         th {
             color: $blanco;
         }
@@ -29,4 +31,8 @@ table.propiedades {
     .imagen-tabla {
         width: 10rem;
     }
+}
+
+.imagen-small {
+    width: 20rem;
 }
